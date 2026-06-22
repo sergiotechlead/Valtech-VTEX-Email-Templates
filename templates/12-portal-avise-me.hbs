@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>CHANEL – Confirmation de commande</title>
+  <title>CHANEL – Produit disponible</title>
   <!--[if mso]>
   <noscript>
     <xml>
@@ -84,130 +84,28 @@
           <tr>
             <td style="padding:0 40px 40px;" class="content-padding">
 
-              <!-- GREETING -->
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:36px;">
                 <tr>
                   <td>
-                    {{#if orders.0.clientProfileData.firstName}}
-                    <h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Bonjour {{orders.0.clientProfileData.firstName}},</h1>
-                    {{else}}
                     <h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Cher client,</h1>
-                    {{/if}}
                     <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:23px;margin:0 0 14px;">
-                      Nous avons bien reçu votre commande et nous la traitons actuellement. Vous recevrez une confirmation dès que votre paiement sera validé.
+                      Le produit que vous suivez est maintenant disponible. Ne manquez pas cette occasion de l'acquérir.
                     </p>
-                    {{#if orders.0.orderId}}
-                    <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:23px;margin:0 0 28px;">
-                      <strong style="color:#000000;">N° de commande :</strong> {{orders.0.orderId}}
-                    </p>
-                    {{/if}}
                   </td>
                 </tr>
               </table>
-              
-        {{#if orders.0.items}}
-        <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:28px 0 12px;">Articles commandés</h2>
-        <table role="presentation" class="product-table" width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
-          <thead>
-            <tr>
-              <th style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#000000;padding:8px 0;border-bottom:2px solid #000000;text-align:left;">Article</th>
-              <th style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#000000;padding:8px 6px;border-bottom:2px solid #000000;text-align:center;">Qté</th>
-              <th style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#000000;padding:8px 0;border-bottom:2px solid #000000;text-align:right;">Prix</th>
-            </tr>
-          </thead>
-          <tbody>
-            {{#each orders.0.items}}
-            <tr>
-              <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;padding:12px 0;border-bottom:1px solid #eeeeee;vertical-align:top;">{{name}}</td>
-              <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;padding:12px 6px;border-bottom:1px solid #eeeeee;vertical-align:top;text-align:center;">{{quantity}}</td>
-              <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;padding:12px 0;border-bottom:1px solid #eeeeee;vertical-align:top;text-align:right;white-space:nowrap;">{{formatCurrency sellingPrice}}</td>
-            </tr>
-            {{/each}}
-          </tbody>
-        </table>
-        {{/if}}
-              
-        {{#if orders.0.totals}}
-        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;margin-top:16px;">
-          {{#each orders.0.totals}}
-          {{#if value}}
-          <tr>
-            <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;padding:5px 0;text-align:left;">{{name}}</td>
-            <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;padding:5px 0;text-align:right;white-space:nowrap;">{{formatCurrency value}}</td>
-          </tr>
-          {{/if}}
-          {{/each}}
-        </table>
-        {{/if}}
-              
-        {{#if orders.0.shippingData.address}}
-        <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:28px 0 12px;">Adresse de livraison</h2>
-        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#f9f9f9;margin-bottom:28px;">
-          <tr>
-            <td style="padding:16px 20px;">
-              {{#if orders.0.shippingData.address.receiverName}}
-              <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0;"><strong style="color:#000000;">{{orders.0.shippingData.address.receiverName}}</strong></p>
-              {{/if}}
-              <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:4px 0 0;">
-                {{orders.0.shippingData.address.street}}{{#if orders.0.shippingData.address.number}}, {{orders.0.shippingData.address.number}}{{/if}}<br>
-                {{#if orders.0.shippingData.address.complement}}{{orders.0.shippingData.address.complement}}<br>{{/if}}
-                {{orders.0.shippingData.address.postalCode}} {{orders.0.shippingData.address.city}}<br>
-                {{orders.0.shippingData.address.country}}
-              </p>
-            </td>
-          </tr>
-        </table>
-        {{/if}}
-              
-        {{#if orders.0.shippingData.logisticsInfo}}
-        <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:28px 0 12px;">Délai de livraison estimé</h2>
-        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#f9f9f9;margin-bottom:28px;">
-          <tr>
-            <td style="padding:16px 20px;">
-              {{#each orders.0.shippingData.logisticsInfo}}
-              {{#each slas}}
-              {{#eq ../selectedSla id}}
-              <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0 0 6px;"><strong style="color:#000000;">{{name}}</strong></p>
-              {{#if deliveryWindow}}
-              <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0;">
-                Livraison prévue le {{formatDate deliveryWindow.startDateUtc "DD/MM/YYYY"}} entre {{formatDate deliveryWindow.startDateUtc "HH:mm"}} et {{formatDate deliveryWindow.endDateUtc "HH:mm"}}
-              </p>
-              {{else}}
-              {{#hasSubStr shippingEstimate 'bd'}}
-              <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0;">
-                Livraison estimée&nbsp;: {{replace shippingEstimate 'bd' ''}} jour(s) ouvré(s)
-              </p>
-              {{else}}
-              <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0;">
-                Livraison estimée&nbsp;: {{shippingEstimate}} jour(s)
-              </p>
-              {{/hasSubStr}}
-              {{/if}}
-              {{/eq}}
-              {{/each}}
-              {{/each}}
-            </td>
-          </tr>
-        </table>
-        {{/if}}
-              <!-- PAYMENT INFO -->
-              {{#if orders.0.paymentData.transactions}}
-              <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:28px 0 12px;">Informations de paiement</h2>
+              {{#if productName}}
+              <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:28px 0 12px;">Produit disponible</h2>
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#f9f9f9;margin-bottom:28px;">
                 <tr>
-                  <td style="padding:16px 20px;">
-                    {{#each orders.0.paymentData.transactions}}
-                    {{#each payments}}
-                    <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0 0 4px;">
-                      <strong style="color:#000000;">Mode de paiement :</strong> {{paymentSystemName}}
-                    </p>
-                    {{#if installments}}
-                    <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0;">
-                      <strong style="color:#000000;">En :</strong> {{installments}} fois
-                    </p>
+                  <td style="padding:24px;">
+                    <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:400;color:#000000;margin:0 0 12px;text-transform:none;letter-spacing:0;">{{productName}}</h2>
+                    {{#if productDescription}}
+                    <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:23px;margin:0 0 20px;">{{productDescription}}</p>
                     {{/if}}
-                    {{/each}}
-                    {{/each}}
+                    {{#if productLink}}
+                    <a href="{{productLink}}" style="display:inline-block;background-color:#000000;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;text-decoration:none;padding:14px 32px;" target="_blank">Voir le produit</a>
+                    {{/if}}
                   </td>
                 </tr>
               </table>
