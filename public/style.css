@@ -180,7 +180,8 @@ body {
 /* ── Preview Page ─────────────────────────────────────────────────────────── */
 .preview-layout {
   display: flex;
-  height: calc(100vh - var(--topbar-h));
+  min-height: calc(100vh - var(--topbar-h));
+  align-items: flex-start;
 }
 
 /* Preview toolbar */
@@ -210,12 +211,10 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  min-width: 0;
 }
 
 .preview-area {
-  flex: 1;
-  overflow: auto;
   padding: 32px;
   background: var(--gray-100);
   display: flex;
@@ -256,6 +255,10 @@ body {
   flex-direction: column;
   overflow: hidden;
   transition: width 0.2s;
+  position: sticky;
+  top: var(--topbar-h);
+  height: calc(100vh - var(--topbar-h));
+  align-self: flex-start;
 }
 
 .json-panel.collapsed { width: 0; }

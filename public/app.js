@@ -50,6 +50,7 @@
         doc.open();
         doc.write(html);
         doc.close();
+        if (typeof window._resizeEmailFrame === 'function') window._resizeEmailFrame();
       })
       .catch(console.error);
   }

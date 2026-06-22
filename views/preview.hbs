@@ -47,10 +47,39 @@
   (function () {
     var frame = document.getElementById('email-frame');
     if (!frame) return;
+
     function resize() {
-      try { frame.style.height = frame.contentDocument.body.scrollHeight + 'px'; } catch (e) {}
+      try {
+        var doc = frame.contentDocument || frame.contentWindow.document;
+        var h = Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight);
+        frame.style.height = h + 'px';
+      } catch (e) {}
     }
-    frame.addEventListener('load', resize);
-    setTimeout(resize, 500);
+
+    function resizeAfterImages() {
+      try {
+        var doc = frame.contentDocument || frame.contentWindow.document;
+        var imgs = doc.querySelectorAll('img');
+        var total = imgs.length;
+        if (total === 0) { resize(); return; }
+        var done = 0;
+        function check() { done++; if (done >= total) resize(); }
+        imgs.forEach(function (img) {
+          if (img.complete) { check(); }
+          else { img.addEventListener('load', check); img.addEventListener('error', check); }
+        });
+      } catch (e) { resize(); }
+    }
+
+    frame.addEventListener('load', function () {
+      resize();
+      resizeAfterImages();
+    });
+
+    // Expose so the JSON editor can trigger a resize after doc.write()
+    window._resizeEmailFrame = function () {
+      resize();
+      resizeAfterImages();
+    };
   })();
 </script>
