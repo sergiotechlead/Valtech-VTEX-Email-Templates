@@ -1,0 +1,84 @@
+{
+	"items": [
+		{
+			"imageUrl": "https://vpclqa.vteximg.com.br/arquivos/ids/155474-55-55/60tabs.png?v=638933113700200000",
+			"name": "V******",
+			"quantity": 6,
+			"sellingPrice": 120
+		}
+	],
+	"orderId": "1569560500441-01",
+	"package": {
+		"type": "Input",
+		"items": [
+			{
+				"itemIndex": 0,
+				"id": "40004",
+				"uniqueId": "CFAC4B8C03664C648209DCBBA784813B",
+				"quantity": 1,
+				"price": 13560,
+				"description": null,
+				"unitMultiplier": 1
+			}
+		],
+		"restitutions": {
+			"Refund": {
+				"value": 13560
+			}
+		}
+	},
+	"storePreferencesData": {
+		"currencySymbol": "$"
+	},
+	"clientProfileData": {
+		"id": null,
+		"userProfileId": "d08e9d12-f949-46ce-951c-693e7e19fbf4",
+		"userProfileVersion": null,
+		"firstName": "d****",
+		"lastName": "p*****",
+		"email": "c*******************************@c*.v***.c**.b*",
+		"document": null,
+		"corporateDocument": "A***",
+		"corporateName": "A*** W*** V********* H******* ",
+		"documentType": null,
+		"phone": "6*********",
+		"tradeName": "a**",
+		"stateInscription": "000000000",
+		"corporatePhone": "6477817560",
+		"isCorporate": true,
+		"customerClass": null,
+		"customerCode": null
+	},
+	"_accountInfo": {
+		"MainAccountName": "v*****",
+		"AccountName": "v*****",
+		"Cnpj": null,
+		"Id": "3a4eb6e1-9a0c-4304-8701-466d970119b5",
+		"AppId": null,
+		"IsActive": true,
+		"IsOperating": false,
+		"CreationDate": "2025-06-09T18:14:42.9979136Z",
+		"OperationDate": null,
+		"CompanyName": "V********************************",
+		"TradingName": "V****************************",
+		"City": null,
+		"Complement": null,
+		"Country": null,
+		"State": null,
+		"Address": null,
+		"District": null,
+		"Number": null,
+		"PostalCode": null,
+		"Licenses": [
+			7
+		],
+		"ParentAccountId": null,
+		"ParentAccountName": null,
+		"InactivationDate": null,
+		"Platform": "vtex",
+		"Privacy": null,
+		"HasPiiRestriction": false,
+		"Infra": null,
+		"Sponsor": "1b911b3d-901f-4a94-a71f-016381348afa"
+	}
+}

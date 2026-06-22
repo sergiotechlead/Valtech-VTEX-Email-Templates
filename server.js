@@ -1,0 +1,208 @@
+'use strict';
+
+const express = require('express');
+const { engine } = require('express-handlebars');
+const Handlebars = require('handlebars');
+const fs = require('fs');
+const path = require('path');
+const chokidar = require('chokidar');
+
+const ROOT = __dirname;
+const PORT = process.env.PORT || 3000;
+
+// ── Email Helpers ─────────────────────────────────────────────────────────────
+const helpers = require('./helpers/email');
+Object.entries(helpers).forEach(([name, fn]) => Handlebars.registerHelper(name, fn));
+
+// ── Email Partials ────────────────────────────────────────────────────────────
+function loadEmailPartials() {
+  const dir = path.join(ROOT, 'templates/partials');
+  if (!fs.existsSync(dir)) return;
+  for (const file of fs.readdirSync(dir)) {
+    if (file.endsWith('.hbs')) {
+      const name = path.basename(file, '.hbs');
+      Handlebars.registerPartial(name, fs.readFileSync(path.join(dir, file), 'utf8'));
+    }
+  }
+}
+loadEmailPartials();
+
+// ── Template Discovery ────────────────────────────────────────────────────────
+const TEMPLATE_META = {
+  '01-confirmed':               { label: 'Order Confirmed',          description: 'Confirmation de commande' },
+  '02-cancelled':               { label: 'Order Cancelled',          description: 'Annulation de commande' },
+  '03-payment-approved':        { label: 'Payment Approved',         description: 'Paiement approuvé' },
+  '04-invoiced':                { label: 'Invoiced',                 description: 'Commande expédiée' },
+  '05-invoiced-cancel-request': { label: 'Invoice Cancel Request',   description: 'Demande d\'annulation' },
+  '06-shipped':                 { label: 'Shipped',                  description: 'Colis expédié' },
+  '07-shipped-cancel-request':  { label: 'Shipped Cancel Request',   description: 'Annulation après expédition' },
+  '08-shipping-update':         { label: 'Shipping Update',          description: 'Mise à jour livraison' },
+  '09-replaced':                { label: 'Replaced',                 description: 'Commande remplacée' },
+  '10-delivered':               { label: 'Delivered',                description: 'Commande livrée' },
+  '11-let-me-know':             { label: 'Let Me Know',              description: 'Disponibilité produit' },
+};
+
+function getTemplates(activeName = null) {
+  const dir = path.join(ROOT, 'templates');
+  return fs.readdirSync(dir)
+    .filter(f => f.endsWith('.hbs'))
+    .map(file => {
+      const name = path.basename(file, '.hbs');
+      const meta = TEMPLATE_META[name] || {};
+      return {
+        name,
+        label: meta.label || name.replace(/^\d+-/, '').split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' '),
+        description: meta.description || '',
+        hasData: fs.existsSync(path.join(ROOT, 'data', 'vtex', `${name}.json`)),
+        active: name === activeName,
+      };
+    });
+}
+
+// ── Email Rendering ───────────────────────────────────────────────────────────
+function renderEmail(name, overrideData = null) {
+  const tplPath = path.join(ROOT, 'templates', `${name}.hbs`);
+  const dataPath = path.join(ROOT, 'data', 'vtex', `${name}.json`);
+
+  if (!fs.existsSync(tplPath)) throw new Error(`Template "${name}" not found`);
+
+  const src = fs.readFileSync(tplPath, 'utf8');
+  const compile = Handlebars.compile(src);
+
+  let data = {};
+  if (overrideData && typeof overrideData === 'object') {
+    data = overrideData;
+  } else if (fs.existsSync(dataPath)) {
+    data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+  }
+
+  return { html: compile(data), data };
+}
+
+// ── Express Setup ─────────────────────────────────────────────────────────────
+const app = express();
+app.use(express.json({ limit: '1mb' }));
+app.use(express.static(path.join(ROOT, 'public')));
+
+app.engine('hbs', engine({
+  extname: '.hbs',
+  defaultLayout: 'main',
+  layoutsDir: path.join(ROOT, 'views/layouts'),
+}));
+app.set('view engine', 'hbs');
+app.set('views', path.join(ROOT, 'views'));
+
+// ── SSE Live Reload ───────────────────────────────────────────────────────────
+const sseClients = new Set();
+
+app.get('/sse', (req, res) => {
+  res.set({
+    'Content-Type': 'text/event-stream',
+    'Cache-Control': 'no-cache',
+    'Connection': 'keep-alive',
+    'X-Accel-Buffering': 'no',
+  });
+  res.write('data: connected\n\n');
+  sseClients.add(res);
+  req.on('close', () => sseClients.delete(res));
+});
+
+function broadcast(msg) {
+  for (const res of sseClients) res.write(`data: ${msg}\n\n`);
+}
+
+// ── Routes ────────────────────────────────────────────────────────────────────
+app.get('/', (req, res) => {
+  res.render('index', {
+    pageTitle: 'Home',
+    templates: getTemplates(),
+  });
+});
+
+app.get('/preview/:name', (req, res) => {
+  const { name } = req.params;
+  try {
+    const { data } = renderEmail(name);
+
+    if ('raw' in req.query) {
+      const { html } = renderEmail(name);
+      return res.type('html').send(html);
+    }
+
+    const templates = getTemplates(name);
+    const current = templates.findIndex(t => t.name === name);
+    const prev = templates[current - 1] || null;
+    const next = templates[current + 1] || null;
+    const meta = TEMPLATE_META[name] || {};
+    const label = meta.label || name.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
+
+    res.render('preview', {
+      pageTitle: label,
+      currentTemplate: name,
+      name,
+      label,
+      templates,
+      prev,
+      next,
+      jsonData: JSON.stringify(data, null, 2),
+    });
+  } catch (err) {
+    res.status(404).render('error', {
+      pageTitle: 'Error',
+      templates: getTemplates(),
+      message: err.message,
+    });
+  }
+});
+
+app.post('/render/:name', (req, res) => {
+  try {
+    const { html } = renderEmail(req.params.name, req.body);
+    res.json({ html });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+app.get('/download/:name', (req, res) => {
+  try {
+    const { html } = renderEmail(req.params.name);
+    res.set('Content-Disposition', `attachment; filename="${req.params.name}.html"`);
+    res.type('html').send(html);
+  } catch (err) {
+    res.status(404).send(err.message);
+  }
+});
+
+// ── File Watcher ──────────────────────────────────────────────────────────────
+chokidar.watch(
+  ['templates', 'data/vtex', 'views'].map(d => path.join(ROOT, d)),
+  { ignoreInitial: true }
+).on('all', (event, filePath) => {
+  const rel = path.relative(ROOT, filePath);
+  console.log(`  [${event}] ${rel}`);
+  if (rel.startsWith('templates/partials')) loadEmailPartials();
+  broadcast('reload');
+});
+
+// ── Start ─────────────────────────────────────────────────────────────────────
+function startServer(port) {
+  const server = app.listen(port, () => {
+    console.log('\n────────────────────────────────────────────');
+    console.log('  VTEX Email Templates — Preview Server');
+    console.log(`  http://localhost:${port}`);
+    console.log('────────────────────────────────────────────');
+    console.log('  Watching: templates/  data/  views/');
+    console.log('────────────────────────────────────────────\n');
+  });
+  server.on('error', err => {
+    if (err.code === 'EADDRINUSE') {
+      console.log(`  Port ${port} in use, trying ${port + 1}…`);
+      startServer(port + 1);
+    } else {
+      throw err;
+    }
+  });
+}
+
+startServer(PORT);

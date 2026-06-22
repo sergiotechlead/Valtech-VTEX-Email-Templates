@@ -1,0 +1,56 @@
+<div class="preview-layout">
+  <div class="preview-container">
+    <div class="preview-toolbar-main">
+      <div class="nav-arrows">
+        {{#if prev}}
+          <a href="/preview/{{prev.name}}" class="btn btn-ghost" title="{{prev.label}}">←</a>
+        {{else}}
+          <button class="btn btn-ghost" disabled style="opacity:.3">←</button>
+        {{/if}}
+        {{#if next}}
+          <a href="/preview/{{next.name}}" class="btn btn-ghost" title="{{next.label}}">→</a>
+        {{else}}
+          <button class="btn btn-ghost" disabled style="opacity:.3">→</button>
+        {{/if}}
+      </div>
+      <span class="text-muted">{{label}}</span>
+      <div class="width-toggle ml-auto">
+        <button class="btn btn-ghost btn-sm active" data-width="full">Full</button>
+        <button class="btn btn-ghost btn-sm" data-width="600">600</button>
+        <button class="btn btn-ghost btn-sm" data-width="375">375</button>
+      </div>
+    </div>
+    <div class="preview-area">
+      <div class="email-mock">
+        <div class="email-mock-header">
+          <div><strong>From:</strong> noreply@chanel.com</div>
+          <div><strong>Subject:</strong> {{label}}</div>
+        </div>
+        <iframe id="email-frame" class="email-body" src="/preview/{{name}}?raw" frameborder="0" scrolling="no" style="width:100%;display:block;border:none;"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="json-panel" id="json-panel">
+    <div class="json-panel-header">
+      <span>JSON DATA</span>
+    </div>
+    <textarea id="json-editor" class="json-textarea" spellcheck="false">{{jsonData}}</textarea>
+    <div class="json-actions">
+      <button id="btn-apply" class="btn btn-primary btn-sm flex-1">Apply</button>
+      <button id="btn-reset" class="btn btn-ghost btn-sm">Reset</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var frame = document.getElementById('email-frame');
+    if (!frame) return;
+    function resize() {
+      try { frame.style.height = frame.contentDocument.body.scrollHeight + 'px'; } catch (e) {}
+    }
+    frame.addEventListener('load', resize);
+    setTimeout(resize, 500);
+  })();
+</script>

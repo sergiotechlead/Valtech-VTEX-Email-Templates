@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{pageTitle}} — VTEX Email Templates</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body{{#if currentTemplate}} data-template="{{currentTemplate}}"{{/if}}>
+
+<header class="topbar">
+  <a href="/" class="topbar-logo">
+    <svg width="40" height="20" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="15" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="1.5">VTEX</text>
+    </svg>
+  </a>
+  <div class="topbar-sep"></div>
+  <span class="topbar-subtitle">Email Templates</span>
+  {{#if currentTemplate}}
+  <div class="topbar-actions ml-auto">
+    <button id="btn-copy" class="btn btn-dark btn-sm">Copy HTML</button>
+    <a href="/download/{{currentTemplate}}" class="btn btn-dark btn-sm">↓ Download</a>
+    <button id="btn-toggle-json" class="btn btn-dark btn-sm">✕ JSON</button>
+  </div>
+  {{/if}}
+</header>
+
+<div class="app-layout">
+  <nav class="sidebar">
+    <div class="sidebar-heading">Templates</div>
+    <ul class="sidebar-nav">
+      {{#each templates}}
+      <li>
+        <a href="/preview/{{name}}"{{#if active}} class="active"{{/if}}>
+          <span class="nav-label">{{label}}</span>
+          {{#if description}}<span class="nav-desc">{{description}}</span>{{/if}}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </nav>
+  <main class="main">
+    {{{body}}}
+  </main>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

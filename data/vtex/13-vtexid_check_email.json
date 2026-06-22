@@ -1,0 +1,45 @@
+{
+	"to": [
+		{
+			"name": "s************",
+			"email": "s*****.c*****@v***.c**"
+		}
+	],
+	"aditionalData": {
+		"accessKey": "5*****",
+		"locale": "en-CA",
+		"userAgent": "Chrome, Mac OS X"
+	},
+	"_accountInfo": {
+		"MainAccountName": "v*****",
+		"AccountName": "v*****",
+		"Cnpj": null,
+		"Id": "3a4eb6e1-9a0c-4304-8701-466d970119b5",
+		"AppId": null,
+		"IsActive": true,
+		"IsOperating": true,
+		"CreationDate": "2025-06-09T18:14:42.9979136Z",
+		"OperationDate": "2025-11-05T19:59:45.3764792Z",
+		"CompanyName": "V********************************",
+		"TradingName": "V***********************",
+		"City": null,
+		"Complement": null,
+		"Country": null,
+		"State": null,
+		"Address": null,
+		"District": null,
+		"Number": null,
+		"PostalCode": null,
+		"Licenses": [
+			7
+		],
+		"ParentAccountId": null,
+		"ParentAccountName": null,
+		"InactivationDate": null,
+		"Platform": "vtex",
+		"Privacy": null,
+		"HasPiiRestriction": false,
+		"Infra": null,
+		"Sponsor": "1b911b3d-901f-4a94-a71f-016381348afa"
+	}
+}

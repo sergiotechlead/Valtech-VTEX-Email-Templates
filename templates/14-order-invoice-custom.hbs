@@ -1,0 +1,204 @@
+<!-- SUBJECT -->
+ <!-- {{#eq locale "fr-CA"}} Votre commande {{subjectItemAttachment.item}} {{#if subjectItemAttachment.extraItems}}  et {{subjectItemAttachment.extraItems}} autre(s) article(s) {{/ if}} a été facturée !{{else}}Your {{subjectItemAttachment.item}} order {{#if subjectItemAttachment.extraItems}} and {{subjectItemAttachment.extraItems}} other item(s) {{/ if}} has been invoiced!{{/eq}} -->
+
+<!-- TO -->
+ <!-- {{to}} -->
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; box-sizing: border-box; width: 100%; height: 100%; margin: 0; padding: 0; background: #f1f1f1 !important;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{_accountInfo.TradingName}}</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+</head>
+
+<body style="margin: 0;">
+  <table width=100% style="margin: 0; font-family: Arial, Helvetica, sans-serif;">
+
+    {{#eq locale "fr-CA"}}
+
+      <!-- HEADER -->
+    <tr>
+      <td>
+        <table width=100% style="background-color: #541721; height: 64px; text-align: center;">
+          <tr>
+            <td>
+              <img src="https://{{_accountInfo.MainAccountName}}.vteximg.com.br/arquivos/vp-logo-emails.png" />
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- HERO -->
+    <tr>
+      <td>
+        <table align="center" style="text-align: center; margin: 70px auto 0; max-width: 600px;">
+          <tr>
+            <td>
+              <h1 style="font-weight: 700; font-size: 44px; line-height: 50px; color: #161511; margin-bottom: 8px;">Les détails de votre facture sont inclus</h1>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span style="font-weight: 700; font-size: 24px; line-height: 26px; color: #161511; margin: 0;">Commande #{{orderId}}</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 42px;">
+              <p style="font-weight: 700; font-size: 16px; line-height: 26px; color: #161511; margin: 0;">{{companyName}}</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 8px;">
+              <p style="font-weight: 400; font-size: 16px; line-height: 24px; color: #5D5951; margin: 0;">Votre commande est en route !</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="font-weight: 400; font-size: 16px; line-height: 24px; color: #5D5951; margin: 0;">Veuillez cliquer sur l'URL pour afficher et télécharger votre facture.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 32px;">
+              <a href="{{pdf_url}}" target="_blank" style="font-weight: 400; font-size: 16px; line-height: 24px; color: #6C1E2A; margin: 0; text-decoration: underline;">Télécharger la facture</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <table align="center" style="margin-top: 24px;">
+          <tr>
+            <td>
+              <p style="font-size: 16px; line-height: 24px; color: #5D5951; text-align: center;">Salutations,</p>
+              <p style="font-size: 16px; line-height: 24px; color: #5D5951; text-align: center;">Votre équipe VP.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- FOOTER -->
+    <tr>
+      <td>
+        <table style="background-color: #6C1E2A; margin-top: 80px; width: 100%; text-align: center; padding: 24px 0;">
+          <tr>
+            <td>
+              <img style="width: 24px; height: 24px; vertical-align: middle;" src="https://{{_accountInfo.MainAccountName}}.vteximg.com.br/arquivos/phone-footer.png" alt=""> <p style="display: inline-block; font-weight: 600; font-size: 14px; line-height: 17px; color: #FFFFFF;">Contacter l'assistance : </p> <p style="display: inline-block; font-weight: 600; font-size: 14px; line-height: 17px; color: #FFFFFF;">1-800-555-5555</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="display: inline-block; font-weight: 400; font-size: 12px; line-height: 15px; color: #FFFFFF;">2025 © Veterinary Purchasing</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr> 
+
+    {{else}}
+
+    <!-- HEADER -->
+    <tr>
+      <td>
+        <table width=100% style="background-color: #541721; height: 64px; text-align: center;">
+          <tr>
+            <td>
+              <img src="https://{{_accountInfo.MainAccountName}}.vteximg.com.br/arquivos/vp-logo-emails.png" />
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- HERO -->
+    <tr>
+      <td>
+        <table align="center" style="text-align: center; margin: 70px auto 0; max-width: 600px;">
+          <tr>
+            <td>
+              <h1 style="font-weight: 700; font-size: 44px; line-height: 50px; color: #161511; margin-bottom: 8px;">Your invoice details are included</h1>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span style="font-weight: 700; font-size: 24px; line-height: 26px; color: #161511; margin: 0;">Order #{{orderId}}</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 42px;">
+              <p style="font-weight: 700; font-size: 16px; line-height: 26px; color: #161511; margin: 0;">{{companyName}}</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 8px;">
+              <p style="font-weight: 400; font-size: 16px; line-height: 24px; color: #5D5951; margin: 0;">Your order is on it's way!</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="font-weight: 400; font-size: 16px; line-height: 24px; color: #5D5951; margin: 0;">Please click the URL to view and download your Invoice.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 32px;">
+              <a href="{{pdf_url}}" target="_blank" style="font-weight: 400; font-size: 16px; line-height: 24px; color: #6C1E2A; margin: 0; text-decoration: underline;">Download Invoice</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <table align="center" style="margin-top: 32px;">
+          <tr>
+            <td>
+              <p style="font-size: 16px; line-height: 24px; color: #5D5951; text-align: center;">Regards,</p>
+              <p style="font-size: 16px; line-height: 24px; color: #5D5951; text-align: center;">Your VP Team.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- FOOTER -->
+    <tr>
+      <td>
+        <table style="background-color: #6C1E2A; margin-top: 80px; width: 100%; text-align: center; padding: 24px 0;">
+          <tr>
+            <td>
+              <img style="width: 24px; height: 24px; vertical-align: middle;" src="https://{{_accountInfo.MainAccountName}}.vteximg.com.br/arquivos/phone-footer.png" alt=""> <p style="display: inline-block; font-weight: 600; font-size: 14px; line-height: 17px; color: #FFFFFF;">Contact Support: </p> <p style="display: inline-block; font-weight: 600; font-size: 14px; line-height: 17px; color: #FFFFFF;">1-800-555-5555</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="display: inline-block; font-weight: 400; font-size: 12px; line-height: 15px; color: #FFFFFF;">2025 © Veterinary Purchasing</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr> 
+
+    {{/eq}}
+
+  </table>
+</body>
+
+</html>

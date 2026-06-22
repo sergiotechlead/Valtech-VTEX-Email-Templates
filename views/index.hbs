@@ -1,0 +1,17 @@
+<div class="index-page">
+  <h1>VTEX Email Templates</h1>
+  <p class="subtitle">{{templates.length}} templates — click one to preview.</p>
+  <div class="template-grid">
+    {{#each templates}}
+    <a href="/preview/{{name}}" class="template-card">
+      <span class="template-card-name">{{label}}</span>
+      {{#if description}}<span class="template-card-desc">{{description}}</span>{{/if}}
+      {{#if hasData}}
+        <span class="template-card-tag">✓ Sample data</span>
+      {{else}}
+        <span class="template-card-tag no-data">⚠ No data file</span>
+      {{/if}}
+    </a>
+    {{/each}}
+  </div>
+</div>

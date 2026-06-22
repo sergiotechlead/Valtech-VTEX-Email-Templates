@@ -1,0 +1,42 @@
+{
+	"to": [
+		"offline-order-vpclqa-vstr-f36@vpcl.on.ca-260001721992b.ct.vtex.com.br"
+	],
+	"tradingName": "N*************************",
+	"locale": "en-CA",
+	"orderId": "1510997",
+	"pdf_url": "https://vpclqa.vtexassets.com/assets/vpcl.invoices-svc/invoices/1376652-0/order_invoice-1376652-0-en-CA___04a6966078e44d7fc7e13c935d990f11.pdf",
+	"companyName": "F**************************",
+	"_accountInfo": {
+		"MainAccountName": "v*****",
+		"AccountName": "v*****",
+		"Cnpj": null,
+		"Id": "3a4eb6e1-9a0c-4304-8701-466d970119b5",
+		"AppId": null,
+		"IsActive": true,
+		"IsOperating": true,
+		"CreationDate": "2025-06-09T18:14:42.9979136Z",
+		"OperationDate": "2025-11-05T19:59:45.3764792Z",
+		"CompanyName": "V********************************",
+		"TradingName": "V***********************",
+		"City": null,
+		"Complement": null,
+		"Country": null,
+		"State": null,
+		"Address": null,
+		"District": null,
+		"Number": null,
+		"PostalCode": null,
+		"Licenses": [
+			7
+		],
+		"ParentAccountId": null,
+		"ParentAccountName": null,
+		"InactivationDate": null,
+		"Platform": "vtex",
+		"Privacy": null,
+		"HasPiiRestriction": false,
+		"Infra": null,
+		"Sponsor": "1b911b3d-901f-4a94-a71f-016381348afa"
+	}
+}

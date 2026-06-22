@@ -1,0 +1,224 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; box-sizing: border-box; width: 100%; height: 100%; margin: 0; padding: 0; background: #f1f1f1 !important;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{_accountInfo.TradingName}}</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+</head>
+
+<!-- EMAIL SUBJECT
+{{#eq aditionalData.locale "fr-CA"}}Votre clé d'accès est {{aditionalData.accessKey}}{{else}}Your access key is {{aditionalData.accessKey}}{{/eq}} -->
+
+<body style="margin: 0;">
+  <table width=100% style="margin: 0; font-family: Arial, Helvetica, sans-serif;">
+
+    {{eval "Handlebars.registerHelper('getOrganizationName', function(customData) {
+      var apps = (customData && customData.customApps) ? customData.customApps : [];
+      var app = null;
+      for (var i = 0; i < apps.length; i++) { 
+        if (apps[i] && apps[i].id==='orders-integration' ) { 
+          app=apps[i]; break; 
+        } 
+      }
+      return (app && app.fields && app.fields['organization-name']) ? app.fields['organization-name'] : '' ; }); "
+    }}
+
+    {{#eq aditionalData.locale "fr-CA"}}
+
+      <!-- HEADER -->
+    <tr>
+      <td>
+        <table width=100% style="background-color: #541721; height: 64px; text-align: center;">
+          <tr>
+            <td>
+              <img src="https://{{_accountInfo.MainAccountName}}.vteximg.com.br/arquivos/vp-logo-emails.png" />
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- HERO -->
+    <tr>
+      <td>
+        <table align="center" style="text-align: center; margin: 70px auto 0; max-width: 600px;">
+          <tr>
+            <td>
+              <h1 style="font-weight: 700; font-size: 44px; line-height: 50px; color: #161511; margin-bottom: 8px;">Bonjour {{to.0.name}}</h1>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 24px;">
+              <span style="font-weight: 400; font-size: 16px; line-height: 26px; color: #5D5951; margin: 0;">Vous avez récemment demandé à configurer ou à réinitialiser votre mot de passe.</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="">
+              <span style="font-weight: 400; font-size: 16px; line-height: 26px; color: #5D5951; margin: 0;">Veuillez utiliser le code ci-dessous pour terminer le processus :</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 24px;">
+              <table align="center" style="background-color: #F3F1EC; padding: 18px 24px; border-radius: 8px;">
+                <tr>
+                  <td style="font-family: Arial; font-weight: 700; font-size: 32px; text-align: center; color: #6C1E2A;">
+                    {{aditionalData.accessKey}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 24px;">
+              <p style="font-weight: 400; font-size: 16px; line-height: 24px; color: #5D5951; margin: 0;">Pour des raisons de sécurité, ce code expirera dans 10 minutes.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="">
+              <p style="font-weight: 400; font-size: 16px; line-height: 24px; color: #5D5951; margin: 0;">Si vous n'avez pas fait cette demande, veuillez ignorer ce courriel.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding-top: 24px;">
+        <table align="center" style="margin-top: 32px;">
+          <tr>
+            <td>
+              <p style="font-size: 16px; line-height: 24px; color: #5D5951; text-align: center; margin: 0;">Cordialement,</p>
+              <p style="font-size: 16px; line-height: 24px; color: #5D5951; text-align: center; margin: 0;">Votre équipe VP.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- FOOTER -->
+    <tr>
+      <td>
+        <table style="background-color: #6C1E2A; margin-top: 80px; width: 100%; text-align: center; padding: 24px 0;">
+          <tr>
+            <td>
+              <img style="width: 24px; height: 24px; vertical-align: middle;" src="https://{{_accountInfo.MainAccountName}}.vteximg.com.br/arquivos/phone-footer.png" alt=""> <p style="display: inline-block; font-weight: 600; font-size: 14px; line-height: 17px; color: #FFFFFF;">Contacter l'assistance : </p> <p style="display: inline-block; font-weight: 600; font-size: 14px; line-height: 17px; color: #FFFFFF;">1-844-344-5552</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="display: inline-block; font-weight: 400; font-size: 12px; line-height: 15px; color: #FFFFFF;">2025 © Veterinary Purchasing</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr> 
+
+    {{else}}
+
+    <!-- HEADER -->
+    <tr>
+      <td>
+        <table width=100% style="background-color: #541721; height: 64px; text-align: center;">
+          <tr>
+            <td>
+              <img src="https://{{_accountInfo.MainAccountName}}.vteximg.com.br/arquivos/vp-logo-emails.png" />
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- HERO -->
+    <tr>
+      <td>
+        <table align="center" style="text-align: center; margin: 70px auto 0; max-width: 600px;">
+          <tr>
+            <td>
+              <h1 style="font-weight: 700; font-size: 44px; line-height: 50px; color: #161511; margin-bottom: 8px;">Dear {{to.0.name}}</h1>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 24px;">
+              <span style="font-weight: 400; font-size: 16px; line-height: 26px; color: #5D5951; margin: 0;">You recently requested to setup or reset your password.</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="">
+              <span style="font-weight: 400; font-size: 16px; line-height: 26px; color: #5D5951; margin: 0;">Please use the code below to complete the process:</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 24px;">
+              <table align="center" style="background-color: #F3F1EC; padding: 18px 24px; border-radius: 8px;">
+                <tr>
+                  <td style="font-family: Arial; font-weight: 700; font-size: 32px; text-align: center; color: #6C1E2A;">
+                    {{aditionalData.accessKey}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 24px;">
+              <p style="font-weight: 400; font-size: 16px; line-height: 24px; color: #5D5951; margin: 0;">For security reasons, this code will expire in 10 minutes.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="">
+              <p style="font-weight: 400; font-size: 16px; line-height: 24px; color: #5D5951; margin: 0;">If you did not make this request, please ignore this email.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding-top: 24px;">
+        <table align="center" style="margin-top: 32px;">
+          <tr>
+            <td>
+              <p style="font-size: 16px; line-height: 24px; color: #5D5951; text-align: center; margin: 0;">Regards,</p>
+              <p style="font-size: 16px; line-height: 24px; color: #5D5951; text-align: center; margin: 0;">Your VP Team.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- FOOTER -->
+    <tr>
+      <td>
+        <table style="background-color: #6C1E2A; margin-top: 80px; width: 100%; text-align: center; padding: 24px 0;">
+          <tr>
+            <td>
+              <img style="width: 24px; height: 24px; vertical-align: middle;" src="https://{{_accountInfo.MainAccountName}}.vteximg.com.br/arquivos/phone-footer.png" alt=""> <p style="display: inline-block; font-weight: 600; font-size: 14px; line-height: 17px; color: #FFFFFF;">Contact Support: </p> <p style="display: inline-block; font-weight: 600; font-size: 14px; line-height: 17px; color: #FFFFFF;">1-800-555-5555</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="display: inline-block; font-weight: 400; font-size: 12px; line-height: 15px; color: #FFFFFF;">2025 © Veterinary Purchasing</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr> 
+
+    {{/eq}}
+
+  </table>
+</body>
+
+</html>
