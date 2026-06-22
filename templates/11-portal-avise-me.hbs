@@ -1,148 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="initial-scale=1.0">
-    <!-- So that mobile webkit will display zoomed in -->
-    <meta name="format-detection" content="telephone=no">
-    <!-- disable auto telephone linking in iOS -->
-    <title>{{_accountInfo.TradingName}}</title>
-    <style type="text/css">
-            /* Resets: see reset.css for details */
-            .ReadMsgBody { width: 100%; background-color: #555;}
-            .ExternalClass {width: 100%; background-color: #555;}
-            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}
-            body {-webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
-            body {
-                padding:0;
-                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            }
-            table td {
-                border-collapse:collapse;
-                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                font-size: 13px;
-                line-height: 1.4;
-            }
-            .yshortcuts a {border-bottom: none !important;}
-            /* Constrain email width for small screens */
-            @media screen and (max-width: 600px) {
-                table[class="container"] {
-                    width: 100% !important;
-                }
-            }
-            /* Give content more room on mobile */
-            @media screen and (max-width: 480px) {
-                .status{padding-bottom:0px;}
-            }
-            /* Styles for forcing columns to rows */
-            @media only screen and (max-width : 600px) {
-                /* force container columns to (horizontal) blocks */
-                .container{border-radius:0 !important;}
-                .no-padding-top-bottom-mobile{padding-top:0;padding-bottom:0;padding:0 !important;}
-                .img-product{width:70px;}
-                .side-border td{padding-left:0;}
-                .button{padding:11px 0 !important;font-size:13px;width:100%;}
-                .table-button{width:100% !important;}
-                td[class="force-col"] {
-                    display: block;
-                    padding-right: 0 !important;
-                }
-                table[class="col-3"] {
-                    /* unset table align="left/right" */
-                    float: none !important;
-                    width: 100% !important;
-                    /* change left/right padding and margins to top/bottom ones */
-                    padding-bottom: 12px;
-                    border-bottom: 1px solid #eee;
-                }
-                /* remove bottom border for last column/row */
-                table[id="last-col-3"] {
-                    border-bottom: none !important;
-                }
-                /* align images right and shrink them a bit */
-                img[class="col-3-img"] {
-                    float: right;
-                    margin-left: 6px;
-                    max-width: 130px;
-                }
-            }
-            @media only screen and (max-width : 600px) {
-                .status{width:100% !important;}
-                .status div{width:200px !important;}
-            }
-    </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="x-apple-disable-message-reformatting"/>
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no"/>
+  <title>{{_accountInfo.TradingName}}</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+  <style type="text/css">
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    table { border-collapse: collapse !important; }
+    body { margin: 0 !important; padding: 0 !important; background-color: #f4f4f4; }
+    a[x-apple-data-detectors] {
+      color: inherit !important; text-decoration: none !important;
+      font-size: inherit !important; font-family: inherit !important;
+      font-weight: inherit !important; line-height: inherit !important;
+    }
+    u + #body a { color: inherit; text-decoration: none; font-size: inherit; font-family: inherit; font-weight: inherit; line-height: inherit; }
+    #MessageViewBody a { color: inherit; text-decoration: none; font-size: inherit; font-family: inherit; font-weight: inherit; line-height: inherit; }
+    @media only screen and (max-width: 640px) {
+      .email-container { width: 100% !important; }
+      .mobile-padding { padding-left: 24px !important; padding-right: 24px !important; }
+      .fluid { max-width: 100% !important; height: auto !important; }
+      h1 { font-size: 26px !important; line-height: 34px !important; }
+    }
+  </style>
 </head>
-<body leftmargin="0" marginheight="0" marginwidth="0" offset="0" topmargin="0">
-    <center>
-        <table border="0" cellpadding="0" cellspacing="0" height="100%" style="font-size:14px;" width="100%">
-            <tr>
-                <td align="center" valign="top">
-                    <table border="0" cellpadding="0" cellspacing="0" width="600">
-                        <tr>
-                            <td align="center" valign="top">
-                                <!-- Begin Template Body -->
-                                <table border="0" cellpadding="0" cellspacing="0" width="600">
-                                    <tr>
-                                        <td style="width:100%; height: 90px; padding-bottom: 10px;">
-                                            <img alt="{{_accountInfo.AccountName}}" border="0" class="img-logo" height="60px" src="https://{{_accountInfo.AccountName}}.vtexcommercestable.com.br/api/license-manager/site/pub/accounts/{{_accountInfo.Id}}/logos/show" width="auto">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <table width="100%" cellpadding="0" cellspacing="0" align="center">
-                                                <tr>
-                                                    <td style="text-align: justify;">
-                                                        Hi <strong>{{addressee.name}}</strong>,
-                                                        <br />
-                                                        <br />
-                                                        The following product you requested is available for purchase:
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td height="15"></td>
-                                                </tr>
-                                                <!-- Product information -->
-                                                <tr>
-                                                    <td>
-                                                        <table width="88%" cellpadding="0" cellspacing="0" align="center" style="border: 1px solid #969696; padding: 20px; text-align: justify;">
-                                                            <tr>
-                                                                <td>
-                                                                    <strong>Product:</strong>
-                                                                    <br />
-                                                                    <a href="{{productLink}}" target="_blank">{{productName}}</a>
-                                                                    <br />
-                                                                    <br />
-                                                                    <strong>Product details:</strong>
-                                                                    <br />
-                                                                    {{productDescription}}
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                <!-- End Product information -->
-                                                <tr>
-                                                    <td>
-                                                        <br />
-                                                        We appreciate your interest!
-                                                        <br />
-                                                        <br />
-                                                        Best regards,
-                                                        <br />
-                                                        <strong>{{_accountInfo.TradingName}}</strong>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <!-- End Template Body -->
-                            </td>
-                        </tr>
-                    </table>
+<body id="body" style="margin: 0; padding: 0; background-color: #f4f4f4;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f4f4f4;">
+  <tr>
+    <td align="center" valign="top" style="padding: 24px 0;">
+      <table role="presentation" class="email-container" cellpadding="0" cellspacing="0" border="0" width="640" style="max-width: 640px; width: 100%; background-color: #ffffff; border-top: 7px solid #000000;">
+
+        <!-- HEADER -->
+        <tr>
+          <td align="center" class="mobile-padding" style="padding: 32px 40px 24px; border-bottom: 1px solid #eeeeee;">
+            <a href="https://{{_accountInfo.HostName}}" style="text-decoration: none; display: block;">
+              <img src="https://licensemanager.vtex.com.br/api/site/pub/accounts/{{_accountInfo.Id}}/logos/show" width="172" alt="{{_accountInfo.TradingName}}" border="0" style="display: block; margin: 0 auto; max-width: 172px; height: auto;"/>
+            </a>
+          </td>
+        </tr>
+
+        <!-- TITLE -->
+        <tr>
+          <td align="center" class="mobile-padding" style="padding: 40px 40px 24px; border-bottom: 1px solid #eeeeee;">
+            {{#eq clientPreferencesData.locale "fr-CA"}}
+            <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 32px; line-height: 40px; font-weight: 700; color: #000000; margin: 0 0 12px;">Votre article est de nouveau disponible.</h1>
+            {{else}}
+            <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 32px; line-height: 40px; font-weight: 700; color: #000000; margin: 0 0 12px;">Your item is back in stock.</h1>
+            {{/eq}}
+          </td>
+        </tr>
+
+        <!-- MESSAGE -->
+        <tr>
+          <td class="mobile-padding" style="padding: 32px 40px 0;">
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 24px; color: #333333; margin: 0 0 12px;">
+              {{#if addressee.name}}
+                {{#eq clientPreferencesData.locale "fr-CA"}}Bonjour {{addressee.name}},{{else}}Hi {{addressee.name}},{{/eq}}
+              {{/if}}
+            </p>
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 24px; color: #333333; margin: 0 0 24px;">
+              {{#eq clientPreferencesData.locale "fr-CA"}}
+                L'article que vous suiviez est de nouveau disponible. Commandez dès maintenant avant qu'il ne soit épuisé.
+              {{else}}
+                The item you were watching is now available. Order now before it sells out again.
+              {{/eq}}
+            </p>
+          </td>
+        </tr>
+
+        <!-- DIVIDER -->
+        <tr><td style="border-top: 1px solid #eeeeee; height: 1px; line-height: 1px; font-size: 1px;">&nbsp;</td></tr>
+
+        <!-- PRODUCT -->
+        <tr>
+          <td class="mobile-padding" style="padding: 32px 40px;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #333333;">
+                  <p style="margin: 0 0 8px; font-size: 18px; font-weight: 700; color: #000000; line-height: 26px;">{{productName}}</p>
+                  {{#if productDescription}}
+                  <p style="margin: 0 0 20px; font-size: 14px; color: #777777; line-height: 22px;">{{productDescription}}</p>
+                  {{/if}}
+                  <p style="margin: 0;">
+                    <a href="{{productLink}}" style="display: inline-block; background-color: #000000; color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 700; text-decoration: none; padding: 14px 28px; letter-spacing: 0.5px;">
+                      {{#eq clientPreferencesData.locale "fr-CA"}}Acheter maintenant{{else}}Shop Now{{/eq}}
+                    </a>
+                  </p>
                 </td>
-            </tr>
-        </table>
-    </center>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- DIVIDER -->
+        <tr><td style="border-top: 1px solid #eeeeee; height: 1px; line-height: 1px; font-size: 1px;">&nbsp;</td></tr>
+
+        <!-- CLOSING -->
+        <tr>
+          <td class="mobile-padding" style="padding: 32px 40px;">
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 24px; color: #333333; margin: 0;">
+              {{#eq clientPreferencesData.locale "fr-CA"}}Cordialement,{{else}}Kind regards,{{/eq}}<br/>
+              {{_accountInfo.TradingName}}
+            </p>
+          </td>
+        </tr>
+
+        <!-- FOOTER -->
+        <tr>
+          <td style="background-color: #000000; padding: 32px 40px;" class="mobile-padding">
+            <p style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px; color: #777777; text-align: center;">&copy; {{_accountInfo.TradingName}}</p>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
 </body>
 </html>
