@@ -1,66 +1,66 @@
 {
 	"items": [
 		{
-			"imageUrl": "https://vpclqa.vteximg.com.br/arquivos/ids/155474-55-55/60tabs.png?v=638933113700200000",
-			"name": "V******",
-			"quantity": 6,
-			"sellingPrice": 120
+			"imageUrl": "",
+			"name": "Sac Caviar & Or Noir",
+			"quantity": 1,
+			"sellingPrice": 2700
 		}
 	],
-	"orderId": "1569560500441-01",
+	"orderId": "735179",
 	"package": {
 		"type": "Input",
 		"items": [
 			{
 				"itemIndex": 0,
-				"id": "40004",
-				"uniqueId": "CFAC4B8C03664C648209DCBBA784813B",
+				"id": "1",
+				"uniqueId": "AP0250Y01480C3906-01",
 				"quantity": 1,
-				"price": 13560,
-				"description": null,
+				"price": 2700,
+				"description": "Sac Caviar & Or Noir",
 				"unitMultiplier": 1
 			}
 		],
 		"restitutions": {
 			"Refund": {
-				"value": 13560
+				"value": 2700
 			}
 		}
 	},
 	"storePreferencesData": {
-		"currencySymbol": "$"
+		"currencySymbol": "€"
 	},
 	"clientProfileData": {
 		"id": null,
-		"userProfileId": "d08e9d12-f949-46ce-951c-693e7e19fbf4",
+		"userProfileId": "user-735179",
 		"userProfileVersion": null,
-		"firstName": "d****",
-		"lastName": "p*****",
-		"email": "c*******************************@c*.v***.c**.b*",
-		"document": null,
-		"corporateDocument": "A***",
-		"corporateName": "A*** W*** V********* H******* ",
-		"documentType": null,
-		"phone": "6*********",
-		"tradeName": "a**",
-		"stateInscription": "000000000",
-		"corporatePhone": "6477817560",
-		"isCorporate": true,
+		"firstName": "Léana",
+		"lastName": "BELKHIRI",
+		"email": "leana.belkhiri@email.com",
+		"document": "542052766",
+		"corporateDocument": null,
+		"corporateName": null,
+		"documentType": "siret",
+		"phone": "+33 (0) 1 44 50 66 00",
+		"tradeName": null,
+		"stateInscription": null,
+		"corporatePhone": null,
+		"isCorporate": false,
 		"customerClass": null,
-		"customerCode": null
+		"customerCode": "BELKHIRI-735179"
 	},
 	"_accountInfo": {
-		"MainAccountName": "v*****",
-		"AccountName": "v*****",
+		"MainAccountName": "chanel",
+		"AccountName": "chanel",
 		"Cnpj": null,
 		"Id": "3a4eb6e1-9a0c-4304-8701-466d970119b5",
 		"AppId": null,
 		"IsActive": true,
-		"IsOperating": false,
-		"CreationDate": "2025-06-09T18:14:42.9979136Z",
-		"OperationDate": null,
-		"CompanyName": "V********************************",
-		"TradingName": "V****************************",
+		"IsOperating": true,
+		"CreationDate": "2021-09-14T14:34:00.000+00:00",
+		"OperationDate": "2021-09-14T14:34:00.000+00:00",
+		"CompanyName": "CHANEL",
+		"TradingName": "CHANEL",
 		"City": null,
 		"Complement": null,
 		"Country": null,

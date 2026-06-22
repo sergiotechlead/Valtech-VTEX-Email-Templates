@@ -1,64 +1,62 @@
 {
-    "orders": [
+	"orders": [
 		{
 			"package": null,
 			"subjectItemAttachment": {
-				"item": "Camisa Flamengo Bran...",
+				"item": "Sac Caviar & Or Noir",
 				"totalItems": 1
 			},
 			"items": [
 				{
 					"additionalInfo": {
 						"dimension": {
-							"cubicweight": 0.0002,
-							"height": 1,
-							"length": 1,
-							"weight": 1,
-							"width": 1
+							"cubicweight": 1,
+							"height": 0,
+							"length": 0,
+							"weight": 0,
+							"width": 0
 						},
-						"categoriesIds": "/1/2/3/",
-						"productClusterId": "135",
+						"categoriesIds": "/1/",
+						"productClusterId": "",
 						"commercialConditionId": "1",
-						"brandName": "Marca 1",
-						"brandId": "2000001",
+						"brandName": "CHANEL",
+						"brandId": "1",
 						"offeringInfo": null,
 						"offeringType": null,
 						"offeringTypeId": null
 					},
-					"sellerSku": "249",
-					"priceValidUntil": "2019-01-12T17:10:13.7672225Z",
+					"sellerSku": "AP0250Y01480C3906",
+					"priceValidUntil": "2022-09-14T14:34:00.000+00:00",
 					"callCenterOperator": null,
 					"commission": 0,
 					"freightCommission": 0,
-					"uniqueId": "D58BC2B842E941C29D6782521A0F5D39",
-					"id": "249",
-					"productId": "234",
-					"refId": "209290",
-					"ean": "7898947707044",
-					"name": "Camisa Flamengo Branca",
-					"skuName": "Camisa Flamengo Branca",
+					"uniqueId": "AP0250Y01480C3906-01",
+					"id": "1",
+					"productId": "1",
+					"refId": "AP0250Y01480C3906",
+					"ean": "",
+					"name": "Sac Caviar & Or Noir",
+					"skuName": "Sac Caviar & Or Noir",
 					"modalType": null,
-					"tax": 0,
-					"price": 24900,
-					"listPrice": 1000,
+					"tax": 450,
+					"price": 2700,
+					"listPrice": 2700,
 					"manualPrice": null,
-					"sellingPrice": 24900,
+					"sellingPrice": 2700,
 					"rewardValue": 0,
 					"isGift": false,
 					"preSaleDate": null,
-					"productCategoryIds": "/1/2/3/",
+					"productCategoryIds": "/1/",
 					"productCategories": {
-						"1": "Departamento 1",
-						"2": "Categoria 1.1",
-						"3": "Subcategoria 1.1"
+						"1": "Maroquinerie"
 					},
 					"defaultPicker": null,
 					"handlerSequence": 0,
 					"handling": false,
 					"quantity": 1,
-					"seller": "vtexgame3",
-					"imageUrl": "http://vtexgame1.vteximg.com.br/arquivos/ids/155631-55-55/camisaflamentobranca.jpg?v=636506877240300000",
-					"detailUrl": "/camisa-flamengo-branca/p",
+					"seller": "1",
+					"imageUrl": "",
+					"detailUrl": "/sac-caviar-or-noir/p",
 					"components": [],
 					"bundleItems": [],
 					"attachments": [],
@@ -77,10 +75,10 @@
 			"sellers": [
 				{
 					"subSellerId": "1",
-					"fulfillmentEndpoint": "http://vtexgame3.vtexcommercestable.com.br/api/fulfillment?affiliateid=SLR&sc=1",
-					"id": "vtexgame3",
-					"name": "vtexgame3",
-					"logo": null
+					"fulfillmentEndpoint": "http://fulfillment.vtexcommerce.com.br/api/fulfillment?an=chanel",
+					"id": "1",
+					"name": "CHANEL",
+					"logo": "https://chanel.com/logo.png"
 				}
 			],
 			"paymentData": {
@@ -88,22 +86,17 @@
 				"transactions": [
 					{
 						"isActive": true,
-						"transactionId": "0CA402D1F7BF496D8743EB26DFE95E99",
-						"merchantName": "VTEXGAME1",
+						"transactionId": "TXN-735179",
+						"merchantName": "CHANEL",
 						"payments": [
 							{
-								"id": "C7181098298349BCA87DEB5A1E9DC1B3",
-								"paymentSystem": "6",
-								"paymentSystemName": "Boleto Bancário",
-								"value": 51599,
+								"id": "PAY-735179",
+								"paymentSystem": "1",
+								"paymentSystemName": "Especes Euros",
+								"value": 2700,
 								"installments": 1,
-								"connectorResponses": {
-									"Tid": "00581115",
-									"ReturnCode": null,
-									"Message": null,
-									"authId": "581115"
-								},
-								"referenceValue": 51599,
+								"connectorResponses": {},
+								"referenceValue": 2700,
 								"cardHolder": null,
 								"cardNumber": null,
 								"firstDigits": null,
@@ -113,12 +106,12 @@
 								"expireYear": null,
 								"url": null,
 								"koinUrl": null,
-								"tid": "00581115",
+								"tid": null,
 								"redemptionCode": null,
 								"giftCardId": null,
 								"giftCardProvider": null,
 								"giftCardAsDiscount": null,
-								"group": "bankInvoice",
+								"group": "cash",
 								"dueDate": null,
 								"accountId": null,
 								"parentAccountId": null
@@ -131,54 +124,54 @@
 			"receiptData": null,
 			"contextData": null,
 			"marketPlaceOrderId": "",
-			"orderFormId": "9d92714161af47d78e93647318aabeef",
-			"sequence": "549100",
-			"affiliateId": "",
+			"orderFormId": "chanel-735179",
+			"sequence": "AA01455969",
+			"affiliateId": "CHN",
 			"status": "",
 			"callCenterOperator": "",
-			"userProfileId": "d79f2b67-2d3f-4cd8-9337-5f5dda7c757a",
-			"hostName": "vtexgame1",
+			"userProfileId": "user-735179",
+			"hostName": "chanel",
 			"creationVersion": null,
 			"creationEnvironment": null,
 			"lastChangeVersion": null,
 			"workflowInstanceId": null,
-			"orderId": "802810590387-01",
-			"orderGroup": "802810590387",
-			"state": "order-completed",
+			"orderId": "735179",
+			"orderGroup": "735179",
+			"state": "payment-approved",
 			"isCheckedIn": false,
-			"sellerOrderId": "SLR-802810590387-01",
+			"sellerOrderId": "00-v735179chanel-01",
 			"storeId": null,
-			"value": 25099,
+			"value": 2700,
 			"totals": [
 				{
 					"id": "Items",
-					"name": "Total dos Itens",
-					"value": 24900
+					"name": "Total des Articles",
+					"value": 2700
 				},
 				{
 					"id": "Discounts",
-					"name": "Total dos Descontos",
+					"name": "Total des Remises",
 					"value": 0
 				},
 				{
 					"id": "Shipping",
-					"name": "Total do Frete",
-					"value": 199
+					"name": "Total de la Livraison",
+					"value": 0
 				},
 				{
 					"id": "Tax",
-					"name": "Total da Taxa",
-					"value": 0
+					"name": "Total de la TVA",
+					"value": 450
 				}
 			],
 			"clientProfileData": {
 				"attachmentId": "clientProfileData",
-				"email": "ellen.silva@vtex.com.br-7042b.ct.vtex.com.br",
-				"firstName": "Ellen",
-				"lastName": "Silva",
-				"document": "72724282604",
-				"documentType": "cpf",
-				"phone": "+5521987497007",
+				"email": "leana.belkhiri@email.com",
+				"firstName": "Léana",
+				"lastName": "BELKHIRI",
+				"document": "542052766",
+				"documentType": "siret",
+				"phone": "+33 (0) 1 44 50 66 00",
 				"corporateName": null,
 				"tradeName": null,
 				"corporateDocument": null,
@@ -198,15 +191,15 @@
 				"attachmentId": "shippingData",
 				"address": {
 					"addressType": "residential",
-					"receiverName": "Ellen Silva",
-					"addressId": "e7f1f88a76ec409c87e45d8b5badd8c4",
-					"postalCode": "22011-050",
-					"city": "Rio de Janeiro",
-					"state": "RJ",
-					"country": "BRA",
-					"street": "Rua General Azevedo Pimentel",
-					"number": "4",
-					"neighborhood": "Copacabana",
+					"receiverName": "Madame Léana BELKHIRI",
+					"addressId": "66000",
+					"postalCode": "66000",
+					"city": "PERPIGNAN",
+					"state": "",
+					"country": "FRA",
+					"street": "22 ESPACE MEDITERRANEE",
+					"number": "",
+					"neighborhood": "",
 					"complement": null,
 					"reference": null,
 					"geoCoordinates": []
@@ -214,210 +207,30 @@
 				"logisticsInfo": [
 					{
 						"itemIndex": 0,
-						"selectedSla": "normal",
+						"selectedSla": "Standard",
 						"selectedDeliveryChannel": "delivery",
-						"addressId": "e7f1f88a76ec409c87e45d8b5badd8c4",
+						"addressId": "66000",
 						"slas": [
 							{
-								"id": "pickup (128fcc8)",
-								"deliveryChannel": "pickup-in-point",
-								"name": "pickup (128fcc8)",
+								"id": "Standard",
+								"deliveryChannel": "delivery",
+								"name": "Standard",
 								"deliveryIds": [
 									{
-										"courierId": "18f89ac",
-										"warehouseId": "1",
-										"dockId": "10c4d1c",
-										"courierName": "Retirada",
+										"courierId": "chanel_courier",
+										"warehouseId": "warehouse_paris",
+										"dockId": "dock_chanel",
+										"courierName": "CHANEL Express",
 										"quantity": 1
 									}
 								],
-								"shippingEstimate": "0bd",
-								"shippingEstimateDate": null,
-								"lockTTL": "12d",
-								"availableDeliveryWindows": [
-									{
-										"startDateUtc": "2018-01-15T09:00:00+00:00",
-										"endDateUtc": "2018-01-15T19:00:00+00:00",
-										"price": 0,
-										"lisPrice": 0,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2018-01-16T09:00:00+00:00",
-										"endDateUtc": "2018-01-16T19:00:00+00:00",
-										"price": 0,
-										"lisPrice": 0,
-										"tax": 0
-									}
-								],
+								"shippingEstimate": "3bd",
+								"shippingEstimateDate": "2021-09-17T14:34:00.000+00:00",
+								"lockTTL": "10d",
+								"availableDeliveryWindows": [],
 								"deliveryWindow": null,
 								"price": 0,
 								"listPrice": 0,
-								"tax": 0,
-								"pickupStoreInfo": {
-									"isPickupStore": true,
-									"friendlyName": "Loja oficial do flamengo",
-									"address": {
-										"addressType": "pickup",
-										"receiverName": null,
-										"addressId": "128fcc8",
-										"postalCode": "22060002",
-										"city": "Rio de Janeiro",
-										"state": "RJ",
-										"country": "BRA",
-										"street": "Avenida Nossa Senhora de Copacabana",
-										"number": "",
-										"neighborhood": "Copacabana",
-										"complement": "",
-										"reference": null,
-										"geoCoordinates": [
-											-43.19089889526367,
-											-22.979047775268555
-										]
-									},
-									"additionalInfo": "Levar documento e comprovante de pagamento",
-									"dockId": "10c4d1c"
-								}
-							},
-							{
-								"id": "pickup (1c553cc)",
-								"deliveryChannel": "pickup-in-point",
-								"name": "pickup (1c553cc)",
-								"deliveryIds": [
-									{
-										"courierId": "157e25a",
-										"warehouseId": "1",
-										"dockId": "1664733",
-										"courierName": "Retirada na loja",
-										"quantity": 1
-									}
-								],
-								"shippingEstimate": "0bd",
-								"shippingEstimateDate": null,
-								"lockTTL": "12d",
-								"availableDeliveryWindows": [
-									{
-										"startDateUtc": "2018-01-13T10:00:00+00:00",
-										"endDateUtc": "2018-01-13T19:00:00+00:00",
-										"price": 0,
-										"lisPrice": 0,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2018-01-14T10:00:00+00:00",
-										"endDateUtc": "2018-01-14T19:00:00+00:00",
-										"price": 0,
-										"lisPrice": 0,
-										"tax": 0
-									}
-								],
-								"deliveryWindow": null,
-								"price": 0,
-								"listPrice": 0,
-								"tax": 0,
-								"pickupStoreInfo": {
-									"isPickupStore": true,
-									"friendlyName": "ESTADIO DO MARACANÃ",
-									"address": {
-										"addressType": "pickup",
-										"receiverName": null,
-										"addressId": "1c553cc",
-										"postalCode": "20271130",
-										"city": "Rio de Janeiro",
-										"state": "RJ",
-										"country": "BRA",
-										"street": "Avenida Presidente Castelo Branco",
-										"number": "3",
-										"neighborhood": "Maracanã",
-										"complement": "portao 3",
-										"reference": null,
-										"geoCoordinates": [
-											-43.22951126098633,
-											-22.910478591918945
-										]
-									},
-									"additionalInfo": "",
-									"dockId": "1664733"
-								}
-							},
-							{
-								"id": "normal",
-								"deliveryChannel": "delivery",
-								"name": "normal",
-								"deliveryIds": [
-									{
-										"courierId": "13640f5",
-										"warehouseId": "138d525",
-										"dockId": "1",
-										"courierName": "Normal",
-										"quantity": 1
-									}
-								],
-								"shippingEstimate": "11bd",
-								"shippingEstimateDate": null,
-								"lockTTL": "12d",
-								"availableDeliveryWindows": [],
-								"deliveryWindow": null,
-								"price": 199,
-								"listPrice": 199,
-								"tax": 0,
-								"pickupStoreInfo": {
-									"isPickupStore": false,
-									"friendlyName": null,
-									"address": null,
-									"additionalInfo": null,
-									"dockId": null
-								}
-							},
-							{
-								"id": "PAC",
-								"deliveryChannel": "delivery",
-								"name": "PAC",
-								"deliveryIds": [
-									{
-										"courierId": "1",
-										"warehouseId": "1",
-										"dockId": "1",
-										"courierName": "PAC",
-										"quantity": 1
-									}
-								],
-								"shippingEstimate": "13bd",
-								"shippingEstimateDate": null,
-								"lockTTL": "12d",
-								"availableDeliveryWindows": [],
-								"deliveryWindow": null,
-								"price": 1200,
-								"listPrice": 1200,
-								"tax": 0,
-								"pickupStoreInfo": {
-									"isPickupStore": false,
-									"friendlyName": null,
-									"address": null,
-									"additionalInfo": null,
-									"dockId": null
-								}
-							},
-							{
-								"id": "Expressa",
-								"deliveryChannel": "delivery",
-								"name": "Expressa",
-								"deliveryIds": [
-									{
-										"courierId": "2",
-										"warehouseId": "1",
-										"dockId": "1",
-										"courierName": "SEDEX",
-										"quantity": 1
-									}
-								],
-								"shippingEstimate": "14bd",
-								"shippingEstimateDate": null,
-								"lockTTL": "12d",
-								"availableDeliveryWindows": [],
-								"deliveryWindow": null,
-								"price": 3005,
-								"listPrice": 3005,
 								"tax": 0,
 								"pickupStoreInfo": {
 									"isPickupStore": false,
@@ -429,15 +242,12 @@
 							}
 						],
 						"shipsTo": [
-							"BRA"
+							"FRA"
 						],
-						"itemId": "249",
+						"itemId": "1",
 						"deliveryChannels": [
 							{
 								"id": "delivery"
-							},
-							{
-								"id": "pickup-in-point"
 							}
 						]
 					}
@@ -445,15 +255,15 @@
 				"selectedAddresses": [
 					{
 						"addressType": "residential",
-						"receiverName": "Ellen Silva",
-						"addressId": "e7f1f88a76ec409c87e45d8b5badd8c4",
-						"postalCode": "22011-050",
-						"city": "Rio de Janeiro",
-						"state": "RJ",
-						"country": "BRA",
-						"street": "Rua General Azevedo Pimentel",
-						"number": "4",
-						"neighborhood": "Copacabana",
+						"receiverName": "Madame Léana BELKHIRI",
+						"addressId": "66000",
+						"postalCode": "66000",
+						"city": "PERPIGNAN",
+						"state": "",
+						"country": "FRA",
+						"street": "22 ESPACE MEDITERRANEE",
+						"number": "",
+						"neighborhood": "",
 						"complement": null,
 						"reference": null,
 						"geoCoordinates": []
@@ -462,15 +272,15 @@
 				"availableAddresses": [
 					{
 						"addressType": "residential",
-						"receiverName": "Ellen Silva",
-						"addressId": "e7f1f88a76ec409c87e45d8b5badd8c4",
-						"postalCode": "22011-050",
-						"city": "Rio de Janeiro",
-						"state": "RJ",
-						"country": "BRA",
-						"street": "Rua General Azevedo Pimentel",
-						"number": "4",
-						"neighborhood": "Copacabana",
+						"receiverName": "Madame Léana BELKHIRI",
+						"addressId": "66000",
+						"postalCode": "66000",
+						"city": "PERPIGNAN",
+						"state": "",
+						"country": "FRA",
+						"street": "22 ESPACE MEDITERRANEE",
+						"number": "",
+						"neighborhood": "",
 						"complement": null,
 						"reference": null,
 						"geoCoordinates": []
@@ -479,25 +289,25 @@
 			},
 			"clientPreferencesData": {
 				"attachmentId": "clientPreferencesData",
-				"locale": "pt-BR",
-				"optinNewsLetter": true
+				"locale": "fr-FR",
+				"optinNewsLetter": false
 			},
 			"commercialConditionData": null,
 			"marketingData": null,
 			"storePreferencesData": {
-				"countryCode": "BRA",
+				"countryCode": "FRA",
 				"checkToSavePersonDataByDefault": false,
 				"templateOptions": {
 					"toggleCorporate": false
 				},
-				"timeZone": "E. South America Standard Time",
-				"currencyCode": "BRL",
-				"currencyLocale": 1046,
-				"currencySymbol": "R$",
+				"timeZone": "Romance Standard Time",
+				"currencyCode": "EUR",
+				"currencyLocale": 1036,
+				"currencySymbol": "€",
 				"currencyFormatInfo": {
 					"currencyDecimalDigits": 2,
 					"currencyDecimalSeparator": ",",
-					"currencyGroupSeparator": ".",
+					"currencyGroupSeparator": " ",
 					"currencyGroupSize": 3,
 					"startsWithCurrencySymbol": true
 				}
@@ -507,77 +317,75 @@
 			"hooksData": null,
 			"changeData": null,
 			"salesChannel": "1",
-			"followUpEmail": "5ba254738e734aac8590d60a774b57a3@ct.vtex.com.br",
-			"creationDate": "2018-01-12T17:10:16.8620953Z",
-			"lastChange": "2018-01-12T17:10:34.6384913Z",
-			"timeZoneCreationDate": "2018-01-12T15:10:16.8620953",
-			"timeZoneLastChange": "2018-01-12T15:10:34.6384913",
-			"isCompleted": true,
-			"merchantName": null,
+			"followUpEmail": "service@chanel.com",
+			"creationDate": "2021-09-14T14:34:00.000+00:00",
+			"lastChange": "2021-09-14T14:34:00.000+00:00",
+			"timeZoneCreationDate": "2021-09-14T14:34:00.000",
+			"timeZoneLastChange": "2021-09-14T14:34:00.000",
+			"isCompleted": false,
+			"merchantName": "chanel",
 			"userType": "",
 			"roundingError": 0,
 			"allowEdition": false,
-			"allowCancellation": false
+			"allowCancellation": true
 		},
 		{
 			"package": null,
 			"subjectItemAttachment": {
-				"item": "Camisa Flamengo",
+				"item": "Sac Caviar & Or Noir",
 				"totalItems": 1
 			},
 			"items": [
 				{
 					"additionalInfo": {
 						"dimension": {
-							"cubicweight": 0.0002,
-							"height": 1,
-							"length": 1,
-							"weight": 1,
-							"width": 1
+							"cubicweight": 1,
+							"height": 0,
+							"length": 0,
+							"weight": 0,
+							"width": 0
 						},
-						"categoriesIds": "/1/2/3/",
-						"productClusterId": "135",
+						"categoriesIds": "/1/",
+						"productClusterId": "",
 						"commercialConditionId": "1",
-						"brandName": "Marca 1",
-						"brandId": "2000001",
+						"brandName": "CHANEL",
+						"brandId": "1",
 						"offeringInfo": null,
 						"offeringType": null,
 						"offeringTypeId": null
 					},
-					"sellerSku": "250",
-					"priceValidUntil": "2019-01-12T17:10:13.7672225Z",
+					"sellerSku": "AP0250Y01480C3906",
+					"priceValidUntil": "2022-09-14T14:34:00.000+00:00",
 					"callCenterOperator": null,
 					"commission": 0,
 					"freightCommission": 0,
-					"uniqueId": "03F0FCA2FA0D4C6A9466ACBD809EBE48",
-					"id": "250",
-					"productId": "235",
-					"refId": "197326",
-					"ean": "7898926177332",
-					"name": "Camisa Flamengo",
-					"skuName": "Camisa Flamengo",
+					"uniqueId": "AP0250Y01480C3906-02",
+					"id": "1",
+					"productId": "1",
+					"refId": "AP0250Y01480C3906",
+					"ean": "",
+					"name": "Sac Caviar & Or Noir",
+					"skuName": "Sac Caviar & Or Noir",
 					"modalType": null,
-					"tax": 0,
-					"price": 25000,
-					"listPrice": 1000,
+					"tax": 450,
+					"price": 2700,
+					"listPrice": 2700,
 					"manualPrice": null,
-					"sellingPrice": 25000,
+					"sellingPrice": 2700,
 					"rewardValue": 0,
 					"isGift": false,
 					"preSaleDate": null,
-					"productCategoryIds": "/1/2/3/",
+					"productCategoryIds": "/1/",
 					"productCategories": {
-						"1": "Departamento 1",
-						"2": "Categoria 1.1",
-						"3": "Subcategoria 1.1"
+						"1": "Maroquinerie"
 					},
 					"defaultPicker": null,
 					"handlerSequence": 0,
 					"handling": false,
 					"quantity": 1,
-					"seller": "vtexgame2",
-					"imageUrl": "http://vtexgame1.vteximg.com.br/arquivos/ids/155630-55-55/camisaflamengo.jpg?v=636506874809700000",
-					"detailUrl": "/camisa-flamengo/p",
+					"seller": "1",
+					"imageUrl": "",
+					"detailUrl": "/sac-caviar-or-noir/p",
 					"components": [],
 					"bundleItems": [],
 					"attachments": [],
@@ -596,10 +404,10 @@
 			"sellers": [
 				{
 					"subSellerId": "1",
-					"fulfillmentEndpoint": "http://vtexgame2.vtexcommercestable.com.br/api/fulfillment?affiliateid=SLR&sc=1",
-					"id": "vtexgame2",
-					"name": "vtexgame2",
-					"logo": null
+					"fulfillmentEndpoint": "http://fulfillment.vtexcommerce.com.br/api/fulfillment?an=chanel",
+					"id": "1",
+					"name": "CHANEL",
+					"logo": "https://chanel.com/logo.png"
 				}
 			],
 			"paymentData": {
@@ -607,22 +415,17 @@
 				"transactions": [
 					{
 						"isActive": true,
-						"transactionId": "0CA402D1F7BF496D8743EB26DFE95E99",
-						"merchantName": "VTEXGAME1",
+						"transactionId": "TXN-735180",
+						"merchantName": "CHANEL",
 						"payments": [
 							{
-								"id": "C7181098298349BCA87DEB5A1E9DC1B3",
-								"paymentSystem": "6",
-								"paymentSystemName": "Boleto Bancário",
-								"value": 51599,
+								"id": "PAY-735180",
+								"paymentSystem": "1",
+								"paymentSystemName": "Especes Euros",
+								"value": 2700,
 								"installments": 1,
-								"connectorResponses": {
-									"Tid": "00581115",
-									"ReturnCode": null,
-									"Message": null,
-									"authId": "581115"
-								},
-								"referenceValue": 51599,
+								"connectorResponses": {},
+								"referenceValue": 2700,
 								"cardHolder": null,
 								"cardNumber": null,
 								"firstDigits": null,
@@ -632,12 +435,12 @@
 								"expireYear": null,
 								"url": null,
 								"koinUrl": null,
-								"tid": "00581115",
+								"tid": null,
 								"redemptionCode": null,
 								"giftCardId": null,
 								"giftCardProvider": null,
 								"giftCardAsDiscount": null,
-								"group": "bankInvoice",
+								"group": "cash",
 								"dueDate": null,
 								"accountId": null,
 								"parentAccountId": null
@@ -650,54 +453,54 @@
 			"receiptData": null,
 			"contextData": null,
 			"marketPlaceOrderId": "",
-			"orderFormId": "9d92714161af47d78e93647318aabeef",
-			"sequence": "549102",
-			"affiliateId": "",
+			"orderFormId": "chanel-735180",
+			"sequence": "AA01455970",
+			"affiliateId": "CHN",
 			"status": "",
 			"callCenterOperator": "",
-			"userProfileId": "d79f2b67-2d3f-4cd8-9337-5f5dda7c757a",
-			"hostName": "vtexgame1",
+			"userProfileId": "user-735179",
+			"hostName": "chanel",
 			"creationVersion": null,
 			"creationEnvironment": null,
 			"lastChangeVersion": null,
 			"workflowInstanceId": null,
-			"orderId": "802810590387-02",
-			"orderGroup": "802810590387",
-			"state": "order-completed",
+			"orderId": "735180",
+			"orderGroup": "735179",
+			"state": "payment-approved",
 			"isCheckedIn": false,
-			"sellerOrderId": "SLR-802810590387-02",
+			"sellerOrderId": "00-v735180chanel-01",
 			"storeId": null,
-			"value": 26500,
+			"value": 2700,
 			"totals": [
 				{
 					"id": "Items",
-					"name": "Total dos Itens",
-					"value": 25000
+					"name": "Total des Articles",
+					"value": 2700
 				},
 				{
 					"id": "Discounts",
-					"name": "Total dos Descontos",
+					"name": "Total des Remises",
 					"value": 0
 				},
 				{
 					"id": "Shipping",
-					"name": "Total do Frete",
-					"value": 1500
+					"name": "Total de la Livraison",
+					"value": 0
 				},
 				{
 					"id": "Tax",
-					"name": "Total da Taxa",
-					"value": 0
+					"name": "Total de la TVA",
+					"value": 450
 				}
 			],
 			"clientProfileData": {
 				"attachmentId": "clientProfileData",
-				"email": "ellen.silva@vtex.com.br-7043b.ct.vtex.com.br",
-				"firstName": "Ellen",
-				"lastName": "Silva",
-				"document": "72724282604",
-				"documentType": "cpf",
-				"phone": "+5521987497007",
+				"email": "leana.belkhiri@email.com",
+				"firstName": "Léana",
+				"lastName": "BELKHIRI",
+				"document": "542052766",
+				"documentType": "siret",
+				"phone": "+33 (0) 1 44 50 66 00",
 				"corporateName": null,
 				"tradeName": null,
 				"corporateDocument": null,
@@ -717,15 +520,15 @@
 				"attachmentId": "shippingData",
 				"address": {
 					"addressType": "residential",
-					"receiverName": "Ellen Silva",
-					"addressId": "e7f1f88a76ec409c87e45d8b5badd8c4",
-					"postalCode": "22011-050",
-					"city": "Rio de Janeiro",
-					"state": "RJ",
-					"country": "BRA",
-					"street": "Rua General Azevedo Pimentel",
-					"number": "4",
-					"neighborhood": "Copacabana",
+					"receiverName": "Madame Léana BELKHIRI",
+					"addressId": "66000",
+					"postalCode": "66000",
+					"city": "PERPIGNAN",
+					"state": "",
+					"country": "FRA",
+					"street": "22 ESPACE MEDITERRANEE",
+					"number": "",
+					"neighborhood": "",
 					"complement": null,
 					"reference": null,
 					"geoCoordinates": []
@@ -733,210 +536,30 @@
 				"logisticsInfo": [
 					{
 						"itemIndex": 0,
-						"selectedSla": "normal",
+						"selectedSla": "Standard",
 						"selectedDeliveryChannel": "delivery",
-						"addressId": "e7f1f88a76ec409c87e45d8b5badd8c4",
+						"addressId": "66000",
 						"slas": [
 							{
-								"id": "pickup (128fcc8)",
-								"deliveryChannel": "pickup-in-point",
-								"name": "pickup (128fcc8)",
+								"id": "Standard",
+								"deliveryChannel": "delivery",
+								"name": "Standard",
 								"deliveryIds": [
 									{
-										"courierId": "18f89ac",
-										"warehouseId": "1",
-										"dockId": "10c4d1c",
-										"courierName": "Retirada",
+										"courierId": "chanel_courier",
+										"warehouseId": "warehouse_paris",
+										"dockId": "dock_chanel",
+										"courierName": "CHANEL Express",
 										"quantity": 1
 									}
 								],
-								"shippingEstimate": "0bd",
-								"shippingEstimateDate": null,
-								"lockTTL": "12d",
-								"availableDeliveryWindows": [
-									{
-										"startDateUtc": "2018-01-15T09:00:00+00:00",
-										"endDateUtc": "2018-01-15T19:00:00+00:00",
-										"price": 0,
-										"lisPrice": 0,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2018-01-16T09:00:00+00:00",
-										"endDateUtc": "2018-01-16T19:00:00+00:00",
-										"price": 0,
-										"lisPrice": 0,
-										"tax": 0
-									}
-								],
+								"shippingEstimate": "3bd",
+								"shippingEstimateDate": "2021-09-17T14:34:00.000+00:00",
+								"lockTTL": "10d",
+								"availableDeliveryWindows": [],
 								"deliveryWindow": null,
 								"price": 0,
 								"listPrice": 0,
-								"tax": 0,
-								"pickupStoreInfo": {
-									"isPickupStore": true,
-									"friendlyName": "Loja oficial do flamengo",
-									"address": {
-										"addressType": "pickup",
-										"receiverName": null,
-										"addressId": "128fcc8",
-										"postalCode": "22060002",
-										"city": "Rio de Janeiro",
-										"state": "RJ",
-										"country": "BRA",
-										"street": "Avenida Nossa Senhora de Copacabana",
-										"number": "",
-										"neighborhood": "Copacabana",
-										"complement": "",
-										"reference": null,
-										"geoCoordinates": [
-											-43.19089889526367,
-											-22.979047775268555
-										]
-									},
-									"additionalInfo": "Levar documento e comprovante de pagamento",
-									"dockId": "10c4d1c"
-								}
-							},
-							{
-								"id": "pickup (1c553cc)",
-								"deliveryChannel": "pickup-in-point",
-								"name": "pickup (1c553cc)",
-								"deliveryIds": [
-									{
-										"courierId": "157e25a",
-										"warehouseId": "1",
-										"dockId": "1664733",
-										"courierName": "Retirada na loja",
-										"quantity": 1
-									}
-								],
-								"shippingEstimate": "0bd",
-								"shippingEstimateDate": null,
-								"lockTTL": "12d",
-								"availableDeliveryWindows": [
-									{
-										"startDateUtc": "2018-01-13T10:00:00+00:00",
-										"endDateUtc": "2018-01-13T19:00:00+00:00",
-										"price": 0,
-										"lisPrice": 0,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2018-01-14T10:00:00+00:00",
-										"endDateUtc": "2018-01-14T19:00:00+00:00",
-										"price": 0,
-										"lisPrice": 0,
-										"tax": 0
-									}
-								],
-								"deliveryWindow": null,
-								"price": 0,
-								"listPrice": 0,
-								"tax": 0,
-								"pickupStoreInfo": {
-									"isPickupStore": true,
-									"friendlyName": "ESTADIO DO MARACANÃ",
-									"address": {
-										"addressType": "pickup",
-										"receiverName": null,
-										"addressId": "1c553cc",
-										"postalCode": "20271130",
-										"city": "Rio de Janeiro",
-										"state": "RJ",
-										"country": "BRA",
-										"street": "Avenida Presidente Castelo Branco",
-										"number": "3",
-										"neighborhood": "Maracanã",
-										"complement": "portao 3",
-										"reference": null,
-										"geoCoordinates": [
-											-43.22951126098633,
-											-22.910478591918945
-										]
-									},
-									"additionalInfo": "",
-									"dockId": "1664733"
-								}
-							},
-							{
-								"id": "PAC",
-								"deliveryChannel": "delivery",
-								"name": "PAC",
-								"deliveryIds": [
-									{
-										"courierId": "1",
-										"warehouseId": "1bcd5fc",
-										"dockId": "1",
-										"courierName": "PAC",
-										"quantity": 1
-									}
-								],
-								"shippingEstimate": "13bd",
-								"shippingEstimateDate": null,
-								"lockTTL": "12d",
-								"availableDeliveryWindows": [],
-								"deliveryWindow": null,
-								"price": 1200,
-								"listPrice": 1200,
-								"tax": 0,
-								"pickupStoreInfo": {
-									"isPickupStore": false,
-									"friendlyName": null,
-									"address": null,
-									"additionalInfo": null,
-									"dockId": null
-								}
-							},
-							{
-								"id": "normal",
-								"deliveryChannel": "delivery",
-								"name": "normal",
-								"deliveryIds": [
-									{
-										"courierId": "12dbebf",
-										"warehouseId": "1865617",
-										"dockId": "1c11c80",
-										"courierName": "Normal",
-										"quantity": 1
-									}
-								],
-								"shippingEstimate": "22bd",
-								"shippingEstimateDate": null,
-								"lockTTL": "12d",
-								"availableDeliveryWindows": [],
-								"deliveryWindow": null,
-								"price": 1500,
-								"listPrice": 1500,
-								"tax": 0,
-								"pickupStoreInfo": {
-									"isPickupStore": false,
-									"friendlyName": null,
-									"address": null,
-									"additionalInfo": null,
-									"dockId": null
-								}
-							},
-							{
-								"id": "Expressa",
-								"deliveryChannel": "delivery",
-								"name": "Expressa",
-								"deliveryIds": [
-									{
-										"courierId": "2",
-										"warehouseId": "1bcd5fc",
-										"dockId": "1",
-										"courierName": "SEDEX",
-										"quantity": 1
-									}
-								],
-								"shippingEstimate": "14bd",
-								"shippingEstimateDate": null,
-								"lockTTL": "12d",
-								"availableDeliveryWindows": [],
-								"deliveryWindow": null,
-								"price": 3004,
-								"listPrice": 3004,
 								"tax": 0,
 								"pickupStoreInfo": {
 									"isPickupStore": false,
@@ -948,15 +571,12 @@
 							}
 						],
 						"shipsTo": [
-							"BRA"
+							"FRA"
 						],
-						"itemId": "250",
+						"itemId": "1",
 						"deliveryChannels": [
 							{
 								"id": "delivery"
-							},
-							{
-								"id": "pickup-in-point"
 							}
 						]
 					}
@@ -964,15 +584,15 @@
 				"selectedAddresses": [
 					{
 						"addressType": "residential",
-						"receiverName": "Ellen Silva",
-						"addressId": "e7f1f88a76ec409c87e45d8b5badd8c4",
-						"postalCode": "22011-050",
-						"city": "Rio de Janeiro",
-						"state": "RJ",
-						"country": "BRA",
-						"street": "Rua General Azevedo Pimentel",
-						"number": "4",
-						"neighborhood": "Copacabana",
+						"receiverName": "Madame Léana BELKHIRI",
+						"addressId": "66000",
+						"postalCode": "66000",
+						"city": "PERPIGNAN",
+						"state": "",
+						"country": "FRA",
+						"street": "22 ESPACE MEDITERRANEE",
+						"number": "",
+						"neighborhood": "",
 						"complement": null,
 						"reference": null,
 						"geoCoordinates": []
@@ -981,15 +601,15 @@
 				"availableAddresses": [
 					{
 						"addressType": "residential",
-						"receiverName": "Ellen Silva",
-						"addressId": "e7f1f88a76ec409c87e45d8b5badd8c4",
-						"postalCode": "22011-050",
-						"city": "Rio de Janeiro",
-						"state": "RJ",
-						"country": "BRA",
-						"street": "Rua General Azevedo Pimentel",
-						"number": "4",
-						"neighborhood": "Copacabana",
+						"receiverName": "Madame Léana BELKHIRI",
+						"addressId": "66000",
+						"postalCode": "66000",
+						"city": "PERPIGNAN",
+						"state": "",
+						"country": "FRA",
+						"street": "22 ESPACE MEDITERRANEE",
+						"number": "",
+						"neighborhood": "",
 						"complement": null,
 						"reference": null,
 						"geoCoordinates": []
@@ -998,25 +618,25 @@
 			},
 			"clientPreferencesData": {
 				"attachmentId": "clientPreferencesData",
-				"locale": "pt-BR",
-				"optinNewsLetter": true
+				"locale": "fr-FR",
+				"optinNewsLetter": false
 			},
 			"commercialConditionData": null,
 			"marketingData": null,
 			"storePreferencesData": {
-				"countryCode": "BRA",
+				"countryCode": "FRA",
 				"checkToSavePersonDataByDefault": false,
 				"templateOptions": {
 					"toggleCorporate": false
 				},
-				"timeZone": "E. South America Standard Time",
-				"currencyCode": "BRL",
-				"currencyLocale": 1046,
-				"currencySymbol": "R$",
+				"timeZone": "Romance Standard Time",
+				"currencyCode": "EUR",
+				"currencyLocale": 1036,
+				"currencySymbol": "€",
 				"currencyFormatInfo": {
 					"currencyDecimalDigits": 2,
 					"currencyDecimalSeparator": ",",
-					"currencyGroupSeparator": ".",
+					"currencyGroupSeparator": " ",
 					"currencyGroupSize": 3,
 					"startsWithCurrencySymbol": true
 				}
@@ -1026,39 +646,39 @@
 			"hooksData": null,
 			"changeData": null,
 			"salesChannel": "1",
-			"followUpEmail": "81f40188e7e64471b82b0790d91525b3@ct.vtex.com.br",
-			"creationDate": "2018-01-12T17:10:21.1832356Z",
-			"lastChange": "2018-01-12T17:10:30.1039013Z",
-			"timeZoneCreationDate": "2018-01-12T15:10:21.1832356",
-			"timeZoneLastChange": "2018-01-12T15:10:30.1039013",
-			"isCompleted": true,
-			"merchantName": null,
+			"followUpEmail": "service@chanel.com",
+			"creationDate": "2021-09-14T14:34:00.000+00:00",
+			"lastChange": "2021-09-14T14:34:00.000+00:00",
+			"timeZoneCreationDate": "2021-09-14T14:34:00.000",
+			"timeZoneLastChange": "2021-09-14T14:34:00.000",
+			"isCompleted": false,
+			"merchantName": "chanel",
 			"userType": "",
 			"roundingError": 0,
 			"allowEdition": false,
-			"allowCancellation": false
+			"allowCancellation": true
 		}
 	],
-	"ordersUrl": "http://vtexgame1.vtexcommercestable.com.br/account/orders",
-	"orderGroup": "802810590387",
+	"ordersUrl": "https://chanel.com/account/orders",
+	"orderGroup": "735179",
 	"subjectItemAttachment": {
-		"item": "Camisa Flamengo",
+		"item": "Sac Caviar & Or Noir",
 		"totalItems": 2,
 		"extraItems": 1
 	},
 	"split": false,
-	"totalValue": 51599,
+	"totalValue": 5400,
 	"callCenterOperatorData": null,
 	"_accountInfo": {
-		"HostName": "vtexgame1",
-		"MainAccountName": "vtexgame1",
+		"HostName": "chanel",
+		"MainAccountName": "chanel",
 		"IsPersisted": true,
 		"IsRemoved": false,
 		"Id": "e39d05f9-0c54-4469-a626-8bb5cff169f8",
-		"Cnpj": "99999999999999",
-		"CompanyName": "VTEX Developers",
-		"TradingName": "VTEX Developers",
-		"AccountName": "vtexgame1",
+		"Cnpj": null,
+		"CompanyName": "CHANEL",
+		"TradingName": "CHANEL",
+		"AccountName": "chanel",
 		"DefaultUrl": null,
 		"Address": null,
 		"Number": null,
@@ -1067,14 +687,14 @@
 		"City": null,
 		"State": null,
 		"PostalCode": null,
-		"Country": "Brasil",
+		"Country": "France",
 		"Telephone": null,
 		"IsActive": true,
 		"Sponsor": "eb436322-473b-4296-89a9-f129c479be4c",
 		"Logo": null,
 		"AppId": "fddf74e6-cc47-4a7d-8956-f0a6629cb23b",
-		"IsOperating": false,
-		"LV": "LV-1068069",
+		"IsOperating": true,
+		"LV": null,
 		"Sigla": null
 	}
 }

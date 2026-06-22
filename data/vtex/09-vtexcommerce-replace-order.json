@@ -3,61 +3,60 @@
 		{
 			"package": null,
 			"subjectItemAttachment": {
-				"item": "Novalgina",
+				"item": "Sac Caviar & Or Noir",
 				"totalItems": 1
 			},
 			"items": [
 				{
 					"additionalInfo": {
 						"dimension": {
-							"cubicweight": 0.1667,
-							"height": 10,
-							"length": 10,
-							"weight": 10,
-							"width": 10
+							"cubicweight": 1,
+							"height": 0,
+							"length": 0,
+							"weight": 0,
+							"width": 0
 						},
-						"categoriesIds": "/4/5/",
-						"productClusterId": "135",
+						"categoriesIds": "/1/",
+						"productClusterId": "",
 						"commercialConditionId": "1",
-						"brandName": "Marca Exemplo",
-						"brandId": "2000000",
+						"brandName": "CHANEL",
+						"brandId": "1",
 						"offeringInfo": null,
 						"offeringType": null,
 						"offeringTypeId": null
 					},
-					"sellerSku": "15",
-					"priceValidUntil": "2018-11-16T16:30:47.4891129Z",
+					"sellerSku": "AP0250Y01480C3906",
+					"priceValidUntil": "2022-09-14T14:34:00.000+00:00",
 					"callCenterOperator": null,
 					"commission": 0,
 					"freightCommission": 0,
-					"uniqueId": "1824717540CF499FAC3D6D4FF8060683",
-					"id": "15",
-					"productId": "4",
-					"refId": "produtohomologação",
-					"ean": "produtohomologação",
-					"name": "Novalgina",
-					"skuName": "Novalgina",
+					"uniqueId": "AP0250Y01480C3906-01",
+					"id": "1",
+					"productId": "1",
+					"refId": "AP0250Y01480C3906",
+					"ean": "",
+					"name": "Sac Caviar & Or Noir",
+					"skuName": "Sac Caviar & Or Noir",
 					"modalType": null,
-					"tax": 0,
-					"price": 5764,
-					"listPrice": 8000,
+					"tax": 450,
+					"price": 2700,
+					"listPrice": 2700,
 					"manualPrice": null,
-					"sellingPrice": 5764,
+					"sellingPrice": 2700,
 					"rewardValue": 0,
 					"isGift": false,
 					"preSaleDate": null,
-					"productCategoryIds": "/4/5/",
+					"productCategoryIds": "/1/",
 					"productCategories": {
-						"4": "Departamento 2",
-						"5": "Categoria 2.3 (Campo Produto)"
+						"1": "Maroquinerie"
 					},
 					"defaultPicker": null,
 					"handlerSequence": 0,
 					"handling": false,
 					"quantity": 1,
 					"seller": "1",
-					"imageUrl": "http://qamarketplace.vteximg.com.br/arquivos/ids/155400-55-55/Novalgina.jpg?v=635985172600570000",
-					"detailUrl": "/novalgina/p",
+					"imageUrl": "",
+					"detailUrl": "/sac-caviar-or-noir/p",
 					"components": [],
 					"bundleItems": [],
 					"attachments": [],
@@ -65,31 +64,7 @@
 						"name": null,
 						"content": {}
 					},
-					"attachmentOfferings": [
-						{
-							"name": "Receita",
-							"required": false,
-							"schema": {
-								"Nome1": {
-									"maximumNumberOfCharacters": 5,
-									"domain": []
-								},
-								"Teste": {
-									"maximumNumberOfCharacters": 10,
-									"domain": [
-										"0987654321"
-									]
-								},
-								"Embalagem": {
-									"maximumNumberOfCharacters": 6,
-									"domain": [
-										"true",
-										" false"
-									]
-								}
-							}
-						}
-					],
+					"attachmentOfferings": [],
 					"offerings": [],
 					"priceTags": [],
 					"availability": "available",
@@ -100,41 +75,28 @@
 			"sellers": [
 				{
 					"subSellerId": "1",
-					"fulfillmentEndpoint": "https://qamarketplace.vtexcommercestable.com.br/api/fulfillment",
+					"fulfillmentEndpoint": "http://fulfillment.vtexcommerce.com.br/api/fulfillment?an=chanel",
 					"id": "1",
-					"name": "qamarketplace",
-					"logo": ""
+					"name": "CHANEL",
+					"logo": "https://chanel.com/logo.png"
 				}
 			],
 			"paymentData": {
-				"giftCards": [
-					{
-						"redemptionCode": null,
-						"provider": "VtexGiftCard",
-						"value": 0,
-						"balance": 600,
-						"name": "loyalty-program",
-						"caption": null,
-						"id": "5c6372f0-cfab-41cf-8036-aeb3f8184976_38",
-						"inUse": false,
-						"isSpecialCard": true,
-						"groupName": null
-					}
-				],
+				"giftCards": [],
 				"transactions": [
 					{
 						"isActive": true,
-						"transactionId": "A52F4DE353A24CB08A79C22C1B8D27CE",
-						"merchantName": "QAMARKETPLACE",
+						"transactionId": "TXN-735179",
+						"merchantName": "CHANEL",
 						"payments": [
 							{
-								"id": "9F9A0C1CA6D9463AA11A225644F31B47",
-								"paymentSystem": "6",
-								"paymentSystemName": "Boleto Bancário",
-								"value": 7265,
+								"id": "PAY-735179",
+								"paymentSystem": "1",
+								"paymentSystemName": "Especes Euros",
+								"value": 2700,
 								"installments": 1,
 								"connectorResponses": {},
-								"referenceValue": 7265,
+								"referenceValue": 2700,
 								"cardHolder": null,
 								"cardNumber": null,
 								"firstDigits": null,
@@ -142,15 +104,15 @@
 								"cvv2": null,
 								"expireMonth": null,
 								"expireYear": null,
-								"url": "https://QAMARKETPLACE.vtexpayments.com.br:443/BankIssuedInvoice/Transaction/A52F4DE353A24CB08A79C22C1B8D27CE/Payment/9F9A0C1CA6D9463AA11A225644F31B47/Installment/{Installment}",
+								"url": null,
 								"koinUrl": null,
 								"tid": null,
 								"redemptionCode": null,
 								"giftCardId": null,
 								"giftCardProvider": null,
 								"giftCardAsDiscount": null,
-								"group": "bankInvoice",
-								"dueDate": "2017-11-19",
+								"group": "cash",
+								"dueDate": null,
 								"accountId": null,
 								"parentAccountId": null
 							}
@@ -162,54 +124,54 @@
 			"receiptData": null,
 			"contextData": null,
 			"marketPlaceOrderId": "",
-			"orderFormId": "74db2456962f4bb4ae6e050a5ae80386",
-			"sequence": "1253286",
-			"affiliateId": "",
+			"orderFormId": "chanel-735179",
+			"sequence": "AA01455969",
+			"affiliateId": "CHN",
 			"status": "",
 			"callCenterOperator": "",
-			"userProfileId": "5c6372f0-cfab-41cf-8036-aeb3f8184976",
-			"hostName": "qamarketplace",
+			"userProfileId": "user-735179",
+			"hostName": "chanel",
 			"creationVersion": null,
 			"creationEnvironment": null,
 			"lastChangeVersion": null,
 			"workflowInstanceId": null,
-			"orderId": "776732309845-01",
-			"orderGroup": "776732309845",
-			"state": "on-order-completed",
+			"orderId": "735179",
+			"orderGroup": "735179",
+			"state": "handling",
 			"isCheckedIn": false,
-			"sellerOrderId": "00-776732309845-01",
+			"sellerOrderId": "00-v735179chanel-01",
 			"storeId": null,
-			"value": 7265,
+			"value": 2700,
 			"totals": [
 				{
 					"id": "Items",
-					"name": "Total dos Itens",
-					"value": 5764
+					"name": "Total des Articles",
+					"value": 2700
 				},
 				{
 					"id": "Discounts",
-					"name": "Total dos Descontos",
+					"name": "Total des Remises",
 					"value": 0
 				},
 				{
 					"id": "Shipping",
-					"name": "Total do Frete",
-					"value": 1501
+					"name": "Total de la Livraison",
+					"value": 0
 				},
 				{
 					"id": "Tax",
-					"name": "Total da Taxa",
-					"value": 0
+					"name": "Total de la TVA",
+					"value": 450
 				}
 			],
 			"clientProfileData": {
 				"attachmentId": "clientProfileData",
-				"email": "marcus.moreno@vtex.com.br-118b.ct.vtex.com.br",
-				"firstName": "Marcus",
-				"lastName": "Moreno",
-				"document": "85986006798",
-				"documentType": "cpf",
-				"phone": "+552197788388",
+				"email": "leana.belkhiri@email.com",
+				"firstName": "Léana",
+				"lastName": "BELKHIRI",
+				"document": "542052766",
+				"documentType": "siret",
+				"phone": "+33 (0) 1 44 50 66 00",
 				"corporateName": null,
 				"tradeName": null,
 				"corporateDocument": null,
@@ -218,7 +180,7 @@
 				"isCorporate": false,
 				"profileCompleteOnLoading": true,
 				"profileErrorOnLoading": false,
-				"customerClass": "teste Customer"
+				"customerClass": null
 			},
 			"ratesAndBenefitsData": {
 				"attachmentId": "ratesAndBenefitsData",
@@ -229,15 +191,15 @@
 				"attachmentId": "shippingData",
 				"address": {
 					"addressType": "residential",
-					"receiverName": "qa qa",
-					"addressId": "-1460051769222",
-					"postalCode": "05805-000",
-					"city": "São Paulo",
-					"state": "SP",
-					"country": "BRA",
-					"street": "Avenida Maria Coelho Aguiar",
-					"number": "34",
-					"neighborhood": "Jardim São Luís",
+					"receiverName": "Madame Léana BELKHIRI",
+					"addressId": "66000",
+					"postalCode": "66000",
+					"city": "PERPIGNAN",
+					"state": "",
+					"country": "FRA",
+					"street": "22 ESPACE MEDITERRANEE",
+					"number": "",
+					"neighborhood": "",
 					"complement": null,
 					"reference": null,
 					"geoCoordinates": []
@@ -245,186 +207,30 @@
 				"logisticsInfo": [
 					{
 						"itemIndex": 0,
-						"selectedSla": "Normal",
+						"selectedSla": "Standard",
 						"selectedDeliveryChannel": "delivery",
-						"addressId": "-1460051769222",
+						"addressId": "66000",
 						"slas": [
 							{
-								"id": "Entrega Agendada",
+								"id": "Standard",
 								"deliveryChannel": "delivery",
-								"name": "Entrega Agendada",
+								"name": "Standard",
 								"deliveryIds": [
 									{
-										"courierId": "19029e0",
-										"warehouseId": "19a797c",
-										"dockId": "1befa63",
-										"courierName": "Transportadora Entrega Agendada",
+										"courierId": "chanel_courier",
+										"warehouseId": "warehouse_paris",
+										"dockId": "dock_chanel",
+										"courierName": "CHANEL Express",
 										"quantity": 1
 									}
 								],
-								"shippingEstimate": "7bd",
-								"shippingEstimateDate": null,
-								"lockTTL": "7d",
-								"availableDeliveryWindows": [
-									{
-										"startDateUtc": "2017-11-27T17:00:00+00:00",
-										"endDateUtc": "2017-11-27T22:00:00+00:00",
-										"price": 200,
-										"lisPrice": 200,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-11-27T22:00:00+00:00",
-										"endDateUtc": "2017-11-27T00:00:00+00:00",
-										"price": 200,
-										"lisPrice": 200,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-11-28T00:00:00+00:00",
-										"endDateUtc": "2017-11-28T13:00:00+00:00",
-										"price": 400,
-										"lisPrice": 400,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-11-28T13:30:00+00:00",
-										"endDateUtc": "2017-11-28T15:00:00+00:00",
-										"price": 100,
-										"lisPrice": 100,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-11-28T17:00:00+00:00",
-										"endDateUtc": "2017-11-28T22:00:00+00:00",
-										"price": 200,
-										"lisPrice": 200,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-11-28T22:00:00+00:00",
-										"endDateUtc": "2017-11-28T00:00:00+00:00",
-										"price": 400,
-										"lisPrice": 400,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-11-29T00:00:00+00:00",
-										"endDateUtc": "2017-11-29T13:00:00+00:00",
-										"price": 100,
-										"lisPrice": 100,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-11-29T13:30:00+00:00",
-										"endDateUtc": "2017-11-29T15:00:00+00:00",
-										"price": 200,
-										"lisPrice": 200,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-11-29T17:00:00+00:00",
-										"endDateUtc": "2017-11-29T22:00:00+00:00",
-										"price": 100,
-										"lisPrice": 100,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-11-29T22:00:00+00:00",
-										"endDateUtc": "2017-11-29T00:00:00+00:00",
-										"price": 100,
-										"lisPrice": 100,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-11-30T00:00:00+00:00",
-										"endDateUtc": "2017-11-30T13:00:00+00:00",
-										"price": 200,
-										"lisPrice": 200,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-11-30T13:30:00+00:00",
-										"endDateUtc": "2017-11-30T15:00:00+00:00",
-										"price": 200,
-										"lisPrice": 200,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-11-30T17:00:00+00:00",
-										"endDateUtc": "2017-11-30T22:00:00+00:00",
-										"price": 200,
-										"lisPrice": 200,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-11-30T22:00:00+00:00",
-										"endDateUtc": "2017-11-30T00:00:00+00:00",
-										"price": 200,
-										"lisPrice": 200,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-12-01T00:00:00+00:00",
-										"endDateUtc": "2017-12-01T13:00:00+00:00",
-										"price": 200,
-										"lisPrice": 200,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-12-01T13:30:00+00:00",
-										"endDateUtc": "2017-12-01T15:00:00+00:00",
-										"price": 200,
-										"lisPrice": 200,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-12-01T17:00:00+00:00",
-										"endDateUtc": "2017-12-01T22:00:00+00:00",
-										"price": 200,
-										"lisPrice": 200,
-										"tax": 0
-									},
-									{
-										"startDateUtc": "2017-12-01T22:00:00+00:00",
-										"endDateUtc": "2017-12-01T00:00:00+00:00",
-										"price": 200,
-										"lisPrice": 200,
-										"tax": 0
-									}
-								],
-								"deliveryWindow": null,
-								"price": 530,
-								"listPrice": 530,
-								"tax": 0,
-								"pickupStoreInfo": {
-									"isPickupStore": false,
-									"friendlyName": null,
-									"address": null,
-									"additionalInfo": null,
-									"dockId": null
-								}
-							},
-							{
-								"id": "Normal",
-								"deliveryChannel": "delivery",
-								"name": "Normal",
-								"deliveryIds": [
-									{
-										"courierId": "1",
-										"warehouseId": "169cdbc",
-										"dockId": "1",
-										"courierName": "Transportadora",
-										"quantity": 1
-									}
-								],
-								"shippingEstimate": "7d",
-								"shippingEstimateDate": null,
-								"lockTTL": "7d",
+								"shippingEstimate": "3bd",
+								"shippingEstimateDate": "2021-09-17T14:34:00.000+00:00",
+								"lockTTL": "10d",
 								"availableDeliveryWindows": [],
 								"deliveryWindow": null,
-								"price": 1501,
-								"listPrice": 1501,
+								"price": 0,
+								"listPrice": 0,
 								"tax": 0,
 								"pickupStoreInfo": {
 									"isPickupStore": false,
@@ -436,9 +242,9 @@
 							}
 						],
 						"shipsTo": [
-							"BRA"
+							"FRA"
 						],
-						"itemId": "15",
+						"itemId": "1",
 						"deliveryChannels": [
 							{
 								"id": "delivery"
@@ -449,15 +255,15 @@
 				"selectedAddresses": [
 					{
 						"addressType": "residential",
-						"receiverName": "qa qa",
-						"addressId": "-1460051769222",
-						"postalCode": "05805-000",
-						"city": "São Paulo",
-						"state": "SP",
-						"country": "BRA",
-						"street": "Avenida Maria Coelho Aguiar",
-						"number": "34",
-						"neighborhood": "Jardim São Luís",
+						"receiverName": "Madame Léana BELKHIRI",
+						"addressId": "66000",
+						"postalCode": "66000",
+						"city": "PERPIGNAN",
+						"state": "",
+						"country": "FRA",
+						"street": "22 ESPACE MEDITERRANEE",
+						"number": "",
+						"neighborhood": "",
 						"complement": null,
 						"reference": null,
 						"geoCoordinates": []
@@ -466,15 +272,15 @@
 				"availableAddresses": [
 					{
 						"addressType": "residential",
-						"receiverName": "qa qa",
-						"addressId": "-1460051769222",
-						"postalCode": "05805-000",
-						"city": "São Paulo",
-						"state": "SP",
-						"country": "BRA",
-						"street": "Avenida Maria Coelho Aguiar",
-						"number": "34",
-						"neighborhood": "Jardim São Luís",
+						"receiverName": "Madame Léana BELKHIRI",
+						"addressId": "66000",
+						"postalCode": "66000",
+						"city": "PERPIGNAN",
+						"state": "",
+						"country": "FRA",
+						"street": "22 ESPACE MEDITERRANEE",
+						"number": "",
+						"neighborhood": "",
 						"complement": null,
 						"reference": null,
 						"geoCoordinates": []
@@ -483,25 +289,25 @@
 			},
 			"clientPreferencesData": {
 				"attachmentId": "clientPreferencesData",
-				"locale": "pt-BR",
-				"optinNewsLetter": true
+				"locale": "fr-FR",
+				"optinNewsLetter": false
 			},
 			"commercialConditionData": null,
 			"marketingData": null,
 			"storePreferencesData": {
-				"countryCode": "BRA",
+				"countryCode": "FRA",
 				"checkToSavePersonDataByDefault": false,
 				"templateOptions": {
 					"toggleCorporate": false
 				},
-				"timeZone": "E. South America Standard Time",
-				"currencyCode": "BRL",
-				"currencyLocale": 1046,
-				"currencySymbol": "R$",
+				"timeZone": "Romance Standard Time",
+				"currencyCode": "EUR",
+				"currencyLocale": 1036,
+				"currencySymbol": "€",
 				"currencyFormatInfo": {
 					"currencyDecimalDigits": 2,
 					"currencyDecimalSeparator": ",",
-					"currencyGroupSeparator": ".",
+					"currencyGroupSeparator": " ",
 					"currencyGroupSize": 3,
 					"startsWithCurrencySymbol": true
 				}
@@ -511,53 +317,384 @@
 			"hooksData": null,
 			"changeData": null,
 			"salesChannel": "1",
-			"followUpEmail": "03e05dae02c143e5b97e2692fc6b644d@ct.vtex.com.br",
-			"creationDate": "2017-11-16T16:38:29.8953412Z",
-			"lastChange": "2017-11-16T16:38:38.1285007Z",
-			"timeZoneCreationDate": "2017-11-16T14:38:29.8953412",
-			"timeZoneLastChange": "2017-11-16T14:38:38.1285007",
+			"followUpEmail": "service@chanel.com",
+			"creationDate": "2021-09-14T14:34:00.000+00:00",
+			"lastChange": "2021-09-14T14:34:00.000+00:00",
+			"timeZoneCreationDate": "2021-09-14T14:34:00.000",
+			"timeZoneLastChange": "2021-09-14T14:34:00.000",
 			"isCompleted": true,
-			"merchantName": null,
+			"merchantName": "chanel",
+			"userType": "",
+			"roundingError": 0,
+			"allowEdition": false,
+			"allowCancellation": false
+		},
+		{
+			"package": null,
+			"subjectItemAttachment": {
+				"item": "Sac Caviar & Or Noir",
+				"totalItems": 1
+			},
+			"items": [
+				{
+					"additionalInfo": {
+						"dimension": {
+							"cubicweight": 1,
+							"height": 0,
+							"length": 0,
+							"weight": 0,
+							"width": 0
+						},
+						"categoriesIds": "/1/",
+						"productClusterId": "",
+						"commercialConditionId": "1",
+						"brandName": "CHANEL",
+						"brandId": "1",
+						"offeringInfo": null,
+						"offeringType": null,
+						"offeringTypeId": null
+					},
+					"sellerSku": "AP0250Y01480C3906",
+					"priceValidUntil": "2022-09-14T14:34:00.000+00:00",
+					"callCenterOperator": null,
+					"commission": 0,
+					"freightCommission": 0,
+					"uniqueId": "AP0250Y01480C3906-02",
+					"id": "1",
+					"productId": "1",
+					"refId": "AP0250Y01480C3906",
+					"ean": "",
+					"name": "Sac Caviar & Or Noir",
+					"skuName": "Sac Caviar & Or Noir",
+					"modalType": null,
+					"tax": 450,
+					"price": 2700,
+					"listPrice": 2700,
+					"manualPrice": null,
+					"sellingPrice": 2700,
+					"rewardValue": 0,
+					"isGift": false,
+					"preSaleDate": null,
+					"productCategoryIds": "/1/",
+					"productCategories": {
+						"1": "Maroquinerie"
+					},
+					"defaultPicker": null,
+					"handlerSequence": 0,
+					"handling": false,
+					"quantity": 1,
+					"seller": "1",
+					"imageUrl": "",
+					"detailUrl": "/sac-caviar-or-noir/p",
+					"components": [],
+					"bundleItems": [],
+					"attachments": [],
+					"itemAttachment": {
+						"name": null,
+						"content": {}
+					},
+					"attachmentOfferings": [],
+					"offerings": [],
+					"priceTags": [],
+					"availability": "available",
+					"measurementUnit": "un",
+					"unitMultiplier": 1
+				}
+			],
+			"sellers": [
+				{
+					"subSellerId": "1",
+					"fulfillmentEndpoint": "http://fulfillment.vtexcommerce.com.br/api/fulfillment?an=chanel",
+					"id": "1",
+					"name": "CHANEL",
+					"logo": "https://chanel.com/logo.png"
+				}
+			],
+			"paymentData": {
+				"giftCards": [],
+				"transactions": [
+					{
+						"isActive": true,
+						"transactionId": "TXN-735180",
+						"merchantName": "CHANEL",
+						"payments": [
+							{
+								"id": "PAY-735180",
+								"paymentSystem": "1",
+								"paymentSystemName": "Especes Euros",
+								"value": 2700,
+								"installments": 1,
+								"connectorResponses": {},
+								"referenceValue": 2700,
+								"cardHolder": null,
+								"cardNumber": null,
+								"firstDigits": null,
+								"lastDigits": null,
+								"cvv2": null,
+								"expireMonth": null,
+								"expireYear": null,
+								"url": null,
+								"koinUrl": null,
+								"tid": null,
+								"redemptionCode": null,
+								"giftCardId": null,
+								"giftCardProvider": null,
+								"giftCardAsDiscount": null,
+								"group": "cash",
+								"dueDate": null,
+								"accountId": null,
+								"parentAccountId": null
+							}
+						]
+					}
+				]
+			},
+			"giftRegistryData": null,
+			"receiptData": null,
+			"contextData": null,
+			"marketPlaceOrderId": "",
+			"orderFormId": "chanel-735180",
+			"sequence": "AA01455970",
+			"affiliateId": "CHN",
+			"status": "",
+			"callCenterOperator": "",
+			"userProfileId": "user-735179",
+			"hostName": "chanel",
+			"creationVersion": null,
+			"creationEnvironment": null,
+			"lastChangeVersion": null,
+			"workflowInstanceId": null,
+			"orderId": "735180",
+			"orderGroup": "735179",
+			"state": "handling",
+			"isCheckedIn": false,
+			"sellerOrderId": "00-v735180chanel-01",
+			"storeId": null,
+			"value": 2700,
+			"totals": [
+				{
+					"id": "Items",
+					"name": "Total des Articles",
+					"value": 2700
+				},
+				{
+					"id": "Discounts",
+					"name": "Total des Remises",
+					"value": 0
+				},
+				{
+					"id": "Shipping",
+					"name": "Total de la Livraison",
+					"value": 0
+				},
+				{
+					"id": "Tax",
+					"name": "Total de la TVA",
+					"value": 450
+				}
+			],
+			"clientProfileData": {
+				"attachmentId": "clientProfileData",
+				"email": "leana.belkhiri@email.com",
+				"firstName": "Léana",
+				"lastName": "BELKHIRI",
+				"document": "542052766",
+				"documentType": "siret",
+				"phone": "+33 (0) 1 44 50 66 00",
+				"corporateName": null,
+				"tradeName": null,
+				"corporateDocument": null,
+				"stateInscription": null,
+				"corporatePhone": null,
+				"isCorporate": false,
+				"profileCompleteOnLoading": true,
+				"profileErrorOnLoading": false,
+				"customerClass": null
+			},
+			"ratesAndBenefitsData": {
+				"attachmentId": "ratesAndBenefitsData",
+				"rateAndBenefitsIdentifiers": [],
+				"teaser": []
+			},
+			"shippingData": {
+				"attachmentId": "shippingData",
+				"address": {
+					"addressType": "residential",
+					"receiverName": "Madame Léana BELKHIRI",
+					"addressId": "66000",
+					"postalCode": "66000",
+					"city": "PERPIGNAN",
+					"state": "",
+					"country": "FRA",
+					"street": "22 ESPACE MEDITERRANEE",
+					"number": "",
+					"neighborhood": "",
+					"complement": null,
+					"reference": null,
+					"geoCoordinates": []
+				},
+				"logisticsInfo": [
+					{
+						"itemIndex": 0,
+						"selectedSla": "Standard",
+						"selectedDeliveryChannel": "delivery",
+						"addressId": "66000",
+						"slas": [
+							{
+								"id": "Standard",
+								"deliveryChannel": "delivery",
+								"name": "Standard",
+								"deliveryIds": [
+									{
+										"courierId": "chanel_courier",
+										"warehouseId": "warehouse_paris",
+										"dockId": "dock_chanel",
+										"courierName": "CHANEL Express",
+										"quantity": 1
+									}
+								],
+								"shippingEstimate": "3bd",
+								"shippingEstimateDate": "2021-09-17T14:34:00.000+00:00",
+								"lockTTL": "10d",
+								"availableDeliveryWindows": [],
+								"deliveryWindow": null,
+								"price": 0,
+								"listPrice": 0,
+								"tax": 0,
+								"pickupStoreInfo": {
+									"isPickupStore": false,
+									"friendlyName": null,
+									"address": null,
+									"additionalInfo": null,
+									"dockId": null
+								}
+							}
+						],
+						"shipsTo": [
+							"FRA"
+						],
+						"itemId": "1",
+						"deliveryChannels": [
+							{
+								"id": "delivery"
+							}
+						]
+					}
+				],
+				"selectedAddresses": [
+					{
+						"addressType": "residential",
+						"receiverName": "Madame Léana BELKHIRI",
+						"addressId": "66000",
+						"postalCode": "66000",
+						"city": "PERPIGNAN",
+						"state": "",
+						"country": "FRA",
+						"street": "22 ESPACE MEDITERRANEE",
+						"number": "",
+						"neighborhood": "",
+						"complement": null,
+						"reference": null,
+						"geoCoordinates": []
+					}
+				],
+				"availableAddresses": [
+					{
+						"addressType": "residential",
+						"receiverName": "Madame Léana BELKHIRI",
+						"addressId": "66000",
+						"postalCode": "66000",
+						"city": "PERPIGNAN",
+						"state": "",
+						"country": "FRA",
+						"street": "22 ESPACE MEDITERRANEE",
+						"number": "",
+						"neighborhood": "",
+						"complement": null,
+						"reference": null,
+						"geoCoordinates": []
+					}
+				]
+			},
+			"clientPreferencesData": {
+				"attachmentId": "clientPreferencesData",
+				"locale": "fr-FR",
+				"optinNewsLetter": false
+			},
+			"commercialConditionData": null,
+			"marketingData": null,
+			"storePreferencesData": {
+				"countryCode": "FRA",
+				"checkToSavePersonDataByDefault": false,
+				"templateOptions": {
+					"toggleCorporate": false
+				},
+				"timeZone": "Romance Standard Time",
+				"currencyCode": "EUR",
+				"currencyLocale": 1036,
+				"currencySymbol": "€",
+				"currencyFormatInfo": {
+					"currencyDecimalDigits": 2,
+					"currencyDecimalSeparator": ",",
+					"currencyGroupSeparator": " ",
+					"currencyGroupSize": 3,
+					"startsWithCurrencySymbol": true
+				}
+			},
+			"openTextField": null,
+			"customData": null,
+			"hooksData": null,
+			"changeData": null,
+			"salesChannel": "1",
+			"followUpEmail": "service@chanel.com",
+			"creationDate": "2021-09-14T14:34:00.000+00:00",
+			"lastChange": "2021-09-14T14:34:00.000+00:00",
+			"timeZoneCreationDate": "2021-09-14T14:34:00.000",
+			"timeZoneLastChange": "2021-09-14T14:34:00.000",
+			"isCompleted": true,
+			"merchantName": "chanel",
 			"userType": "",
 			"roundingError": 0,
 			"allowEdition": false,
 			"allowCancellation": false
 		}
 	],
-	"ordersUrl": "http://qamarketplace.vtexcommercestable.com.br/account/orders",
-	"orderGroup": "776732309845",
+	"ordersUrl": "https://chanel.com/account/orders",
+	"orderGroup": "735179",
 	"subjectItemAttachment": {
-		"item": "Novalgina",
-		"totalItems": 1
+		"item": "Sac Caviar & Or Noir",
+		"totalItems": 2,
+		"extraItems": 1
 	},
 	"split": false,
-	"totalValue": 7265,
+	"totalValue": 5400,
+	"callCenterOperatorData": null,
 	"_accountInfo": {
-		"HostName": "qamarketplace",
-		"MainAccountName": "qamarketplace",
+		"HostName": "chanel",
+		"MainAccountName": "chanel",
 		"IsPersisted": true,
 		"IsRemoved": false,
-		"Id": "0e914df8-c516-45bc-a45a-0aab6482eaf7",
-		"Cnpj": "99999999999999",
-		"CompanyName": "QA Marketplace VTEX",
-		"TradingName": "qaMarketPlace",
-		"AccountName": "qamarketplace",
+		"Id": "e39d05f9-0c54-4469-a626-8bb5cff169f8",
+		"Cnpj": null,
+		"CompanyName": "CHANEL",
+		"TradingName": "CHANEL",
+		"AccountName": "chanel",
 		"DefaultUrl": null,
-		"Address": "Praia de Botafogo",
-		"Number": "518",
-		"Complement": "2 andar",
-		"District": "Botafogo",
-		"City": "Rio de Janeiro",
-		"State": "RJ",
-		"PostalCode": "22250-040",
-		"Country": "Brazil",
+		"Address": null,
+		"Number": null,
+		"Complement": null,
+		"District": null,
+		"City": null,
+		"State": null,
+		"PostalCode": null,
+		"Country": "France",
 		"Telephone": null,
 		"IsActive": true,
-		"Sponsor": "d79f2b67-2d3f-4cd8-9337-5f5dda7c757a",
+		"Sponsor": "eb436322-473b-4296-89a9-f129c479be4c",
 		"Logo": null,
-		"AppId": "49fb1d8f-256f-4d5d-9280-35595c6e0493",
-		"IsOperating": false,
-		"LV": "LV-1066896",
+		"AppId": "fddf74e6-cc47-4a7d-8956-f0a6629cb23b",
+		"IsOperating": true,
+		"LV": null,
 		"Sigla": null
 	}
 }

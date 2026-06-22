@@ -1,27 +1,27 @@
 {
 	"to": [
 		{
-			"name": "s************",
-			"email": "s*****.c*****@v***.c**"
+			"name": "Léana BELKHIRI",
+			"email": "leana.belkhiri@email.com"
 		}
 	],
 	"aditionalData": {
-		"accessKey": "5*****",
-		"locale": "en-CA",
+		"accessKey": "735179",
+		"locale": "fr-FR",
 		"userAgent": "Chrome, Mac OS X"
 	},
 	"_accountInfo": {
-		"MainAccountName": "v*****",
-		"AccountName": "v*****",
+		"MainAccountName": "chanel",
+		"AccountName": "chanel",
 		"Cnpj": null,
 		"Id": "3a4eb6e1-9a0c-4304-8701-466d970119b5",
 		"AppId": null,
 		"IsActive": true,
 		"IsOperating": true,
-		"CreationDate": "2025-06-09T18:14:42.9979136Z",
-		"OperationDate": "2025-11-05T19:59:45.3764792Z",
-		"CompanyName": "V********************************",
-		"TradingName": "V***********************",
+		"CreationDate": "2021-09-14T14:34:00.000+00:00",
+		"OperationDate": "2021-09-14T14:34:00.000+00:00",
+		"CompanyName": "CHANEL",
+		"TradingName": "CHANEL",
 		"City": null,
 		"Complement": null,
 		"Country": null,

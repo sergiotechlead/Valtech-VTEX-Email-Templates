@@ -4,18 +4,18 @@
 			{
 				"itemIndex": 0,
 				"quantity": 1,
-				"price": 3999,
-				"description": null
+				"price": 2700,
+				"description": "Sac Caviar & Or Noir"
 			}
 		],
-		"courier": "PAC",
-		"invoiceNumber": "1234",
-		"invoiceValue": 4499,
-		"invoiceUrl": "www.uol.com.br",
-		"issuanceDate": "2018-07-27T03:00:00Z",
-		"trackingNumber": "2222",
+		"courier": "CHANEL Express",
+		"invoiceNumber": "735179",
+		"invoiceValue": 2700,
+		"invoiceUrl": "https://chanel.com/invoices/735179.pdf",
+		"issuanceDate": "2021-09-14T14:34:00.000+00:00",
+		"trackingNumber": "CHN-735179",
 		"invoiceKey": null,
-		"trackingUrl": "www.visa.com.br",
+		"trackingUrl": "",
 		"embeddedInvoice": "",
 		"type": "Output",
 		"courierStatus": {
@@ -23,85 +23,84 @@
 			"finished": true,
 			"data": [
 				{
-					"lastChange": "2015-06-24T00:00:00",
-					"city": "Sao Paulo",
-					"state": "SP",
-					"description": "A caminho de Curitiba"
+					"lastChange": "2021-09-17T14:00:00.000+00:00",
+					"city": "PERPIGNAN",
+					"state": "",
+					"description": "Colis livré"
 				},
 				{
-					"lastChange": "2015-06-23T00:00:00",
-					"city": "Rio de Janeiro",
-					"state": "RJ",
-					"description": "Coletado pela transportadora"
+					"lastChange": "2021-09-15T10:00:00.000+00:00",
+					"city": null,
+					"state": "En transit",
+					"description": "Colis pris en charge par CHANEL Express - Paris"
 				}
 			]
 		}
 	},
 	"subjectItemAttachment": {
-		"item": "Camisa Seleção Brasi...",
-		"totalItems": 2,
-		"extraItems": 1
+		"item": "Sac Caviar & Or Noir",
+		"totalItems": 1,
+		"extraItems": 0
 	},
 	"cancellationReason": null,
 	"items": [
 		{
 			"additionalInfo": {
 				"dimension": {
-					"cubicweight": 0.2,
-					"height": 20,
-					"length": 3,
-					"weight": 50,
-					"width": 20
+					"cubicweight": 1,
+					"height": 0,
+					"length": 0,
+					"weight": 0,
+					"width": 0
 				},
-				"categoriesIds": "/1/2/3/",
-				"productClusterId": "135",
+				"categoriesIds": "/1/",
+				"productClusterId": "",
 				"commercialConditionId": "1",
-				"brandName": "Marca Exemplo",
-				"brandId": "2000000",
+				"brandName": "CHANEL",
+				"brandId": "1",
 				"offeringInfo": null,
 				"offeringType": null,
 				"offeringTypeId": null
 			},
-			"sellerSku": "31",
-			"priceTable": null,
-			"priceValidUntil": "2019-07-25T03:00:00",
+			"sellerSku": "AP0250Y01480C3906",
+			"priceValidUntil": "2022-09-14T14:34:00.000+00:00",
 			"callCenterOperator": null,
 			"commission": 0,
 			"freightCommission": 0,
-			"uniqueId": "4BB1D5AF200949F7BB4D8B6F50575270",
-			"id": "31",
-			"productId": "20",
-			"refId": "00001",
-			"ean": null,
-			"name": "Camisa Seleção Brasileira",
-			"skuName": "Camisa Seleção Brasileira",
+			"uniqueId": "AP0250Y01480C3906-01",
+			"id": "1",
+			"productId": "1",
+			"refId": "AP0250Y01480C3906",
+			"ean": "",
+			"name": "Sac Caviar & Or Noir",
+			"skuName": "Sac Caviar & Or Noir",
 			"modalType": null,
-			"tax": 0,
-			"priceDefinitions": null,
-			"price": 3999,
-			"listPrice": 1000,
+			"tax": 450,
+			"price": 2700,
+			"listPrice": 2700,
 			"manualPrice": null,
-			"sellingPrice": 3999,
-			"orderRewardStatus": null,
+			"sellingPrice": 2700,
 			"rewardValue": 0,
 			"isGift": false,
 			"preSaleDate": null,
-			"productCategoryIds": "/1/2/3/",
+			"productCategoryIds": "/1/",
 			"productCategories": {
-				"1": "Departamento 1",
-				"2": "Categoria 1.1",
-				"3": "Subcategoria 1.1"
+				"1": "Maroquinerie"
 			},
+			"defaultPicker": null,
+			"handlerSequence": 0,
+			"handling": false,
 			"quantity": 1,
 			"seller": "1",
-			"sellerChain": [
-				"1"
-			],
-			"imageUrl": "http://vtexgame1.vteximg.com.br/arquivos/ids/155369-55-55/Azul-Talla-S_0.jpg?v=635833511570300000",
-			"detailUrl": "/polera-de-futbol-nike-manga-corta-20/p",
+			"imageUrl": "",
+			"detailUrl": "/sac-caviar-or-noir/p",
 			"components": [],
 			"bundleItems": [],
 			"attachments": [],
+			"itemAttachment": {
+				"name": null,
+				"content": {}
+			},
 			"attachmentOfferings": [],
 			"offerings": [],
 			"priceTags": [],
@@ -113,64 +112,102 @@
 	"sellers": [
 		{
 			"subSellerId": "1",
-			"fulfillmentEndpoint": "http://fulfillment.vtexcommerce.com.br/api/fulfillment?an=vtexgame1",
+			"fulfillmentEndpoint": "http://fulfillment.vtexcommerce.com.br/api/fulfillment?an=chanel",
 			"id": "1",
-			"name": "vtexgame1",
-			"logo": ""
+			"name": "CHANEL",
+			"logo": "https://chanel.com/logo.png"
 		}
 	],
+	"paymentData": {
+		"giftCards": [],
+		"transactions": [
+			{
+				"isActive": true,
+				"transactionId": "TXN-735179",
+				"merchantName": "CHANEL",
+				"payments": [
+					{
+						"id": "PAY-735179",
+						"paymentSystem": "1",
+						"paymentSystemName": "Especes Euros",
+						"value": 2700,
+						"installments": 1,
+						"connectorResponses": {},
+						"referenceValue": 2700,
+						"cardHolder": null,
+						"cardNumber": null,
+						"firstDigits": null,
+						"lastDigits": null,
+						"cvv2": null,
+						"expireMonth": null,
+						"expireYear": null,
+						"url": null,
+						"koinUrl": null,
+						"tid": null,
+						"redemptionCode": null,
+						"giftCardId": null,
+						"giftCardProvider": null,
+						"giftCardAsDiscount": null,
+						"group": "cash",
+						"dueDate": null,
+						"accountId": null,
+						"parentAccountId": null
+					}
+				]
+			}
+		]
+	},
 	"giftRegistryData": null,
 	"receiptData": null,
-	"contextData": null,
 	"marketPlaceOrderId": "",
-	"orderFormId": "b4c2f5dc1b49419fb87878a61014b522",
-	"sequence": "549600",
-	"affiliateId": "",
+	"orderFormId": "chanel-735179",
+	"sequence": "AA01455969",
+	"affiliateId": "CHN",
 	"status": "",
 	"callCenterOperator": "",
-	"userProfileId": "a8c24a30-cbab-4a16-b53c-b48489975d7e",
-	"hostName": "vtexgame1",
+	"userProfileId": "user-735179",
+	"hostName": "chanel",
 	"creationVersion": null,
 	"creationEnvironment": null,
 	"lastChangeVersion": null,
 	"workflowInstanceId": null,
-	"orderId": "834081519069-01",
-	"orderGroup": "834081519069",
+	"orderId": "735179",
+	"orderGroup": "735179",
 	"state": "invoiced",
 	"isCheckedIn": false,
-	"sellerOrderId": "00-834081519069-01",
+	"sellerOrderId": "00-v735179chanel-01",
 	"storeId": null,
-	"checkedInPickupPointId": null,
-	"value": 6798,
+	"value": 2700,
 	"totals": [
 		{
 			"id": "Items",
-			"name": "Total dos Itens",
-			"value": 6298
+			"name": "Total des Articles",
+			"value": 2700
 		},
 		{
 			"id": "Discounts",
-			"name": "Total dos Descontos",
+			"name": "Total des Remises",
 			"value": 0
 		},
 		{
 			"id": "Shipping",
-			"name": "Total do Frete",
-			"value": 500
+			"name": "Total de la Livraison",
+			"value": 0
 		},
 		{
 			"id": "Tax",
-			"name": "Total da Taxa",
-			"value": 0
+			"name": "Total de la TVA",
+			"value": 450
 		}
 	],
 	"clientProfileData": {
-		"email": "ana.motta@vtex.com.br-35b.ct.vtex.com.br",
-		"firstName": "Ana Luiza",
-		"lastName": "Gomes",
-		"document": "09498512485",
-		"documentType": "cpf",
-		"phone": "+5583991119209",
+		"attachmentId": "clientProfileData",
+		"email": "leana.belkhiri@email.com",
+		"firstName": "Léana",
+		"lastName": "BELKHIRI",
+		"document": "542052766",
+		"documentType": "siret",
+		"phone": "+33 (0) 1 44 50 66 00",
 		"corporateName": null,
 		"tradeName": null,
 		"corporateDocument": null,
@@ -182,21 +219,23 @@
 		"customerClass": null
 	},
 	"ratesAndBenefitsData": {
+		"attachmentId": "ratesAndBenefitsData",
 		"rateAndBenefitsIdentifiers": [],
 		"teaser": []
 	},
 	"shippingData": {
+		"attachmentId": "shippingData",
 		"address": {
 			"addressType": "residential",
-			"receiverName": "Ana Luiza Gomes",
-			"addressId": "-4564401032532",
-			"postalCode": "22225-800",
-			"city": "Rio de Janeiro",
-			"state": "RJ",
-			"country": "BRA",
-			"street": "Praia de Botafogo",
-			"number": "260",
-			"neighborhood": "Botafogo",
+			"receiverName": "Madame Léana BELKHIRI",
+			"addressId": "66000",
+			"postalCode": "66000",
+			"city": "PERPIGNAN",
+			"state": "",
+			"country": "FRA",
+			"street": "22 ESPACE MEDITERRANEE",
+			"number": "",
+			"neighborhood": "",
 			"complement": null,
 			"reference": null,
 			"geoCoordinates": []
@@ -204,150 +243,51 @@
 		"logisticsInfo": [
 			{
 				"itemIndex": 0,
-				"selectedSla": "PAC",
+				"selectedSla": "Standard",
 				"selectedDeliveryChannel": "delivery",
-				"addressId": "-4564401032532",
+				"addressId": "66000",
 				"slas": [
 					{
-						"id": "PAC",
+						"id": "Standard",
 						"deliveryChannel": "delivery",
-						"name": "PAC",
+						"name": "Standard",
 						"deliveryIds": [
 							{
-								"courierId": "1",
-								"warehouseId": "139edf2",
-								"dockId": "1e76746",
-								"courierName": "PAC",
+								"courierId": "chanel_courier",
+								"warehouseId": "warehouse_paris",
+								"dockId": "dock_chanel",
+								"courierName": "CHANEL Express",
 								"quantity": 1
 							}
 						],
-						"shippingEstimate": "8bd",
-						"shippingEstimateDate": "2018-06-02T00:26:44.4700669Z",
-						"lockTTL": "7d",
-						"availableDeliveryWindows": [],
-						"deliveryWindow": null,
-						"price": 500,
-						"listPrice": 500,
-						"tax": 0,
-						"pickupStoreInfo": {
-							"isPickupStore": false,
-							"friendlyName": null,
-							"address": null,
-							"additionalInfo": null,
-							"dockId": null,
-							"businessHours": null
-						},
-						"pickupPointId": null,
-						"pickupDistance": null,
-						"polygonName": null
-					}
-				],
-				"shipsTo": [
-					"BRA"
-				],
-				"itemId": "31",
-				"deliveryChannels": [
-					{
-						"id": "delivery"
-					}
-				]
-			},
-			{
-				"itemIndex": 1,
-				"selectedSla": "Econômica",
-				"selectedDeliveryChannel": "delivery",
-				"addressId": "-4564401032532",
-				"slas": [
-					{
-						"id": "Econômica",
-						"deliveryChannel": "delivery",
-						"name": "Econômica",
-						"deliveryIds": [
-							{
-								"courierId": "10014ba",
-								"warehouseId": "14a6ebe",
-								"dockId": "11d7fbf",
-								"courierName": "Baratex",
-								"quantity": 1
-							}
-						],
-						"shippingEstimate": "10bd",
-						"shippingEstimateDate": "2018-06-06T00:26:44.4700669Z",
-						"lockTTL": "7d",
+						"shippingEstimate": "3bd",
+						"shippingEstimateDate": "2021-09-17T14:34:00.000+00:00",
+						"lockTTL": "10d",
 						"availableDeliveryWindows": [],
 						"deliveryWindow": null,
 						"price": 0,
 						"listPrice": 0,
-						"tax": 0,
-						"pickupStoreInfo": {
-							"isPickupStore": false,
-							"friendlyName": null,
-							"address": null,
-							"additionalInfo": null,
-							"dockId": null,
-							"businessHours": null
-						},
-						"pickupPointId": null,
-						"pickupDistance": null,
-						"polygonName": null
-					},
-					{
-						"id": "normal",
-						"deliveryChannel": "delivery",
-						"name": "normal",
-						"deliveryIds": [
-							{
-								"courierId": "13640f5",
-								"warehouseId": "138d525",
-								"dockId": "1",
-								"courierName": "Normal",
-								"quantity": 1
-							}
-						],
-						"shippingEstimate": "11bd",
-						"shippingEstimateDate": null,
-						"lockTTL": "7d",
-						"availableDeliveryWindows": [],
-						"deliveryWindow": null,
-						"price": 199,
-						"listPrice": 199,
-						"tax": 0,
-						"pickupStoreInfo": {
-							"isPickupStore": false,
-							"friendlyName": null,
-							"address": null,
-							"additionalInfo": null,
-							"dockId": null,
-							"businessHours": null
-						},
-						"pickupPointId": null,
-						"pickupDistance": null,
-						"polygonName": null
+						"tax": 0
 					}
 				],
 				"shipsTo": [
-					"BRA"
+					"FRA"
 				],
-				"itemId": "33",
-				"deliveryChannels": [
-					{
-						"id": "delivery"
-					}
-				]
+				"itemId": "1"
 			}
 		],
 		"selectedAddresses": [
 			{
 				"addressType": "residential",
-				"receiverName": "Ana Luiza Gomes",
-				"addressId": "-4564401032532",
-				"postalCode": "22225-800",
-				"city": "Rio de Janeiro",
-				"state": "RJ",
-				"country": "BRA",
-				"street": "Praia de Botafogo",
-				"number": "260",
-				"neighborhood": "Botafogo",
+				"receiverName": "Madame Léana BELKHIRI",
+				"addressId": "66000",
+				"postalCode": "66000",
+				"city": "PERPIGNAN",
+				"state": "",
+				"country": "FRA",
+				"street": "22 ESPACE MEDITERRANEE",
+				"number": "",
+				"neighborhood": "",
 				"complement": null,
 				"reference": null,
 				"geoCoordinates": []
@@ -356,117 +296,70 @@
 		"availableAddresses": [
 			{
 				"addressType": "residential",
-				"receiverName": "Ana Luiza Gomes",
-				"addressId": "-4564401032532",
-				"postalCode": "22225-800",
-				"city": "Rio de Janeiro",
-				"state": "RJ",
-				"country": "BRA",
-				"street": "Praia de Botafogo",
-				"number": "260",
-				"neighborhood": "Botafogo",
+				"receiverName": "Madame Léana BELKHIRI",
+				"addressId": "66000",
+				"postalCode": "66000",
+				"city": "PERPIGNAN",
+				"state": "",
+				"country": "FRA",
+				"street": "22 ESPACE MEDITERRANEE",
+				"number": "",
+				"neighborhood": "",
 				"complement": null,
 				"reference": null,
 				"geoCoordinates": []
 			}
-		],
-		"pickupPoints": []
-	},
-	"paymentData": {
-		"giftCards": [],
-		"transactions": [
-			{
-				"isActive": true,
-				"transactionId": "C84FAB684A44487CA716C49A18A6C5B6",
-				"merchantName": "VTEXGAME1",
-				"payments": [
-					{
-						"id": "DD838CC148374CB48F745077A0EB405A",
-						"paymentSystem": "2",
-						"paymentSystemName": "Visa",
-						"value": 6798,
-						"installments": 1,
-						"connectorResponses": {
-							"Tid": "63374265",
-							"ReturnCode": null,
-							"Message": null,
-							"authId": "374265"
-						},
-						"referenceValue": 6798,
-						"cardHolder": null,
-						"cardNumber": null,
-						"firstDigits": "444433",
-						"lastDigits": "1111",
-						"cvv2": null,
-						"expireMonth": null,
-						"expireYear": null,
-						"url": null,
-						"koinUrl": null,
-						"tid": "63374265",
-						"redemptionCode": null,
-						"giftCardId": null,
-						"giftCardProvider": null,
-						"giftCardAsDiscount": null,
-						"group": "creditCard",
-						"dueDate": null,
-						"accountId": "D732E7D4CD4B4C8385F049489DEEF803",
-						"parentAccountId": "D732E7D4CD4B4C8385F049489DEEF803"
-					}
-				],
-				"sharedTransaction": null
-			}
 		]
 	},
 	"clientPreferencesData": {
-		"locale": "pt-BR",
-		"optinNewsLetter": true
+		"attachmentId": "clientPreferencesData",
+		"locale": "fr-FR",
+		"optinNewsLetter": false
 	},
 	"commercialConditionData": null,
 	"marketingData": null,
 	"storePreferencesData": {
-		"countryCode": "BRA",
-		"saveUserData": false,
-		"timeZone": "E. South America Standard Time",
-		"currencyCode": "BRL",
-		"currencyLocale": 1046,
-		"currencySymbol": "R$",
+		"countryCode": "FRA",
+		"checkToSavePersonDataByDefault": false,
+		"templateOptions": {
+			"toggleCorporate": false
+		},
+		"timeZone": "Romance Standard Time",
+		"currencyCode": "EUR",
+		"currencyLocale": 1036,
+		"currencySymbol": "€",
 		"currencyFormatInfo": {
 			"currencyDecimalDigits": 2,
 			"currencyDecimalSeparator": ",",
-			"currencyGroupSeparator": ".",
+			"currencyGroupSeparator": " ",
 			"currencyGroupSize": 3,
 			"startsWithCurrencySymbol": true
 		}
 	},
 	"openTextField": null,
-	"customData": null,
-	"hooksData": null,
 	"changeData": null,
-	"subscriptionData": null,
 	"salesChannel": "1",
-	"followUpEmail": "14fb1186974c4f379123fae55cbff4db@ct.vtex.com.br",
-	"creationDate": "2018-05-23T00:26:05.7454162Z",
-	"lastChange": "2018-07-27T14:05:43.8509746Z",
-	"timeZoneCreationDate": "2018-05-22T21:26:05.7454162",
-	"timeZoneLastChange": "2018-07-27T11:05:43.8509746",
+	"followUpEmail": "service@chanel.com",
+	"creationDate": "2021-09-14T14:34:00.000+00:00",
+	"lastChange": "2021-09-17T14:00:00.000+00:00",
+	"timeZoneCreationDate": "2021-09-14T14:34:00.000",
+	"timeZoneLastChange": "2021-09-17T14:00:00.000",
 	"isCompleted": true,
-	"merchantName": null,
+	"merchantName": "chanel",
 	"userType": "",
 	"roundingError": 0,
 	"allowEdition": false,
 	"allowCancellation": false,
-	"isUserDataVisible": false,
-	"allowChangeSeller": false,
 	"_accountInfo": {
-		"HostName": "vtexgame1",
-		"MainAccountName": "vtexgame1",
+		"HostName": "chanel",
+		"MainAccountName": "chanel",
 		"IsPersisted": true,
 		"IsRemoved": false,
-		"Id": "b1ecd33c-1b85-430c-bedd-44d3f3919393",
-		"Cnpj": "99999999999999",
-		"CompanyName": "VTEX GAME1",
-		"TradingName": "VTEX GAME1",
-		"AccountName": "vtexgame1",
+        "Id": "e39d05f9-0c54-4469-a626-8bb5cff169f8",
+		"Cnpj": null,
+		"CompanyName": "CHANEL",
+		"TradingName": "CHANEL",
+		"AccountName": "chanel",
 		"DefaultUrl": null,
 		"Address": null,
 		"Number": null,
@@ -475,14 +368,14 @@
 		"City": null,
 		"State": null,
 		"PostalCode": null,
-		"Country": "Brasil",
+		"Country": "France",
 		"Telephone": null,
 		"IsActive": true,
 		"Sponsor": "eb436322-473b-4296-89a9-f129c479be4c",
 		"Logo": null,
 		"AppId": "fddf74e6-cc47-4a7d-8956-f0a6629cb23b",
-		"IsOperating": false,
-		"LV": "LV-1068069",
+		"IsOperating": true,
+		"LV": null,
 		"Sigla": null
 	}
 }

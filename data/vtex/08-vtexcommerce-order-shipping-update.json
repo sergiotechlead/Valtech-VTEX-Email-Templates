@@ -4,18 +4,18 @@
 			{
 				"itemIndex": 0,
 				"quantity": 1,
-				"price": 10980,
-				"description": null
+				"price": 2700,
+				"description": "Sac Caviar & Or Noir"
 			}
 		],
-		"courier": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRA",
-		"invoiceNumber": "199893",
-		"invoiceValue": 10980,
-		"invoiceUrl": "http://eldoc.com.br/eldoc/html/externo/consultar_nfe.sbx?chave=35171111137051040641550020001998931137161791",
-		"issuanceDate": "2017-11-17T21:55:16.7626205",
-		"trackingNumber": "PN442840126BR",
-		"invoiceKey": "35171111137051040641550020001998931137161791",
-		"trackingUrl": "http://status.intelipost.com.br/tracking/6438/27761349",
+		"courier": "CHANEL Express",
+		"invoiceNumber": "735179",
+		"invoiceValue": 2700,
+		"invoiceUrl": "https://chanel.com/invoices/735179.pdf",
+		"issuanceDate": "2021-09-14T14:34:00.000+00:00",
+		"trackingNumber": "CHN-735179",
+		"invoiceKey": "",
+		"trackingUrl": "",
 		"embeddedInvoice": "",
 		"type": "Output",
 		"courierStatus": {
@@ -23,71 +23,69 @@
 			"finished": false,
 			"data": [
 				{
-					"lastChange": "2017-11-22T12:47:00+00:00",
+					"lastChange": "2021-09-15T10:00:00.000+00:00",
 					"city": null,
-					"state": "Em trânsito",
-					"description": "Objeto recebido na Unidade dos Correios\nAC ORIZONA\nOrizona/GO"
+					"state": "En transit",
+					"description": "Colis pris en charge par CHANEL Express - Paris"
 				}
 			]
 		}
 	},
 	"subjectItemAttachment": {
-		"item": "Kit Presente Portina...",
+		"item": "Sac Caviar & Or Noir",
 		"totalItems": 1
 	},
 	"items": [
 		{
 			"additionalInfo": {
 				"dimension": {
-					"cubicweight": 0.8964,
-					"height": 21.3,
-					"length": 20.2,
-					"weight": 880,
-					"width": 10
+					"cubicweight": 1,
+					"height": 0,
+					"length": 0,
+					"weight": 0,
+					"width": 0
 				},
-				"categoriesIds": "/1000048/1000033/1000069/",
-				"productClusterId": "138,140,143,287,381,463,492,540,549,585,604,609,632,638,681,701,747,785,791,821,835,913,919,972,1031,1036,1164,1181,1209,1282,1291,1298,1300,1301,1305,1309,1313,1318,1319,1320,1321,1326,1332,1337,1340,1341,1342,1365,1369,1371,1382,1404,1470,1471,1479,1498,1508,1510,1512,1515,1538,1559,1564,1565,1580",
+				"categoriesIds": "/1/",
+				"productClusterId": "",
 				"commercialConditionId": "1",
-				"brandName": "Portinari",
-				"brandId": "2000036",
+				"brandName": "CHANEL",
+				"brandId": "1",
 				"offeringInfo": null,
 				"offeringType": null,
 				"offeringTypeId": null
 			},
-			"sellerSku": "2004169",
-			"priceValidUntil": "2018-09-01T03:00:00Z",
+			"sellerSku": "AP0250Y01480C3906",
+			"priceValidUntil": "2022-09-14T14:34:00.000+00:00",
 			"callCenterOperator": null,
 			"commission": 0,
 			"freightCommission": 0,
-			"uniqueId": "24F73820B6374C13AFE2624A24788770",
-			"id": "2004169",
-			"productId": "2003286",
-			"refId": "29042",
-			"ean": "7891033290420",
-			"name": "Kit Presente Portinari",
-			"skuName": "Kit Presente Portinari",
+			"uniqueId": "AP0250Y01480C3906-01",
+			"id": "1",
+			"productId": "1",
+			"refId": "AP0250Y01480C3906",
+			"ean": "",
+			"name": "Sac Caviar & Or Noir",
+			"skuName": "Sac Caviar & Or Noir",
 			"modalType": null,
-			"tax": 0,
-			"price": 11830,
-			"listPrice": 16900,
+			"tax": 450,
+			"price": 2700,
+			"listPrice": 2700,
 			"manualPrice": null,
-			"sellingPrice": 10980,
+			"sellingPrice": 2700,
 			"rewardValue": 0,
 			"isGift": false,
 			"preSaleDate": null,
-			"productCategoryIds": "/1000048/1000033/1000069/",
+			"productCategoryIds": "/1/",
 			"productCategories": {
-				"1000033": "Kits",
-				"1000048": "Presentes",
-				"1000069": "Homens"
+				"1": "Maroquinerie"
 			},
 			"defaultPicker": null,
 			"handlerSequence": 0,
 			"handling": false,
 			"quantity": 1,
 			"seller": "1",
-			"imageUrl": "http://boticario.vteximg.com.br/arquivos/ids/186477-60-60/perfume-portinari-kit-natal-29042.jpg?v=636137943455400000",
-			"detailUrl": "/kit-presente-portinari-natal-29042/p",
+			"imageUrl": "",
+			"detailUrl": "/sac-caviar-or-noir/p",
 			"components": [],
 			"bundleItems": [],
 			"attachments": [],
@@ -97,22 +95,7 @@
 			},
 			"attachmentOfferings": [],
 			"offerings": [],
-			"priceTags": [
-				{
-					"name": "discount@shipping-7f5d863a-c901-49fc-a061-8a2c0a75ab2b#7577af55-0979-4f52-a428-dd1717a0a3df",
-					"value": -1611,
-					"rawValue": -16.11,
-					"isPercentual": false,
-					"identifier": "7f5d863a-c901-49fc-a061-8a2c0a75ab2b"
-				},
-				{
-					"name": "DISCOUNT@GIFTCARD_boticario",
-					"value": -850,
-					"rawValue": -8.5,
-					"isPercentual": false,
-					"identifier": null
-				}
-			],
+			"priceTags": [],
 			"availability": "available",
 			"measurementUnit": "un",
 			"unitMultiplier": 1
@@ -121,64 +104,45 @@
 	"sellers": [
 		{
 			"subSellerId": "1",
-			"fulfillmentEndpoint": "http://fulfillment.vtexcommerce.com.br/api/fulfillment?sc=1&an=boticario",
+			"fulfillmentEndpoint": "http://fulfillment.vtexcommerce.com.br/api/fulfillment?an=chanel",
 			"id": "1",
-			"name": "Boticario",
-			"logo": ""
+			"name": "CHANEL",
+			"logo": "https://chanel.com/logo.png"
 		}
 	],
 	"paymentData": {
-		"giftCards": [
-			{
-				"redemptionCode": "",
-				"provider": "boticario",
-				"value": 850,
-				"balance": 850,
-				"name": null,
-				"caption": "Clube Viva",
-				"id": "01674347138",
-				"inUse": true,
-				"isSpecialCard": true,
-				"groupName": null
-			}
-		],
+		"giftCards": [],
 		"transactions": [
 			{
 				"isActive": true,
-				"transactionId": "F1639B8FF87348B28175CBCBE4F879AE",
-				"merchantName": "BOTICARIO",
+				"transactionId": "TXN-735179",
+				"merchantName": "CHANEL",
 				"payments": [
 					{
-						"id": "1BB1AED6719A4B98B2C358EEB45222EA",
-						"paymentSystem": "4",
-						"paymentSystemName": "Mastercard",
-						"value": 10980,
-						"installments": 5,
-						"connectorResponses": {
-							"nsu": "7URIQI",
-							"tid": "322257",
-							"acquirerReference": "322257",
-							"authorizationcode": "7URIQI",
-							"pspReference": "4615102365489735"
-						},
-						"referenceValue": 10980,
+						"id": "PAY-735179",
+						"paymentSystem": "1",
+						"paymentSystemName": "Especes Euros",
+						"value": 2700,
+						"installments": 1,
+						"connectorResponses": {},
+						"referenceValue": 2700,
 						"cardHolder": null,
 						"cardNumber": null,
-						"firstDigits": "550209",
-						"lastDigits": "0869",
+						"firstDigits": null,
+						"lastDigits": null,
 						"cvv2": null,
 						"expireMonth": null,
 						"expireYear": null,
 						"url": null,
 						"koinUrl": null,
-						"tid": "322257",
+						"tid": null,
 						"redemptionCode": null,
 						"giftCardId": null,
 						"giftCardProvider": null,
 						"giftCardAsDiscount": null,
-						"group": "creditCard",
+						"group": "cash",
 						"dueDate": null,
-						"accountId": "9A0881896E3A4575952191454C11CF16",
+						"accountId": null,
 						"parentAccountId": null
 					}
 				]
@@ -187,102 +151,80 @@
 	},
 	"giftRegistryData": null,
 	"receiptData": null,
-	"contextData": null,
 	"marketPlaceOrderId": "",
-	"orderFormId": "643b42ed7e154f309db02f993307e0a8",
-	"sequence": "75036027",
-	"affiliateId": "",
+	"sellerOrderId": "00-v735179chanel-01",
+	"orderFormId": "chanel-735179",
+	"sequence": "AA01455969",
+	"affiliateId": "CHN",
 	"status": "",
 	"callCenterOperator": "",
-	"userProfileId": "07363c20-06f8-47bc-9758-106e80847ab5",
-	"hostName": "boticario",
+	"userProfileId": "user-735179",
+	"hostName": "chanel",
 	"creationVersion": null,
 	"creationEnvironment": null,
 	"lastChangeVersion": null,
 	"workflowInstanceId": null,
-	"orderId": "v75036027bot-01",
-	"orderGroup": "v75036027bot",
+	"orderId": "735179",
+	"orderGroup": "735179",
 	"state": "invoiced",
 	"isCheckedIn": false,
-	"sellerOrderId": "00-v75036027bot-01",
 	"storeId": null,
-	"value": 10980,
+	"value": 2700,
 	"totals": [
 		{
 			"id": "Items",
-			"name": "Total dos Itens",
-			"value": 11830
+			"name": "Total des Articles",
+			"value": 2700
 		},
 		{
 			"id": "Discounts",
-			"name": "Total dos Descontos",
+			"name": "Total des Remises",
 			"value": 0
 		},
 		{
 			"id": "Shipping",
-			"name": "Total do Frete",
+			"name": "Total de la Livraison",
 			"value": 0
 		},
 		{
 			"id": "Tax",
-			"name": "Total da Taxa",
-			"value": 0
-		},
-		{
-			"id": "Discounts_boticario",
-			"name": "Total dos Descontos - boticario",
-			"value": -850
+			"name": "Total de la TVA",
+			"value": 450
 		}
 	],
 	"clientProfileData": {
 		"attachmentId": "clientProfileData",
-		"email": "rodrigo@vtex.com",
-		"firstName": "Gabriela",
-		"lastName": "Marques",
-		"document": "01674347138",
-		"documentType": "cpf",
-		"phone": "+5564999677759",
+		"email": "leana.belkhiri@email.com",
+		"firstName": "Léana",
+		"lastName": "BELKHIRI",
+		"document": "542052766",
+		"documentType": "siret",
+		"phone": "+33 (0) 1 44 50 66 00",
 		"corporateName": null,
 		"tradeName": null,
 		"corporateDocument": null,
 		"stateInscription": null,
 		"corporatePhone": null,
-		"isCorporate": false,
-		"profileCompleteOnLoading": true,
-		"profileErrorOnLoading": false,
-		"customerClass": null
+		"isCorporate": false
 	},
 	"ratesAndBenefitsData": {
 		"attachmentId": "ratesAndBenefitsData",
-		"rateAndBenefitsIdentifiers": [
-			{
-				"id": "7f5d863a-c901-49fc-a061-8a2c0a75ab2b",
-				"name": "2016.08_frete gratis principal 109,90",
-				"featured": false,
-				"description": "frete gratis acima de 109,90"
-			},
-			{
-				"id": "DISCOUNT@GIFTCARD_boticario",
-				"name": "DISCOUNT@GIFTCARD_boticario",
-				"featured": null,
-				"description": null
-			}
-		],
+		"rateAndBenefitsIdentifiers": [],
 		"teaser": []
 	},
 	"shippingData": {
 		"attachmentId": "shippingData",
 		"address": {
 			"addressType": "residential",
-			"receiverName": "Gabriela Marques",
-			"addressId": "-1477568377563",
-			"postalCode": "75280-000",
-			"city": "Orizona",
-			"state": "GO",
-			"country": "BRA",
-			"street": "Rua Getúlio Vargas",
-			"number": "64",
-			"neighborhood": "Centro",
+			"receiverName": "Madame Léana BELKHIRI",
+			"addressId": "66000",
+			"postalCode": "66000",
+			"city": "PERPIGNAN",
+			"state": "",
+			"country": "FRA",
+			"street": "22 ESPACE MEDITERRANEE",
+			"number": "",
+			"neighborhood": "",
 			"complement": null,
 			"reference": null,
 			"geoCoordinates": []
@@ -290,80 +232,48 @@
 		"logisticsInfo": [
 			{
 				"itemIndex": 0,
-				"selectedSla": "Normal",
-				"selectedDeliveryChannel": "delivery",
-				"addressId": "-1477568377563",
+				"selectedSla": "Standard",
 				"slas": [
 					{
-						"id": "Normal",
-						"deliveryChannel": "delivery",
-						"name": "Normal",
+						"id": "Standard",
+						"name": "Standard",
 						"deliveryIds": [
 							{
-								"courierId": "001_Correios PAC Normal",
-								"warehouseId": "1_1",
-								"dockId": "1_1_1",
-								"courierName": "001_Correios PAC Normal",
+								"courierId": "chanel_courier",
+								"warehouseId": "warehouse_paris",
+								"dockId": "dock_chanel",
+								"courierName": "CHANEL Express",
 								"quantity": 1
 							}
 						],
-						"shippingEstimate": "16bd",
-						"shippingEstimateDate": "2017-12-04T12:09:48.1337615Z",
-						"lockTTL": "6d",
+						"shippingEstimate": "3bd",
+						"shippingEstimateDate": "2021-09-17T14:34:00.000+00:00",
+						"lockTTL": "10d",
 						"availableDeliveryWindows": [],
 						"deliveryWindow": null,
 						"price": 0,
-						"listPrice": 1611,
-						"tax": 0,
-						"pickupStoreInfo": {
-							"isPickupStore": false,
-							"friendlyName": null,
-							"address": null,
-							"additionalInfo": null,
-							"dockId": null
-						}
+						"listPrice": 0,
+						"tax": 0
 					}
 				],
 				"shipsTo": [
-					"BRA"
+					"FRA"
 				],
-				"itemId": "2004169",
-				"deliveryChannels": [
-					{
-						"id": "delivery"
-					}
-				]
-			}
-		],
-		"selectedAddresses": [
-			{
-				"addressType": "residential",
-				"receiverName": "Gabriela Marques",
-				"addressId": "-1477568377563",
-				"postalCode": "75280-000",
-				"city": "Orizona",
-				"state": "GO",
-				"country": "BRA",
-				"street": "Rua Getúlio Vargas",
-				"number": "64",
-				"neighborhood": "Centro",
-				"complement": null,
-				"reference": null,
-				"geoCoordinates": []
+				"itemId": "1"
 			}
 		],
 		"availableAddresses": [
 			{
 				"addressType": "residential",
-				"receiverName": "Gabriela Marques",
-				"addressId": "-1477568377563",
-				"postalCode": "75280-000",
-				"city": "Orizona",
-				"state": "GO",
-				"country": "BRA",
-				"street": "Rua Getúlio Vargas",
-				"number": "64",
-				"neighborhood": "Centro",
+				"receiverName": "Madame Léana BELKHIRI",
+				"addressId": "66000",
+				"postalCode": "66000",
+				"city": "PERPIGNAN",
+				"state": "",
+				"country": "FRA",
+				"street": "22 ESPACE MEDITERRANEE",
+				"number": "",
+				"neighborhood": "",
 				"complement": null,
 				"reference": null,
 				"geoCoordinates": []
@@ -372,81 +282,66 @@
 	},
 	"clientPreferencesData": {
 		"attachmentId": "clientPreferencesData",
-		"locale": "pt-BR",
-		"optinNewsLetter": true
+		"locale": "fr-FR",
+		"optinNewsLetter": false
 	},
-	"commercialConditionData": null,
-	"marketingData": {
-		"attachmentId": "marketingData",
-		"utmSource": "clube_viva",
-		"utmMedium": "e-mail",
-		"utmCampaign": "hc_ciclo16_Clube_Ecomm_Esquenta_Black_5221_email",
-		"utmipage": "",
-		"utmiPart": "",
-		"utmiCampaign": "",
-		"coupon": null,
-		"marketingTags": []
-	},
+	"marketingData": null,
 	"storePreferencesData": {
-		"countryCode": "BRA",
+		"countryCode": "FRA",
 		"checkToSavePersonDataByDefault": false,
 		"templateOptions": {
 			"toggleCorporate": false
 		},
-		"timeZone": "E. South America Standard Time",
-		"currencyCode": "BRL",
-		"currencyLocale": 1046,
-		"currencySymbol": "R$",
+		"timeZone": "Romance Standard Time",
+		"currencyCode": "EUR",
+		"currencyLocale": 1036,
+		"currencySymbol": "€",
 		"currencyFormatInfo": {
 			"currencyDecimalDigits": 2,
 			"currencyDecimalSeparator": ",",
-			"currencyGroupSeparator": ".",
+			"currencyGroupSeparator": " ",
 			"currencyGroupSize": 3,
 			"startsWithCurrencySymbol": true
 		}
 	},
 	"openTextField": null,
-	"customData": null,
-	"hooksData": null,
 	"changeData": null,
 	"salesChannel": "1",
-	"followUpEmail": "rodrigo@vtex.com",
-	"creationDate": "2017-11-09T14:08:56.7441425Z",
-	"lastChange": "2017-11-17T23:55:27.4663142Z",
-	"timeZoneCreationDate": "2017-11-09T12:08:56.7441425",
-	"timeZoneLastChange": "2017-11-17T21:55:27.4663142",
+	"followUpEmail": "service@chanel.com",
+	"creationDate": "2021-09-14T14:34:00.000+00:00",
+	"lastChange": "2021-09-14T14:34:00.000+00:00",
+	"timeZoneCreationDate": "2021-09-14T14:34:00.000",
+	"timeZoneLastChange": "2021-09-14T14:34:00.000",
 	"isCompleted": true,
-	"merchantName": null,
+	"merchantName": "chanel",
 	"userType": "",
 	"roundingError": 0,
-	"allowEdition": false,
-	"allowCancellation": false,
 	"_accountInfo": {
-		"HostName": "vtex",
-		"MainAccountName": "vtex",
+		"HostName": "chanel",
+		"MainAccountName": "chanel",
 		"IsPersisted": true,
 		"IsRemoved": false,
-		"Id": "e39d05f9-0c54-4469-a626-8bb5cff169f8",
-		"Cnpj": "123456789",
-		"CompanyName": "Vtex Remarkable Technology",
-		"TradingName": "VTEX",
-		"AccountName": "vtex",
+        "Id": "e39d05f9-0c54-4469-a626-8bb5cff169f8",
+		"Cnpj": null,
+		"CompanyName": "CHANEL",
+		"TradingName": "CHANEL",
+		"AccountName": "chanel",
 		"DefaultUrl": null,
-		"Address": "PRAIA DE BOTAFOGO",
-		"Number": "518",
-		"Complement": "",
-		"District": "BOTAFOGO",
-		"City": "RIO DE JANEIRO",
-		"State": "RJ",
-		"PostalCode": "22250040",
-		"Country": "Brazil",
-		"Telephone": "2222222222",
-		"IsActive": false,
-		"Sponsor": "bd4b4b3f-d486-4412-9c90-18cac00b52bb",
-		"Logo": "VTEX_icon_pink_RGB.jpg",
-		"AppId": "80ec8b10-25b7-48de-b425-7b93554002cb",
-		"IsOperating": false,
-		"LV": "LV-1000009",
+		"Address": null,
+		"Number": null,
+		"Complement": null,
+		"District": null,
+		"City": null,
+		"State": null,
+		"PostalCode": null,
+		"Country": "France",
+		"Telephone": null,
+		"IsActive": true,
+		"Sponsor": "eb436322-473b-4296-89a9-f129c479be4c",
+		"Logo": null,
+		"AppId": "fddf74e6-cc47-4a7d-8956-f0a6629cb23b",
+		"IsOperating": true,
+		"LV": null,
 		"Sigla": null
 	}
 }
