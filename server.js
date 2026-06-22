@@ -29,17 +29,20 @@ loadEmailPartials();
 
 // ── Template Discovery ────────────────────────────────────────────────────────
 const TEMPLATE_META = {
-  '01-confirmed':               { label: 'Order Confirmed',          description: 'Confirmation de commande' },
-  '02-cancelled':               { label: 'Order Cancelled',          description: 'Annulation de commande' },
-  '03-payment-approved':        { label: 'Payment Approved',         description: 'Paiement approuvé' },
-  '04-invoiced':                { label: 'Invoiced',                 description: 'Commande expédiée' },
-  '05-invoiced-cancel-request': { label: 'Invoice Cancel Request',   description: 'Demande d\'annulation' },
-  '06-shipped':                 { label: 'Shipped',                  description: 'Colis expédié' },
-  '07-shipped-cancel-request':  { label: 'Shipped Cancel Request',   description: 'Annulation après expédition' },
-  '08-shipping-update':         { label: 'Shipping Update',          description: 'Mise à jour livraison' },
-  '09-replaced':                { label: 'Replaced',                 description: 'Commande remplacée' },
-  '10-delivered':               { label: 'Delivered',                description: 'Commande livrée' },
-  '11-let-me-know':             { label: 'Let Me Know',              description: 'Disponibilité produit' },
+  '01-vtexcommerce-new-order':                          { label: 'New Order',               description: 'Merci pour votre commande' },
+  '02-vtexcommerce-payment-approved':                   { label: 'Payment Approved',        description: 'Votre paiement a été confirmé' },
+  '03-vtexcommerce-order-invoiced':                     { label: 'Order Invoiced',          description: 'Votre facture est disponible' },
+  '04-vtexcommerce-order-shipped':                      { label: 'Order Shipped',           description: 'Votre commande est en route' },
+  '05-vtexcommerce-shipping-update':                    { label: 'Shipping Update',         description: 'Une mise à jour sur votre livraison' },
+  '06-vtexcommerce-order-shipping-finished':            { label: 'Order Delivered',         description: 'Votre commande a été livrée' },
+  '07-vtexcommerce-order-cancelled':                    { label: 'Order Cancelled',         description: 'Votre commande a été annulée' },
+  '08-vtexcommerce-payment-denied':                     { label: 'Payment Denied',          description: 'Un problème avec votre paiement' },
+  '09-vtexcommerce-order-refunded':                     { label: 'Order Refunded',          description: 'Votre remboursement est en cours' },
+  '10-vtexcommerce-replace-order':                      { label: 'Replace Order',           description: 'Votre nouvelle commande est confirmée' },
+  '11-vtexcommerce-order-shipped-with-cancel-request':  { label: 'Shipped + Cancel',        description: 'Votre commande est en route – Annulation en cours' },
+  '12-portal-avise-me':                                 { label: 'Back in Stock',           description: 'L\'article que vous attendiez est de retour' },
+  '13-vtexid-check-email':                              { label: 'Email Verification',      description: 'Confirmez votre adresse e-mail' },
+  '14-order-invoice-custom':                            { label: 'Invoice',                 description: 'Votre facture est prête' },
 };
 
 function getTemplates(activeName = null) {
