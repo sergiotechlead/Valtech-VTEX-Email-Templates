@@ -45,6 +45,7 @@ const TEMPLATE_META = {
   '14-order-invoice-custom':                            { label: 'Invoice',                 description: 'Votre facture est prête' },
   '15-oms-order-report':                                { label: 'Orders Report',           description: 'Rapport de commandes disponible' },
   '16-vtex-payment-report':                             { label: 'VTEX Payment Report',     description: 'Rapport de paiement VTEX disponible' },
+  '17-vtex-payment-status-update':                      { label: 'Payment Status Update',   description: 'Mise à jour du statut de paiement' },
 };
 
 function getTemplates(activeName = null) {
