@@ -43,6 +43,7 @@ const TEMPLATE_META = {
   '12-portal-avise-me':                                 { label: 'Back in Stock',           description: 'L\'article que vous attendiez est de retour' },
   '13-vtexid-check-email':                              { label: 'Email Verification',      description: 'Confirmez votre adresse e-mail' },
   '14-order-invoice-custom':                            { label: 'Invoice',                 description: 'Votre facture est prête' },
+  '15-oms-order-report':                                { label: 'Orders Report',           description: 'Rapport de commandes disponible' },
 };
 
 function getTemplates(activeName = null) {
