@@ -11,6 +11,7 @@ A local development environment for previewing and building VTEX transactional e
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Templates](#templates)
+- [Style System](#style-system)
 - [Preview Server](#preview-server)
   - [Routes](#routes)
   - [Live Reload](#live-reload)
@@ -124,6 +125,62 @@ Each template is a standalone `.hbs` file that includes its own `<head>`, inline
 - **Footer:** Black background with grey legal copy
 - **Responsive:** `@media (max-width: 640px)` breakpoint collapses columns
 - **MSO compatibility:** VML conditional comments included for Outlook rendering
+
+> To change any visual property, edit the `<style>` block at the top of the `.hbs` file. See [Style System](#style-system) for details.
+
+---
+
+## Style System
+
+Every template contains a single `<style>` block (≈ lines 18–143) that is the **sole source of truth** for all visual properties. To change a color, size, or spacing value across the email, edit that block — nowhere else.
+
+### Design tokens (documented inside each `<style>` block)
+
+| Token | Value | Used for |
+|-------|-------|----------|
+| Brand Black | `#000000` | Buttons, borders, `<strong>`, section headings |
+| Text Dark | `#1d1d1d` | Greeting `h1`, body links |
+| Text Body | `#333333` | Paragraphs, table cells |
+| Text Muted | `#9b9b9b` | Footer links, legal notices |
+| Background | `#f9f9f9` | Page background, info panels |
+| White | `#ffffff` | Email container |
+| Border Light | `#eeeeee` | Table row dividers |
+| Border Dark | `#333333` | Footer separator |
+
+### CSS classes (no inline style needed)
+
+Structural patterns use named classes so HTML stays clean:
+
+| Class | Element | Purpose |
+|-------|---------|---------|
+| `.info-box` | `<table>` | Shipping address, payment, delivery panels (grey bg + `margin-bottom:28px`) |
+| `.info-box td` | `<td>` | Inner padding `16px 20px` |
+| `.info-box p` | `<p>` | Body text inside info panels |
+| `.product-table` | `<table>` | Ordered items table |
+| `.product-table th/td` | headers/cells | Default left-aligned column |
+| `.col-qty` | `th` / `td` | Qty column — centered, `padding: *px 6px` |
+| `.col-price` | `th` / `td` | Price column — right-aligned, `white-space:nowrap` |
+| `.totals-table` | `<table>` | Order totals / subtotals table |
+| `.totals-table td.col-price` | `<td>` | Right-aligned price cell |
+| `.h2-flush` | `<h2>` | Heading variant with no top margin (used in help section) |
+| `.p-muted` | `<p>` | Small grey text — privacy notices, legal copy |
+| `.btn-primary` | `<a>` | Black CTA button |
+| `.code-box` | `<table>` | Verification code display panel |
+| `.help-section` | `<table>` | Help section wrapper with top border separator |
+| `.footer-nav-list` | `<ul>` | Footer navigation list (grey links, no bullets) |
+| `.footer-legal` | `<div>` | Footer legal text block |
+
+### Changing styles
+
+**Color or spacing tweak** — Edit the value in the `<style>` block. The class cascade applies everywhere the class is used.
+
+**One-off adjustment on a single element** — Inline `style="margin-bottom:10px;"` for minor overrides (only the differing property, not a full style dump).
+
+**Adding a new component** — Define a class in the `<style>` block, use it in the markup.
+
+### Note on Gmail
+
+Gmail's mobile app strips `<style>` tags from emails. The remaining inline styles in the HTML cover structural layout properties (max-width, padding, background-color on wrapper tables) that Gmail would otherwise reset. Do not remove these.
 
 ---
 
