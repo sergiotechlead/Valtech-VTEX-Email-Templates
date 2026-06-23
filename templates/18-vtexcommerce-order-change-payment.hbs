@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- So that mobile webkit will display zoomed in -->
+<meta name="format-detection" content="telephone=no">
+<!-- disable auto telephone linking in iOS -->
+<title>{{_accountInfo.TradingName}}</title>
+<style type="text/css">
+        /* Resets: see reset.css for details */
+        .ReadMsgBody { width: 100%; background-color: #ebebeb;}
+        .ExternalClass {width: 100%; background-color: #ebebeb;}
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}
+        body {-webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
+        body {padding:0;}
+        table td {border-collapse:collapse;}
+        .yshortcuts a {border-bottom: none !important;}
+        /* Constrain email width for small screens */
+        @media screen and (max-width: 600px) {
+            table[class="container"] {
+                width: 100% !important;
+            }
+        }
+        /* Give content more room on mobile */
+        @media screen and (max-width: 480px) {
+            .status{padding-bottom:0px;}
+        }
+        /* Styles for forcing columns to rows */
+        @media only screen and (max-width : 600px) {
+            /* force container columns to (horizontal) blocks */
+            .container{border-radius:0 !important;}
+            .no-padding-top-bottom-mobile{padding-top:0;padding-bottom:0;padding:0 !important;}
+            .img-product{width:70px;}
+            .side-border td{padding-left:0;}
+            .button{padding:11px 0 !important;font-size:13px;width:100%;}
+            .table-button{width:100% !important;}
+            td[class="force-col"] {
+                display: block;
+                padding-right: 0 !important;
+            }
+            table[class="col-3"] {
+                /* unset table align="left/right" */
+                float: none !important;
+                width: 100% !important;
+                /* change left/right padding and margins to top/bottom ones */
+                padding-bottom: 12px;
+                border-bottom: 1px solid #eee;
+            }
+            /* remove bottom border for last column/row */
+            table[id="last-col-3"] {
+                border-bottom: none !important;
+            }
+            /* align images right and shrink them a bit */
+            img[class="col-3-img"] {
+                float: right;
+                margin-left: 6px;
+                max-width: 130px;
+            }
+        }
+        @media only screen and (max-width : 800px) {
+            .status{width:100% !important;}
+r{width:200px !important;}
+        }
+</style>
+</head>
+<body marginwidth="0" marginheight="0" bgcolor="#fff" style="padding:0px 0px;color:#333;" leftmargin="0" topmargin="0">
+<!-- 100% wrapper (grey background) -->
+    <table width="100%" cellspacing="0" border="0" bgcolor="#fff">
+        <tbody>
+            <tr>
+                <td valign="top" bgcolor="#fff" align="center" class="no-padding-top-bottom-mobile" style="background-color: #fff;color:#333;">
+                    <!-- 600px container (white background) -->
+                    <table cellspacing="0" cellpadding="0" border="0" bgcolor="#fff" class="container" style="max-width:600px;">
+                        <tbody>
+                            <tr>
+                                <td bgcolor="#ffffff" align="left" class="container-padding" style="background-color: #ffffff; padding-left: 10px; padding-right: 3px; font-size: 13px; line-height: 19px; font-family: Helvetica, sans-serif; color: #333;">
+                                    <br />
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" class="columns-container">
+                                        <tbody>
+                                            <tr>
+                                                <td class="force-col" style="padding-right: 20px;">
+                                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" align="left" style="padding-bottom: 10px;border:none;border-left:0px;border-right:0px;" class="col-3">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="left">
+                                                                    <a href="http://{{_accountInfo.HostName}}.com.br"><img height="55px" border="0" width="auto" style="border:none;border-left:0px;border-right:0px;" alt="{{_accountInfo.TradingName}}" src="https://licensemanager.vtex.com.br/api/site/pub/accounts/{{_accountInfo.Id}}/logos/show" class="img-logo"></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="force-col">
+                                                    <!-- ### BEGIN CONTENT ### -->
+                                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="left" style="padding-bottom:0;margin-bottom:0;" class="col-3">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="left">
+                                                                    <div style="color: #7F7F7F; font-size: 23px; font-family: sans-serif;font-weight:bold;">Pagamento não autorizado!</div>
+                                                                    <span style="font-size:16px;color:#BBB;display:inline-block;">pedido realizado em: {{formatDate creationDate}}</span><br /><br />
+                                                                    <span style="font-size:18px;">Olá, <strong>{{clientProfileData.firstName}}</strong>.</span><br> <div style="padding-top:3px;padding-bottom:0px;">Parece que houve algum problema com seu pagamento. <strong style="color: #b94a48;">Seu pedido aguarda uma nova forma de pagamento.</strong></div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding-top:5px;padding-bottom:5px;">
+                                                                    <table cellspacing="0" style="padding-top:5px;padding-bottom:5px;padding-right:25px;" border="0" align="left" class="side-border">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div style="color:#BBB;font-size:14px;font-weight:bold;text-transform:uppercase;" scope="col">Forma de pagamento
+                                                                                    </div>
+                                                                                    {{#each paymentData.transactions}}
+                                                                                        {{#each payments}}
+                                                                                            <strong>{{paymentSystemName}}</strong>
+                                                                                            {{#if lastDigits}}
+                                                                                                final {{lastDigits}}
+                                                                                            {{/if}}
+                                                                                            <br />R$ {{formatCurrency value}}
+                                                                                            {{#eq installments 1}}
+                                                                                                (à vista)
+                                                                                            {{else}}
+                                                                                                (em {{installments}}x)
+                                                                                            {{/eq}}
+                                                                                            <br />
+                                                                                            <span style="color:#BBB;">Tid: {{tid}}</span>
+                                                                                            <br />
+                                                                                        {{/each}}
+                                                                                    {{/each}}
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table width="100%" cellspacing="0" border="0" style="border-bottom:1px solid #333;border:1px solid #BBB;box-shadow:1px 1px 2px rgba(0,0,0,.4);">
+                                                        
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="background-color:#f9f9f9;padding-left:10px;">
+                                                                    <table align="left" style="padding-bottom:0px;padding-top:10px;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div>
+                                                                                        <strong style="font-size:14px;">Pedido nº <span style="font-size:22px;display:inline-block;">{{orderId}}</span></strong>
+                                                                                    </div>
+                                                                                    <div style="color:#BBB;">Fornecido e entregue por <strong style="display:inline-block;"><span>{{sellers.0.name}}</span></strong></div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="background-color:#f9f9f9;padding-left:10px;">
+                                                                    <table style="padding-bottom:0px;padding-top:5px;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="status" style="vertical-align:top;display:inline-block;padding-right:5px;padding-bottom:10px;padding-top:0px;">
+                                                                                        <strong style="vertical-align:top;font-size:16px;color:#BBB;">&#10003;</strong>
+                                                                                        <div style="display:inline-block;line-height:16px;font-size:10px;color:#BBB;padding-left:3px;width:100px;">
+                                                                                            <strong style="font-size:14px;">PEDIDO REALIZADO</strong>
+                                                                                            <!--<br><span style="display:inline-block;line-height:16px;">{{formatDate orders.0.creationDate}} 10:30</span>-->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="status" style="vertical-align:top;display:inline-block;padding-right:5px;padding-bottom:10px;padding-top:0px;">
+                                                                                        <strong style="vertical-align:top;font-size:16px;color:#b94a48;">X</strong>
+                                                                                        <div style="display:inline-block;line-height:16px;font-size:10px;color:#b94a48;padding-left:3px;width:140px;">
+                                                                                            <strong style="font-size:14px;">PAGAMENTO NÃO AUTORIZADO</strong>
+                                                                                        </div>
+                                                                                    </div>                                                                      
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding-bottom:0;">
+                                                                    {{#each items}}
+                                                                    <table width="100%" style="border-top:1px solid #EEE;padding-top:5px;padding-bottom:5px;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="padding-left:10px;">
+                                                                                    <span>{{name}}</span><br>
+                                                                                    <table cellpadding="10" align="left" style="padding-top:5px;">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="padding-left:0;padding-bottom:0;padding-top:0;">
+                                                                                                    Entrega                                                             {{#each ../shippingData.logisticsInfo}}
+                                                                                                            {{#eq itemId ../id}}
+                                                                                                                {{#each slas}}
+
+                                                                                                                    {{#eq ../selectedSla id}}
+                                                                                                                        {{#if deliveryWindow}}
+                                                                                                                        agendada entre <strong> 
+                                                                                                                           {{formatDateTime deliveryWindow.startDateUtc}} e
+                                                                                                                            {{formatDateTime deliveryWindow.endDateUtc}}   </strong>
+                                                                                                                        {{else}}
+                                                                                                                            <span style="display:inline-block;">
+                                                                                                                            {{#unless shippingEstimateDate}}
+                                                                                                                                </strong> em até <strong>
+                                                                                                                                {{#hasSubStr shippingEstimate 'bd'}}
+                                                                                                                                    {{replace shippingEstimate 'bd' ' dias úteis.'}}
+                                                                                                                                {{else}}
+                                                                                                                                    {{replace shippingEstimate 'd' ' dias.'}}
+                                                                                                                                {{/hasSubStr}}
+                                                                                                                            {{else}}
+                                                                                                                                </strong> até <strong>
+                                                                                                                                {{formatDate shippingEstimateDate}}
+                                                                                                                            {{/unless}}
+                                                                                                                            </strong>
+                                                                                                                        {{/if}}
+                                                                                                                    {{/eq}}
+                                                                                                                {{/each}}
+                                                                                                            {{/eq}}
+                                                                                                        {{/each}}
+                                                                                                    </span>
+                                                                                                    </strong><br>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <table cellpadding="5" align="right" style="padding-top:5px;">
+                                                                                        <tbody><tr>
+                                                                                            <td style="padding-left:0;padding-bottom:0;padding-top:0;">
+                                                                                                <span>{{quantity}}x R$ {{formatCurrency sellingPrice}}</span><br>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    {{#each bundleItems}}
+                                                                        {{#if name}}
+                                                                            <table width="100%" style="border-top:1px solid #EEE;padding-top:5px;padding-bottom:5px;">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td style="padding-left:10px;">
+                                                                                            <table cellpadding="10" align="left" style="padding-top:5px;">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td style="padding-left:0;padding-bottom:0;padding-top:0;">
+                                                                                                            <span>{{name}}</span><br>
+                                                                                                            </strong><br>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                            <table cellpadding="5" align="right" style="padding-top:5px;">
+                                                                                                <tbody><tr>
+                                                                                                    <td style="padding-left:0;padding-bottom:0;padding-top:0;">
+                                                                                                        <span>R$ {{formatCurrency price}}</span><br>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        {{/if}}
+                                                                    {{/each}}
+                                                                    {{/each}}
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <br />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table cellspacing="0" cellpadding="4" border="0" align="right" style="margin-bottom:15px;border: 1px solid #BBB;padding-top:7px;padding-bottom:7px;padding-left:7px;padding-right:7px;">
+                                                        <tbody>
+                                                            {{#each totals}}
+                                                                {{#if value}}
+                                                                <tr>
+                                                                    <td valign="top" align="right" style="color:#7F7F7F;">
+                                                                        {{#eq id "Items"}}Itens{{/eq}}
+                                                                        {{#eq id "Shipping"}}Entrega{{/eq}}
+                                                                        {{#eq id "Discounts"}}Descontos{{/eq}}
+                                                                        {{#eq id "Tax"}}Taxas{{/eq}}
+                                                                    </td>
+                                                                    <td valign="top" align="right" style="text-align:left;">
+                                                                        R$ {{formatCurrency value}}
+                                                                    </td>
+                                                                </tr>
+                                                                {{/if}}
+                                                            {{/each}}
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Atenciosamente,</strong><br>
+                                                    <strong>Equipe {{_accountInfo.TradingName}}</strong>.<br><br>
+                                                </td>
+                                            </tr>   
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+<!--/600px container -->
+<!--/100% wrapper-->
+</body>
+</html>
