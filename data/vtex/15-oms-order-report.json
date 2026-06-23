@@ -1,0 +1,39 @@
+{
+	"to": "service@chanel.com",
+	"Link": "https://s3.amazonaws.com/OMSReport/v3/_finished/chanel/e60d9f57-e40a-4fb2-acfe-62562e2885e4.zip",
+	"generateDate": "2025-12-29T14:33:37.7288263+00:00",
+	"language": "fr",
+	"_accountInfo": {
+		"MainAccountName": "chanel",
+		"AccountName": "chanel",
+		"Cnpj": null,
+		"Id": "33cda5e3-c17f-4e52-88ea-0397523d3b15",
+		"AppId": null,
+		"IsActive": true,
+		"IsOperating": true,
+		"CreationDate": "2018-08-10T17:55:03",
+		"OperationDate": "2023-04-18T18:49:46.6938891Z",
+		"CompanyName": "CHANEL",
+		"TradingName": "CHANEL",
+		"City": null,
+		"Complement": null,
+		"Country": null,
+		"State": null,
+		"Address": null,
+		"District": null,
+		"Number": null,
+		"PostalCode": null,
+		"Licenses": [
+			7,
+			27
+		],
+		"ParentAccountId": null,
+		"ParentAccountName": null,
+		"InactivationDate": null,
+		"Platform": "vtex",
+		"Privacy": null,
+		"HasPiiRestriction": false,
+		"Infra": null,
+		"Sponsor": "61da3e23-a538-413c-907f-606570d0c733"
+	}
+}
