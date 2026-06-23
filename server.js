@@ -44,6 +44,7 @@ const TEMPLATE_META = {
   '13-vtexid-check-email':                              { label: 'Email Verification',      description: 'Confirmez votre adresse e-mail' },
   '14-order-invoice-custom':                            { label: 'Invoice',                 description: 'Votre facture est prête' },
   '15-oms-order-report':                                { label: 'Orders Report',           description: 'Rapport de commandes disponible' },
+  '16-vtex-payment-report':                             { label: 'VTEX Payment Report',     description: 'Rapport de paiement VTEX disponible' },
 };
 
 function getTemplates(activeName = null) {

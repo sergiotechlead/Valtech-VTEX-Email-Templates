@@ -1,0 +1,12 @@
+{
+  "language": "fr",
+  "type": "Rapport de conciliation",
+  "period": {
+    "fromDate": "01/02/2025",
+    "toDate": "28/02/2025"
+  },
+  "reportContentLink": "https://s3.amazonaws.com/vtex-payment-reports/chanel/conciliation-report-2025-02.zip",
+  "_accountInfo": {
+    "TradingName": "CHANEL"
+  }
+}
