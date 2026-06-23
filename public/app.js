@@ -83,12 +83,29 @@
   // ── Width toggle (desktop / mobile) ──────────────────────────────────────
   document.querySelectorAll('[data-width]').forEach(btn => {
     btn.addEventListener('click', () => {
-      const w = btn.dataset.width;
-      emailFrame.style.width  = w === 'full'   ? '100%' : (w + 'px');
-      emailFrame.parentElement.style.display = 'flex';
-      emailFrame.parentElement.style.justifyContent = 'center';
+      const w    = btn.dataset.width;
+      const mock = emailFrame.closest('.email-mock');
+
+      if (w === 'full') {
+        emailFrame.style.width = '100%';
+        if (mock) { mock.style.width = ''; mock.style.maxWidth = ''; }
+      } else {
+        emailFrame.style.width = w + 'px';
+        // Shrink the mock card to the same width so no white padding bleeds out
+        if (mock) { mock.style.width = w + 'px'; mock.style.maxWidth = w + 'px'; }
+      }
+
+      // Remove the old flex-centering approach (was causing the white-space bug)
+      emailFrame.parentElement.style.display      = '';
+      emailFrame.parentElement.style.justifyContent = '';
+
       document.querySelectorAll('[data-width]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+
+      // Recalculate iframe height — content reflows taller at narrower widths
+      setTimeout(() => {
+        if (typeof window._resizeEmailFrame === 'function') window._resizeEmailFrame();
+      }, 150);
     });
   });
 

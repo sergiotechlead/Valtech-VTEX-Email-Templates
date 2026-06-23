@@ -229,6 +229,7 @@ body {
   box-shadow: 0 2px 24px rgba(0,0,0,0.10);
   border-radius: 4px;
   overflow: hidden;
+  transition: width 0.2s ease, max-width 0.2s ease;
 }
 
 .email-mock-header {
