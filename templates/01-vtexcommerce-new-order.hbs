@@ -167,24 +167,18 @@
             <td style="padding:16px 20px;">
               {{#each orders.0.shippingData.logisticsInfo}}
               {{#each slas}}
-              {{#eq ../selectedSla id}}
+              {{#if (eq ../selectedSla id)}}
               <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0 0 6px;"><strong style="color:#000000;">{{name}}</strong></p>
               {{#if deliveryWindow}}
               <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0;">
                 Livraison prévue le {{formatDate deliveryWindow.startDateUtc "DD/MM/YYYY"}} entre {{formatDate deliveryWindow.startDateUtc "HH:mm"}} et {{formatDate deliveryWindow.endDateUtc "HH:mm"}}
               </p>
               {{else}}
-              {{#hasSubStr shippingEstimate 'bd'}}
               <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0;">
-                Livraison estimée&nbsp;: {{replace shippingEstimate 'bd' ''}} jour(s) ouvré(s)
+                Livraison estimée&nbsp;: {{replace (replace shippingEstimate 'bd' '') 'd' ''}} jour(s) ouvré(s)
               </p>
-              {{else}}
-              <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0;">
-                Livraison estimée&nbsp;: {{shippingEstimate}} jour(s)
-              </p>
-              {{/hasSubStr}}
               {{/if}}
-              {{/eq}}
+              {{/if}}
               {{/each}}
               {{/each}}
             </td>
