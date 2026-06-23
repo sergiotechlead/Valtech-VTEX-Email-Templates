@@ -89,16 +89,20 @@
                 <tr>
                   <td>
                     {{#if clientProfileData.firstName}}
-                    <h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Bonjour {{clientProfileData.firstName}},</h1>
+                    {{! Greeting with firstName }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Hello {{clientProfileData.firstName}},</h1>{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Dzień dobry {{clientProfileData.firstName}},</h1>{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Ciao {{clientProfileData.firstName}},</h1>{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Guten Tag {{clientProfileData.firstName}},</h1>{{else}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Bonjour {{clientProfileData.firstName}},</h1>{{/compare}}{{/compare}}{{/compare}}{{/compare}}
                     {{else}}
-                    <h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Cher client,</h1>
+                    {{! Default greeting }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Dear Customer,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Drogi Kliencie,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Gentile cliente,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Sehr geehrter Kunde,</h1>{{else}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Cher client,</h1>{{/compare}}{{/compare}}{{/compare}}{{/compare}}
                     {{/if}}
                     <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:23px;margin:0 0 14px;">
-                      Votre commande a été facturée et est en cours de préparation pour expédition.
+                      {{! Body paragraph order invoiced }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Your order has been invoiced and is being prepared for shipment.{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Twoje zamówienie zostało zafakturowane i jest przygotowywane do wysyłki.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il suo ordine è stato fatturato ed è in fase di preparazione per la spedizione.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Ihre Bestellung wurde fakturiert und wird für den Versand vorbereitet.{{else}}Votre commande a été facturée et est en cours de préparation pour expédition.{{/compare}}{{/compare}}{{/compare}}{{/compare}}
                     </p>
                     {{#if orderId}}
                     <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:23px;margin:0 0 28px;">
-                      <strong style="color:#000000;">N° de commande :</strong> {{orderId}}
+                      {{! Order number label }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}<strong style="color:#000000;">Order No.:</strong>{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}<strong style="color:#000000;">Nr zamówienia:</strong>{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}<strong style="color:#000000;">N° ordine:</strong>{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}<strong style="color:#000000;">Bestellnummer:</strong>{{else}}<strong style="color:#000000;">N° de commande :</strong>{{/compare}}{{/compare}}{{/compare}}{{/compare}} {{orderId}}
                     </p>
                     {{/if}}
                   </td>
@@ -106,13 +110,17 @@
               </table>
               
         {{#if items}}
-        <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:28px 0 12px;">Articles commandés</h2>
+        <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:28px 0 12px;">{{! Section ordered items }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Ordered Items{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Zamówione artykuły{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Articoli ordinati{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Bestellte Artikel{{else}}Articles commandés{{/compare}}{{/compare}}{{/compare}}{{/compare}}</h2>
         <table role="presentation" class="product-table" width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
           <thead>
             <tr>
-              <th style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#000000;padding:8px 0;border-bottom:2px solid #000000;text-align:left;">Article</th>
-              <th style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#000000;padding:8px 6px;border-bottom:2px solid #000000;text-align:center;">Qté</th>
-              <th style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#000000;padding:8px 0;border-bottom:2px solid #000000;text-align:right;">Prix</th>
+              <th style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#000000;padding:8px 0;border-bottom:2px solid #000000;text-align:left;">{{! TH item }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Item{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Artykuł{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Articolo{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Artikel{{else}}Article{{/compare}}{{/compare}}{{/compare}}{{/compare}}</th>
+              <th style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#000000;padding:8px 6px;border-bottom:2px solid #000000;text-align:center;">{{! TH qty }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Qty{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Ilość{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Qtà{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Menge{{else}}Qté{{/compare}}{{/compare}}{{/compare}}{{/compare}}</th>
+              <th style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#000000;padding:8px 0;border-bottom:2px solid #000000;text-align:right;">{{! TH price }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Price{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Cena{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Prezzo{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Preis{{else}}Prix{{/compare}}{{/compare}}{{/compare}}{{/compare}}</th>
             </tr>
           </thead>
           <tbody>
@@ -141,7 +149,8 @@
         {{/if}}
               
         {{#if shippingData.address}}
-        <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:28px 0 12px;">Adresse de livraison</h2>
+        <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:28px 0 12px;">{{! Section shipping address }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Delivery Address{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Adres dostawy{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Indirizzo di consegna{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Lieferadresse{{else}}Adresse de livraison{{/compare}}{{/compare}}{{/compare}}{{/compare}}</h2>
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#f9f9f9;margin-bottom:28px;">
           <tr>
             <td style="padding:16px 20px;">
@@ -160,7 +169,8 @@
         {{/if}}
               
         {{#if shippingData.logisticsInfo}}
-        <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:28px 0 12px;">Délai de livraison estimé</h2>
+        <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:28px 0 12px;">{{! Section estimated delivery }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Estimated Delivery Time{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Szacowany czas dostawy{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Tempo di consegna stimato{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Geschätzte Lieferzeit{{else}}Délai de livraison estimé{{/compare}}{{/compare}}{{/compare}}{{/compare}}</h2>
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#f9f9f9;margin-bottom:28px;">
           <tr>
             <td style="padding:16px 20px;">
@@ -170,11 +180,13 @@
               <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0 0 6px;"><strong style="color:#000000;">{{name}}</strong></p>
               {{#if deliveryWindow}}
               <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0;">
-                Livraison prévue le {{formatDate deliveryWindow.startDateUtc "DD/MM/YYYY"}} entre {{formatDate deliveryWindow.startDateUtc "HH:mm"}} et {{formatDate deliveryWindow.endDateUtc "HH:mm"}}
+                {{! Delivery window }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Scheduled delivery on {{formatDate deliveryWindow.startDateUtc "DD/MM/YYYY"}} between {{formatDate deliveryWindow.startDateUtc "HH:mm"}} and {{formatDate deliveryWindow.endDateUtc "HH:mm"}}{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Planowana dostawa {{formatDate deliveryWindow.startDateUtc "DD/MM/YYYY"}} między {{formatDate deliveryWindow.startDateUtc "HH:mm"}} a {{formatDate deliveryWindow.endDateUtc "HH:mm"}}{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Consegna prevista il {{formatDate deliveryWindow.startDateUtc "DD/MM/YYYY"}} tra le {{formatDate deliveryWindow.startDateUtc "HH:mm"}} e le {{formatDate deliveryWindow.endDateUtc "HH:mm"}}{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Geplante Lieferung am {{formatDate deliveryWindow.startDateUtc "DD/MM/YYYY"}} zwischen {{formatDate deliveryWindow.startDateUtc "HH:mm"}} und {{formatDate deliveryWindow.endDateUtc "HH:mm"}}{{else}}Livraison prévue le {{formatDate deliveryWindow.startDateUtc "DD/MM/YYYY"}} entre {{formatDate deliveryWindow.startDateUtc "HH:mm"}} et {{formatDate deliveryWindow.endDateUtc "HH:mm"}}{{/compare}}{{/compare}}{{/compare}}{{/compare}}
               </p>
               {{else}}
               <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:22px;margin:0;">
-                Livraison estimée&nbsp;: {{replace (replace shippingEstimate 'bd' '') 'd' ''}} jour(s) ouvré(s)
+                {{! Delivery estimate }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Estimated delivery: {{replace (replace shippingEstimate 'bd' '') 'd' ''}} working day(s){{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Szacowany termin dostawy: {{replace (replace shippingEstimate 'bd' '') 'd' ''}} dzień(dni) roboczy(ch){{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Consegna stimata: {{replace (replace shippingEstimate 'bd' '') 'd' ''}} giorno(i) lavorativo(i){{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Geschätzte Lieferung: {{replace (replace shippingEstimate 'bd' '') 'd' ''}} Werktag(e){{else}}Livraison estimée&nbsp;: {{replace (replace shippingEstimate 'bd' '') 'd' ''}} jour(s) ouvré(s){{/compare}}{{/compare}}{{/compare}}{{/compare}}
               </p>
               {{/if}}
               {{/if}}
@@ -190,13 +202,20 @@
           <tr><td style="height:28px;">&nbsp;</td></tr>
           <tr>
             <td>
-              <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:0 0 12px;">Besoin d'aide&nbsp;?</h2>
+              <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:0 0 12px;">{{! Help heading }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Need help?{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Potrzebujesz pomocy?{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Hai bisogno di aiuto?{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Brauchen Sie Hilfe?{{else}}Besoin d'aide ?{{/compare}}{{/compare}}{{/compare}}{{/compare}}</h2>
               <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:23px;margin:0 0 10px;">
-                Vous trouverez plus d'informations dans notre <a href="https://www.chanel.com/fr/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> ou en contactant notre <a href="https://www.chanel.com/fr/conseils-services/" style="color:#1d1d1d;text-decoration:underline;">Service client</a>.
+                {{! Help text }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}You will find more information in our <a href="https://www.chanel.com/en/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> or by contacting our <a href="https://www.chanel.com/en/customer-service/" style="color:#1d1d1d;text-decoration:underline;">Customer Service</a>.{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Więcej informacji znajdziesz w naszym <a href="https://www.chanel.com/pl/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> lub kontaktując się z naszym <a href="https://www.chanel.com/pl/obsluga-klienta/" style="color:#1d1d1d;text-decoration:underline;">Działem obsługi klienta</a>.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Troverete maggiori informazioni nelle nostre <a href="https://www.chanel.com/it/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> o contattando il nostro <a href="https://www.chanel.com/it/servizio-clienti/" style="color:#1d1d1d;text-decoration:underline;">Servizio clienti</a>.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Weitere Informationen finden Sie in unseren <a href="https://www.chanel.com/de/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> oder wenden Sie sich an unseren <a href="https://www.chanel.com/de/kundenservice/" style="color:#1d1d1d;text-decoration:underline;">Kundendienst</a>.{{else}}Vous trouverez plus d'informations dans notre <a href="https://www.chanel.com/fr/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> ou en contactant notre <a href="https://www.chanel.com/fr/conseils-services/" style="color:#1d1d1d;text-decoration:underline;">Service client</a>.{{/compare}}{{/compare}}{{/compare}}{{/compare}}
               </p>
               <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#9b9b9b;line-height:20px;margin:0;">
-                Pour toute information concernant la collecte et le traitement de vos données personnelles par CHANEL, consultez notre
-                <a href="https://www.chanel.com/fr/politique-de-confidentialite/" style="color:#9b9b9b;text-decoration:underline;">Politique de confidentialité</a>.
+                {{! Privacy text }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}For information on the collection and processing of your personal data by CHANEL, please read our
+                <a href="https://www.chanel.com/en/privacy-policy/" style="color:#9b9b9b;text-decoration:underline;">Privacy Policy</a>.{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Aby uzyskać informacje na temat gromadzenia i przetwarzania Twoich danych osobowych przez CHANEL, zapoznaj się z naszą
+                <a href="https://www.chanel.com/pl/polityka-prywatnosci/" style="color:#9b9b9b;text-decoration:underline;">Polityką prywatności</a>.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Per informazioni sulla raccolta e il trattamento dei dati personali da parte di CHANEL, consultare la nostra
+                <a href="https://www.chanel.com/it/informativa-sulla-privacy/" style="color:#9b9b9b;text-decoration:underline;">Informativa sulla privacy</a>.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Informationen zur Erhebung und Verarbeitung Ihrer personenbezogenen Daten durch CHANEL finden Sie in unserer
+                <a href="https://www.chanel.com/de/datenschutzrichtlinie/" style="color:#9b9b9b;text-decoration:underline;">Datenschutzrichtlinie</a>.{{else}}Pour toute information concernant la collecte et le traitement de vos données personnelles par CHANEL, consultez notre
+                <a href="https://www.chanel.com/fr/politique-de-confidentialite/" style="color:#9b9b9b;text-decoration:underline;">Politique de confidentialité</a>.{{/compare}}{{/compare}}{{/compare}}{{/compare}}
               </p>
             </td>
           </tr>

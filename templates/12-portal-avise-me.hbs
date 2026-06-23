@@ -88,15 +88,18 @@
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:36px;">
                 <tr>
                   <td>
-                    <h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Cher client,</h1>
+                    {{! Default greeting }}
+{{#if clientPreferencesData.locale}}{{#compare clientPreferencesData.locale "==" "en-GB"}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Dear Customer,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Drogi Kliencie,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Gentile cliente,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Sehr geehrter Kunde,</h1>{{else}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Cher client,</h1>{{/compare}}{{/compare}}{{/compare}}{{/compare}}{{else}}<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;color:#1d1d1d;margin:0 0 16px;line-height:1.4;">Cher client,</h1>{{/if}}
                     <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:23px;margin:0 0 14px;">
-                      Le produit que vous suivez est maintenant disponible. Ne manquez pas cette occasion de l'acquérir.
+                      {{! Body paragraph back in stock }}
+{{#if clientPreferencesData.locale}}{{#compare clientPreferencesData.locale "==" "en-GB"}}The product you are following is now available. Don't miss this opportunity to get it.{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Produkt, który obserwujesz, jest teraz dostępny. Nie przegap tej okazji, aby go zdobyć.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il prodotto che stai seguendo è ora disponibile. Non perdere questa opportunità di acquistarlo.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Das Produkt, das Sie verfolgen, ist jetzt verfügbar. Verpassen Sie nicht die Gelegenheit, es zu erwerben.{{else}}Le produit que vous suivez est maintenant disponible. Ne manquez pas cette occasion de l'acquérir.{{/compare}}{{/compare}}{{/compare}}{{/compare}}{{else}}Le produit que vous suivez est maintenant disponible. Ne manquez pas cette occasion de l'acquérir.{{/if}}
                     </p>
                   </td>
                 </tr>
               </table>
               {{#if productName}}
-              <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:28px 0 12px;">Produit disponible</h2>
+              <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:28px 0 12px;">{{! Section available product }}
+{{#if clientPreferencesData.locale}}{{#compare clientPreferencesData.locale "==" "en-GB"}}Available Product{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Dostępny produkt{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Prodotto disponibile{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Verfügbares Produkt{{else}}Produit disponible{{/compare}}{{/compare}}{{/compare}}{{/compare}}{{else}}Produit disponible{{/if}}</h2>
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#f9f9f9;margin-bottom:28px;">
                 <tr>
                   <td style="padding:24px;">
@@ -105,7 +108,8 @@
                     <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:23px;margin:0 0 20px;">{{productDescription}}</p>
                     {{/if}}
                     {{#if productLink}}
-                    <a href="{{productLink}}" style="display:inline-block;background-color:#000000;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;text-decoration:none;padding:14px 32px;" target="_blank">Voir le produit</a>
+                    <a href="{{productLink}}" style="display:inline-block;background-color:#000000;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;text-decoration:none;padding:14px 32px;" target="_blank">{{! View product button }}
+{{#if clientPreferencesData.locale}}{{#compare clientPreferencesData.locale "==" "en-GB"}}View product{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Zobacz produkt{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Visualizza prodotto{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Produkt anzeigen{{else}}Voir le produit{{/compare}}{{/compare}}{{/compare}}{{/compare}}{{else}}Voir le produit{{/if}}</a>
                     {{/if}}
                   </td>
                 </tr>
@@ -117,13 +121,21 @@
           <tr><td style="height:28px;">&nbsp;</td></tr>
           <tr>
             <td>
-              <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:0 0 12px;">Besoin d'aide&nbsp;?</h2>
+              <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#000000;text-transform:uppercase;letter-spacing:0.7px;margin:0 0 12px;">{{! Help heading }}
+{{#if clientPreferencesData.locale}}{{#compare clientPreferencesData.locale "==" "en-GB"}}Need help?{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Potrzebujesz pomocy?{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Hai bisogno di aiuto?{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Brauchen Sie Hilfe?{{else}}Besoin d'aide ?{{/compare}}{{/compare}}{{/compare}}{{/compare}}{{else}}Besoin d'aide ?{{/if}}</h2>
               <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:23px;margin:0 0 10px;">
-                Vous trouverez plus d'informations dans notre <a href="https://www.chanel.com/fr/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> ou en contactant notre <a href="https://www.chanel.com/fr/conseils-services/" style="color:#1d1d1d;text-decoration:underline;">Service client</a>.
+                {{! Help text }}
+{{#if clientPreferencesData.locale}}{{#compare clientPreferencesData.locale "==" "en-GB"}}You will find more information in our <a href="https://www.chanel.com/en/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> or by contacting our <a href="https://www.chanel.com/en/customer-service/" style="color:#1d1d1d;text-decoration:underline;">Customer Service</a>.{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Więcej informacji znajdziesz w naszym <a href="https://www.chanel.com/pl/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> lub kontaktując się z naszym <a href="https://www.chanel.com/pl/obsluga-klienta/" style="color:#1d1d1d;text-decoration:underline;">Działem obsługi klienta</a>.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Troverete maggiori informazioni nelle nostre <a href="https://www.chanel.com/it/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> o contattando il nostro <a href="https://www.chanel.com/it/servizio-clienti/" style="color:#1d1d1d;text-decoration:underline;">Servizio clienti</a>.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Weitere Informationen finden Sie in unseren <a href="https://www.chanel.com/de/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> oder wenden Sie sich an unseren <a href="https://www.chanel.com/de/kundenservice/" style="color:#1d1d1d;text-decoration:underline;">Kundendienst</a>.{{else}}Vous trouverez plus d'informations dans notre <a href="https://www.chanel.com/fr/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> ou en contactant notre <a href="https://www.chanel.com/fr/conseils-services/" style="color:#1d1d1d;text-decoration:underline;">Service client</a>.{{/compare}}{{/compare}}{{/compare}}{{/compare}}{{else}}Vous trouverez plus d'informations dans notre <a href="https://www.chanel.com/fr/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> ou en contactant notre <a href="https://www.chanel.com/fr/conseils-services/" style="color:#1d1d1d;text-decoration:underline;">Service client</a>.{{/if}}
               </p>
               <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#9b9b9b;line-height:20px;margin:0;">
-                Pour toute information concernant la collecte et le traitement de vos données personnelles par CHANEL, consultez notre
-                <a href="https://www.chanel.com/fr/politique-de-confidentialite/" style="color:#9b9b9b;text-decoration:underline;">Politique de confidentialité</a>.
+                {{! Privacy text }}
+{{#if clientPreferencesData.locale}}{{#compare clientPreferencesData.locale "==" "en-GB"}}For information on the collection and processing of your personal data by CHANEL, please read our
+                <a href="https://www.chanel.com/en/privacy-policy/" style="color:#9b9b9b;text-decoration:underline;">Privacy Policy</a>.{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Aby uzyskać informacje na temat gromadzenia i przetwarzania Twoich danych osobowych przez CHANEL, zapoznaj się z naszą
+                <a href="https://www.chanel.com/pl/polityka-prywatnosci/" style="color:#9b9b9b;text-decoration:underline;">Polityką prywatności</a>.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Per informazioni sulla raccolta e il trattamento dei dati personali da parte di CHANEL, consultare la nostra
+                <a href="https://www.chanel.com/it/informativa-sulla-privacy/" style="color:#9b9b9b;text-decoration:underline;">Informativa sulla privacy</a>.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Informationen zur Erhebung und Verarbeitung Ihrer personenbezogenen Daten durch CHANEL finden Sie in unserer
+                <a href="https://www.chanel.com/de/datenschutzrichtlinie/" style="color:#9b9b9b;text-decoration:underline;">Datenschutzrichtlinie</a>.{{else}}Pour toute information concernant la collecte et le traitement de vos données personnelles par CHANEL, consultez notre
+                <a href="https://www.chanel.com/fr/politique-de-confidentialite/" style="color:#9b9b9b;text-decoration:underline;">Politique de confidentialité</a>.{{/compare}}{{/compare}}{{/compare}}{{/compare}}{{else}}Pour toute information concernant la collecte et le traitement de vos données personnelles par CHANEL, consultez notre
+                <a href="https://www.chanel.com/fr/politique-de-confidentialite/" style="color:#9b9b9b;text-decoration:underline;">Politique de confidentialité</a>.{{/if}}
               </p>
             </td>
           </tr>
