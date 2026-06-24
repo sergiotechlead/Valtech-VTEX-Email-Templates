@@ -50,6 +50,7 @@ const TEMPLATE_META = {
   '19-vtexcommerce-payment-pending':                    { label: 'Payment Pending',         description: 'En attente de votre paiement' },
   '20-vtexcommerce-subscriptions-payment-not-approved': { label: 'Subscription Payment Failed', description: 'Paiement de l\'abonnement non approuvé' },
   '21-report-report-finished':                          { label: 'Report Finished',             description: 'Votre rapport est disponible' },
+  '22-catalog-admin-reports':                           { label: 'Catalog Admin Reports',       description: 'Rapport d\'administration du catalogue disponible' },
 };
 
 function getTemplates(activeName = null) {
