@@ -41,7 +41,7 @@ const TEMPLATE_META = {
   '10-vtexcommerce-replace-order':                      { label: 'Replace Order',           description: 'Votre nouvelle commande est confirmée' },
   '11-vtexcommerce-order-shipped-with-cancel-request':  { label: 'Shipped + Cancel',        description: 'Votre commande est en route – Annulation en cours' },
   '12-portal-avise-me':                                 { label: 'Back in Stock',           description: 'L\'article que vous attendiez est de retour' },
-  '13-vtexid-check-email':                              { label: 'Email Verification',      description: 'Confirmez votre adresse e-mail' },
+  '13-vtexid_check_email':                              { label: 'Email Verification',      description: 'Confirmez votre adresse e-mail' },
   '14-order-invoice-custom':                            { label: 'Invoice',                 description: 'Votre facture est prête' },
   '15-oms-order-report':                                { label: 'Orders Report',           description: 'Rapport de commandes disponible' },
   '16-vtex-payment-report':                             { label: 'VTEX Payment Report',     description: 'Rapport de paiement VTEX disponible' },
