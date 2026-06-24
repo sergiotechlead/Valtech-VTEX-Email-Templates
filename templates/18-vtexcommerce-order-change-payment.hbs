@@ -1,320 +1,371 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="initial-scale=1.0">
-<!-- So that mobile webkit will display zoomed in -->
-<meta name="format-detection" content="telephone=no">
-<!-- disable auto telephone linking in iOS -->
-<title>{{_accountInfo.TradingName}}</title>
-<style type="text/css">
-        /* Resets: see reset.css for details */
-        .ReadMsgBody { width: 100%; background-color: #ebebeb;}
-        .ExternalClass {width: 100%; background-color: #ebebeb;}
-        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}
-        body {-webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
-        body {padding:0;}
-        table td {border-collapse:collapse;}
-        .yshortcuts a {border-bottom: none !important;}
-        /* Constrain email width for small screens */
-        @media screen and (max-width: 600px) {
-            table[class="container"] {
-                width: 100% !important;
-            }
-        }
-        /* Give content more room on mobile */
-        @media screen and (max-width: 480px) {
-            .status{padding-bottom:0px;}
-        }
-        /* Styles for forcing columns to rows */
-        @media only screen and (max-width : 600px) {
-            /* force container columns to (horizontal) blocks */
-            .container{border-radius:0 !important;}
-            .no-padding-top-bottom-mobile{padding-top:0;padding-bottom:0;padding:0 !important;}
-            .img-product{width:70px;}
-            .side-border td{padding-left:0;}
-            .button{padding:11px 0 !important;font-size:13px;width:100%;}
-            .table-button{width:100% !important;}
-            td[class="force-col"] {
-                display: block;
-                padding-right: 0 !important;
-            }
-            table[class="col-3"] {
-                /* unset table align="left/right" */
-                float: none !important;
-                width: 100% !important;
-                /* change left/right padding and margins to top/bottom ones */
-                padding-bottom: 12px;
-                border-bottom: 1px solid #eee;
-            }
-            /* remove bottom border for last column/row */
-            table[id="last-col-3"] {
-                border-bottom: none !important;
-            }
-            /* align images right and shrink them a bit */
-            img[class="col-3-img"] {
-                float: right;
-                margin-left: 6px;
-                max-width: 130px;
-            }
-        }
-        @media only screen and (max-width : 800px) {
-            .status{width:100% !important;}
-r{width:200px !important;}
-        }
-</style>
-</head>
-<body marginwidth="0" marginheight="0" bgcolor="#fff" style="padding:0px 0px;color:#333;" leftmargin="0" topmargin="0">
-<!-- 100% wrapper (grey background) -->
-    <table width="100%" cellspacing="0" border="0" bgcolor="#fff">
-        <tbody>
-            <tr>
-                <td valign="top" bgcolor="#fff" align="center" class="no-padding-top-bottom-mobile" style="background-color: #fff;color:#333;">
-                    <!-- 600px container (white background) -->
-                    <table cellspacing="0" cellpadding="0" border="0" bgcolor="#fff" class="container" style="max-width:600px;">
-                        <tbody>
-                            <tr>
-                                <td bgcolor="#ffffff" align="left" class="container-padding" style="background-color: #ffffff; padding-left: 10px; padding-right: 3px; font-size: 13px; line-height: 19px; font-family: Helvetica, sans-serif; color: #333;">
-                                    <br />
-                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" class="columns-container">
-                                        <tbody>
-                                            <tr>
-                                                <td class="force-col" style="padding-right: 20px;">
-                                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" align="left" style="padding-bottom: 10px;border:none;border-left:0px;border-right:0px;" class="col-3">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td align="left">
-                                                                    <a href="http://{{_accountInfo.HostName}}.com.br"><img height="55px" border="0" width="auto" style="border:none;border-left:0px;border-right:0px;" alt="{{_accountInfo.TradingName}}" src="https://licensemanager.vtex.com.br/api/site/pub/accounts/{{_accountInfo.Id}}/logos/show" class="img-logo"></a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="force-col">
-                                                    <!-- ### BEGIN CONTENT ### -->
-                                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="left" style="padding-bottom:0;margin-bottom:0;" class="col-3">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td align="left">
-                                                                    <div style="color: #7F7F7F; font-size: 23px; font-family: sans-serif;font-weight:bold;">Pagamento não autorizado!</div>
-                                                                    <span style="font-size:16px;color:#BBB;display:inline-block;">pedido realizado em: {{formatDate creationDate}}</span><br /><br />
-                                                                    <span style="font-size:18px;">Olá, <strong>{{clientProfileData.firstName}}</strong>.</span><br> <div style="padding-top:3px;padding-bottom:0px;">Parece que houve algum problema com seu pagamento. <strong style="color: #b94a48;">Seu pedido aguarda uma nova forma de pagamento.</strong></div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td style="padding-top:5px;padding-bottom:5px;">
-                                                                    <table cellspacing="0" style="padding-top:5px;padding-bottom:5px;padding-right:25px;" border="0" align="left" class="side-border">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td>
-                                                                                    <div style="color:#BBB;font-size:14px;font-weight:bold;text-transform:uppercase;" scope="col">Forma de pagamento
-                                                                                    </div>
-                                                                                    {{#each paymentData.transactions}}
-                                                                                        {{#each payments}}
-                                                                                            <strong>{{paymentSystemName}}</strong>
-                                                                                            {{#if lastDigits}}
-                                                                                                final {{lastDigits}}
-                                                                                            {{/if}}
-                                                                                            <br />R$ {{formatCurrency value}}
-                                                                                            {{#eq installments 1}}
-                                                                                                (à vista)
-                                                                                            {{else}}
-                                                                                                (em {{installments}}x)
-                                                                                            {{/eq}}
-                                                                                            <br />
-                                                                                            <span style="color:#BBB;">Tid: {{tid}}</span>
-                                                                                            <br />
-                                                                                        {{/each}}
-                                                                                    {{/each}}
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <table width="100%" cellspacing="0" border="0" style="border-bottom:1px solid #333;border:1px solid #BBB;box-shadow:1px 1px 2px rgba(0,0,0,.4);">
-                                                        
-                                                        <tbody>
-                                                            <tr>
-                                                                <td style="background-color:#f9f9f9;padding-left:10px;">
-                                                                    <table align="left" style="padding-bottom:0px;padding-top:10px;">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td>
-                                                                                    <div>
-                                                                                        <strong style="font-size:14px;">Pedido nº <span style="font-size:22px;display:inline-block;">{{orderId}}</span></strong>
-                                                                                    </div>
-                                                                                    <div style="color:#BBB;">Fornecido e entregue por <strong style="display:inline-block;"><span>{{sellers.0.name}}</span></strong></div>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td style="background-color:#f9f9f9;padding-left:10px;">
-                                                                    <table style="padding-bottom:0px;padding-top:5px;">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td>
-                                                                                    <div class="status" style="vertical-align:top;display:inline-block;padding-right:5px;padding-bottom:10px;padding-top:0px;">
-                                                                                        <strong style="vertical-align:top;font-size:16px;color:#BBB;">&#10003;</strong>
-                                                                                        <div style="display:inline-block;line-height:16px;font-size:10px;color:#BBB;padding-left:3px;width:100px;">
-                                                                                            <strong style="font-size:14px;">PEDIDO REALIZADO</strong>
-                                                                                            <!--<br><span style="display:inline-block;line-height:16px;">{{formatDate orders.0.creationDate}} 10:30</span>-->
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="status" style="vertical-align:top;display:inline-block;padding-right:5px;padding-bottom:10px;padding-top:0px;">
-                                                                                        <strong style="vertical-align:top;font-size:16px;color:#b94a48;">X</strong>
-                                                                                        <div style="display:inline-block;line-height:16px;font-size:10px;color:#b94a48;padding-left:3px;width:140px;">
-                                                                                            <strong style="font-size:14px;">PAGAMENTO NÃO AUTORIZADO</strong>
-                                                                                        </div>
-                                                                                    </div>                                                                      
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td style="padding-bottom:0;">
-                                                                    {{#each items}}
-                                                                    <table width="100%" style="border-top:1px solid #EEE;padding-top:5px;padding-bottom:5px;">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td style="padding-left:10px;">
-                                                                                    <span>{{name}}</span><br>
-                                                                                    <table cellpadding="10" align="left" style="padding-top:5px;">
-                                                                                        <tbody>
-                                                                                            <tr>
-                                                                                                <td style="padding-left:0;padding-bottom:0;padding-top:0;">
-                                                                                                    Entrega                                                             {{#each ../shippingData.logisticsInfo}}
-                                                                                                            {{#eq itemId ../id}}
-                                                                                                                {{#each slas}}
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CHANEL – Modification du paiement de votre commande</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style type="text/css">
 
-                                                                                                                    {{#eq ../selectedSla id}}
-                                                                                                                        {{#if deliveryWindow}}
-                                                                                                                        agendada entre <strong> 
-                                                                                                                           {{formatDateTime deliveryWindow.startDateUtc}} e
-                                                                                                                            {{formatDateTime deliveryWindow.endDateUtc}}   </strong>
-                                                                                                                        {{else}}
-                                                                                                                            <span style="display:inline-block;">
-                                                                                                                            {{#unless shippingEstimateDate}}
-                                                                                                                                </strong> em até <strong>
-                                                                                                                                {{#hasSubStr shippingEstimate 'bd'}}
-                                                                                                                                    {{replace shippingEstimate 'bd' ' dias úteis.'}}
-                                                                                                                                {{else}}
-                                                                                                                                    {{replace shippingEstimate 'd' ' dias.'}}
-                                                                                                                                {{/hasSubStr}}
-                                                                                                                            {{else}}
-                                                                                                                                </strong> até <strong>
-                                                                                                                                {{formatDate shippingEstimateDate}}
-                                                                                                                            {{/unless}}
-                                                                                                                            </strong>
-                                                                                                                        {{/if}}
-                                                                                                                    {{/eq}}
-                                                                                                                {{/each}}
-                                                                                                            {{/eq}}
-                                                                                                        {{/each}}
-                                                                                                    </span>
-                                                                                                    </strong><br>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                    <table cellpadding="5" align="right" style="padding-top:5px;">
-                                                                                        <tbody><tr>
-                                                                                            <td style="padding-left:0;padding-bottom:0;padding-top:0;">
-                                                                                                <span>{{quantity}}x R$ {{formatCurrency sellingPrice}}</span><br>
-                                                                                            </td>
-                                                                                        </tr>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                    {{#each bundleItems}}
-                                                                        {{#if name}}
-                                                                            <table width="100%" style="border-top:1px solid #EEE;padding-top:5px;padding-bottom:5px;">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td style="padding-left:10px;">
-                                                                                            <table cellpadding="10" align="left" style="padding-top:5px;">
-                                                                                                <tbody>
-                                                                                                    <tr>
-                                                                                                        <td style="padding-left:0;padding-bottom:0;padding-top:0;">
-                                                                                                            <span>{{name}}</span><br>
-                                                                                                            </strong><br>
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                            <table cellpadding="5" align="right" style="padding-top:5px;">
-                                                                                                <tbody><tr>
-                                                                                                    <td style="padding-left:0;padding-bottom:0;padding-top:0;">
-                                                                                                        <span>R$ {{formatCurrency price}}</span><br>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        {{/if}}
-                                                                    {{/each}}
-                                                                    {{/each}}
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <br />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <table cellspacing="0" cellpadding="4" border="0" align="right" style="margin-bottom:15px;border: 1px solid #BBB;padding-top:7px;padding-bottom:7px;padding-left:7px;padding-right:7px;">
-                                                        <tbody>
-                                                            {{#each totals}}
-                                                                {{#if value}}
-                                                                <tr>
-                                                                    <td valign="top" align="right" style="color:#7F7F7F;">
-                                                                        {{#eq id "Items"}}Itens{{/eq}}
-                                                                        {{#eq id "Shipping"}}Entrega{{/eq}}
-                                                                        {{#eq id "Discounts"}}Descontos{{/eq}}
-                                                                        {{#eq id "Tax"}}Taxas{{/eq}}
-                                                                    </td>
-                                                                    <td valign="top" align="right" style="text-align:left;">
-                                                                        R$ {{formatCurrency value}}
-                                                                    </td>
-                                                                </tr>
-                                                                {{/if}}
-                                                            {{/each}}
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <strong>Atenciosamente,</strong><br>
-                                                    <strong>Equipe {{_accountInfo.TradingName}}</strong>.<br><br>
-                                                </td>
-                                            </tr>   
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
+  /* ============================================================
+     CHANEL Email Templates — Design System
+     Edit ONLY this <style> block to update all visual properties.
+     ============================================================
+
+     COLOR TOKENS
+     Brand Black   : #000000   (buttons, borders, headings)
+     Text Dark     : #1d1d1d   (greeting h1, body links)
+     Text Body     : #333333   (paragraphs, table cells)
+     Text Muted    : #9b9b9b   (footer, legal notices)
+     Background    : #f9f9f9   (page bg, info panels)
+     White         : #ffffff   (email body)
+     Border Light  : #eeeeee   (row dividers)
+     Border Dark   : #333333   (footer divider)
+
+     TYPOGRAPHY
+     Font stack    : Arial, Helvetica, sans-serif
+     H1 size       : 22px  (mobile: 18px)
+     H2 size       : 12px  uppercase, letter-spacing 0.7px
+     Body size     : 14px  line-height 23px
+     Small / legal : 11px  line-height 20px
+
+     SPACING
+     Section gap   : 28px
+     Info panel    : 16px 20px
+     Content pad   : 0 40px 40px
+  */
+
+  /* --- Reset ------------------------------------------------- */
+  body,table,td,p,a,li { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+  body,td,th,input,textarea,select,p,span { font-family:Arial,ArialMT,Helvetica,sans-serif; }
+  table,td { mso-table-lspace:0pt; mso-table-rspace:0pt; }
+  img { -ms-interpolation-mode:bicubic; border:0; outline:none; text-decoration:none; }
+
+  /* --- Layout ------------------------------------------------ */
+  body             { margin:0; padding:0; background-color:#f9f9f9; }
+  .email-wrapper   { width:100%; background-color:#f9f9f9; }
+  .email-container { max-width:640px; margin:0 auto; background-color:#ffffff; }
+
+  /* --- Typography -------------------------------------------- */
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:   22px;
+    font-weight: 400;
+    color:       #1d1d1d;
+    margin:      0 0 16px;
+    line-height: 1.4;
+  }
+  h2 {
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      12px;
+    font-weight:    700;
+    color:          #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin:         28px 0 12px;
+    line-height:    1.4;
+  }
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:   14px;
+    color:       #333333;
+    line-height: 23px;
+    margin:      0 0 14px;
+  }
+  a      { color:#1d1d1d; text-decoration:underline; }
+  strong { color:#000000; }
+
+  /* h2 variant — flush top (used inside the help section) */
+  .h2-flush { margin-top:0; }
+
+  /* Small muted text — privacy & legal notices */
+  .p-muted   { font-size:11px; color:#9b9b9b; line-height:20px; margin:0; }
+  .p-muted a { color:#9b9b9b; }
+
+  /* --- Product table ----------------------------------------- */
+  .product-table              { width:100%; border-collapse:collapse; }
+  .product-table th           { font-family:Arial,Helvetica,sans-serif; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.7px; color:#000000; padding:8px 0; border-bottom:2px solid #000000; text-align:left; }
+  .product-table th.col-qty   { padding:8px 6px; text-align:center; }
+  .product-table th.col-price { text-align:right; }
+  .product-table td           { font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#333333; padding:12px 0; border-bottom:1px solid #eeeeee; vertical-align:top; }
+  .product-table td.col-qty   { padding:12px 6px; text-align:center; }
+  .product-table td.col-price { text-align:right; white-space:nowrap; }
+
+  /* --- Totals table ------------------------------------------ */
+  .totals-table              { width:100%; border-collapse:collapse; margin-top:16px; }
+  .totals-table td           { font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#333333; padding:5px 0; }
+  .totals-table td.col-price { text-align:right; white-space:nowrap; }
+  .totals-table .total-row td { font-weight:700; color:#000000; border-top:1px solid #000000; padding-top:10px; }
+
+  /* --- Info panels (shipping address, payment, delivery) ----- */
+  .info-box    { background-color:#f9f9f9; margin-bottom:28px; }
+  .info-box td { padding:16px 20px; }
+  .info-box p  { font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#333333; line-height:22px; margin:0; }
+
+  /* --- CTA button -------------------------------------------- */
+  .btn-primary { display:inline-block; background-color:#000000; color:#ffffff; font-family:Arial,Helvetica,sans-serif; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1px; text-decoration:none; padding:14px 32px; }
+
+  /* --- Verification code box --------------------------------- */
+  .code-box    { background-color:#f9f9f9; text-align:center; margin:24px 0; }
+  .code-box td { padding:16px 20px; text-align:center; }
+  .code-box p  { font-family:Arial,Helvetica,sans-serif; font-size:40px; letter-spacing:20px; color:#000000; margin:0; padding-left:20px; line-height:1.4; }
+
+  /* --- Help section ------------------------------------------ */
+  .help-section    { margin-top:28px; border-top:1px solid #eeeeee; }
+  .help-section td { height:28px; }
+
+  /* --- Footer ------------------------------------------------ */
+  .footer-nav-list    { font-size:14px; line-height:22px; padding:0; margin:0; color:#9b9b9b; list-style-type:none; }
+  .footer-nav-list li { margin-bottom:9px; }
+  .footer-nav-list a  { text-decoration:none; color:#9b9b9b; }
+  .footer-legal       { color:#9b9b9b; font-size:12px; text-align:center; line-height:16px; }
+  .footer-legal p     { font-size:12px; color:#9b9b9b; margin-bottom:3px; }
+  .footer-legal a     { color:#9b9b9b; }
+
+  /* --- Responsive ------------------------------------------- */
+  @media only screen and (max-width:640px) {
+    .email-container { width:100%!important; }
+    .footer-col      { width:100%!important; display:block!important; padding:0 0 20px 0!important; }
+    .content-padding { padding:20px!important; }
+    h1               { font-size:18px!important; }
+  }
+
+  </style>
+</head>
+<body style="margin:0;padding:0;background-color:#f9f9f9;">
+  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%;background-color:#f9f9f9;" class="email-wrapper">
+    <tr>
+      <td>
+
+  <!-- TOP BAR -->
+  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#000000;max-width:640px;margin:0 auto;">
+    <tr><td style="height:7px;font-size:7px;line-height:7px;">&nbsp;</td></tr>
+  </table>
+  <!-- LOGO HEADER -->
+  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background-color:#ffffff;">
+    <tr>
+      <td align="center" style="padding:36px 40px 30px;background-color:#ffffff;">
+        <a href="https://www.chanel.com/fr/" style="text-decoration:none;border:0;display:inline-block;" target="_blank" aria-label="Page d'accueil CHANEL">
+          <svg xmlns="http://www.w3.org/2000/svg" width="175" height="28" viewBox="0 0 175 28" role="img" aria-label="CHANEL"><title>CHANEL</title><path fill="#000000" fill-rule="evenodd" d="m20.655 17.726 4.565 2.615c-2.282 4.197-6.737 6.922-11.781 6.922C6.075 27.263 0 21.629 0 13.713S6.075.163 13.439.163c5.044 0 9.5 2.725 11.781 6.923L20.655 9.7c-1.326-2.725-4.013-4.381-7.216-4.381-4.603 0-8.1 3.423-8.1 8.394s3.497 8.395 8.1 8.395c3.203 0 5.89-1.657 7.216-4.382m29.05 8.874V15.554H36.818V26.6h-5.154V.826h5.154V10.4h12.887V.826h5.155V26.6zm29.898-10.678L74.926 5.061 70.25 15.922zM89.838 26.6h-5.634l-2.54-5.892H68.188l-2.54 5.892h-5.634L71.428.826h6.996zm23.748 0L99.778 6.313V26.6h-4.786V.826h6.812l11.598 17.084V.826h4.787V26.6zm14.543 0V.826h18.41v4.787h-13.624v5.523h11.782v4.786h-11.782v5.892h14.36V26.6zm27.431 0V.826h5.154v20.62h13.622V26.6z"/></svg>
+        </a>
+      </td>
+    </tr>
+  </table>
+        <!-- MAIN CONTENT -->
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background-color:#ffffff;">
+          <tr>
+            <td style="padding:0 40px 40px;" class="content-padding">
+
+              <!-- GREETING -->
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:36px;">
+                <tr>
+                  <td>
+                    {{#if clientProfileData.firstName}}
+                    {{! Greeting firstName }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}<h1>Hello {{clientProfileData.firstName}},</h1>{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}<h1>Dzień dobry {{clientProfileData.firstName}},</h1>{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}<h1>Ciao {{clientProfileData.firstName}},</h1>{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}<h1>Guten Tag {{clientProfileData.firstName}},</h1>{{else}}<h1>Bonjour {{clientProfileData.firstName}},</h1>{{/compare}}{{/compare}}{{/compare}}{{/compare}}
+                    {{else}}
+                    {{! Default greeting }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}<h1>Dear Customer,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}<h1>Drogi Kliencie,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}<h1>Gentile cliente,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}<h1>Sehr geehrter Kunde,</h1>{{else}}<h1>Cher client,</h1>{{/compare}}{{/compare}}{{/compare}}{{/compare}}
+                    {{/if}}
+                    <p>
+                      {{! Body paragraph payment change }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Your payment was not authorised. Your order is awaiting a new payment method.{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Twoja płatność nie została zatwierdzona. Twoje zamówienie oczekuje na nową metodę płatności.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il suo pagamento non è stato autorizzato. Il suo ordine è in attesa di un nuovo metodo di pagamento.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Ihre Zahlung wurde nicht autorisiert. Ihre Bestellung wartet auf eine neue Zahlungsmethode.{{else}}Votre paiement n'a pas été autorisé. Votre commande est en attente d'un nouveau mode de paiement.{{/compare}}{{/compare}}{{/compare}}{{/compare}}
+                    </p>
+                    {{#if orderId}}
+                    <p style="margin-bottom:28px;">
+                      {{! Order number label }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}<strong>Order No.:</strong>{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}<strong>Nr zamówienia:</strong>{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}<strong>N° ordine:</strong>{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}<strong>Bestellnummer:</strong>{{else}}<strong>N° de commande :</strong>{{/compare}}{{/compare}}{{/compare}}{{/compare}} {{orderId}}
+                    </p>
+                    {{/if}}
+                  </td>
+                </tr>
+              </table>
+
+        {{#if paymentData.transactions}}
+        <h2>{{! Section payment info }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Payment Information{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Informacje o płatności{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Informazioni sul pagamento{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Zahlungsinformationen{{else}}Informations de paiement{{/compare}}{{/compare}}{{/compare}}{{/compare}}</h2>
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" class="info-box">
+          <tr>
+            <td>
+              {{#each paymentData.transactions}}
+              {{#each payments}}
+              <p style="margin-bottom:4px;">
+                {{! Payment method label }}
+{{#compare ../../clientPreferencesData.locale "==" "en-GB"}}<strong>Payment Method:</strong>{{else}}{{#compare ../../clientPreferencesData.locale "==" "pl-PL"}}<strong>Metoda płatności:</strong>{{else}}{{#compare ../../clientPreferencesData.locale "==" "it-IT"}}<strong>Metodo di pagamento:</strong>{{else}}{{#compare ../../clientPreferencesData.locale "==" "de-DE"}}<strong>Zahlungsmethode:</strong>{{else}}<strong>Mode de paiement :</strong>{{/compare}}{{/compare}}{{/compare}}{{/compare}} {{paymentSystemName}}{{#if lastDigits}} — {{#compare ../../clientPreferencesData.locale "==" "en-GB"}}ending in{{else}}{{#compare ../../clientPreferencesData.locale "==" "pl-PL"}}końcówka{{else}}{{#compare ../../clientPreferencesData.locale "==" "it-IT"}}che termina con{{else}}{{#compare ../../clientPreferencesData.locale "==" "de-DE"}}endend auf{{else}}se terminant par{{/compare}}{{/compare}}{{/compare}}{{/compare}} {{lastDigits}}{{/if}}
+              </p>
+              {{#if tid}}<p style="margin-bottom:4px;"><strong>TID:</strong> {{tid}}</p>{{/if}}
+              {{/each}}
+              {{/each}}
+            </td>
+          </tr>
+        </table>
+        {{/if}}
+
+        {{#if items}}
+        <h2>{{! Section ordered items }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Ordered Items{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Zamówione artykuły{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Articoli ordinati{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Bestellte Artikel{{else}}Articles commandés{{/compare}}{{/compare}}{{/compare}}{{/compare}}</h2>
+        <table role="presentation" class="product-table" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <thead>
+            <tr>
+              <th>{{! TH item }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Item{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Artykuł{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Articolo{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Artikel{{else}}Article{{/compare}}{{/compare}}{{/compare}}{{/compare}}</th>
+              <th class="col-qty">{{! TH qty }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Qty{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Ilość{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Qtà{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Menge{{else}}Qté{{/compare}}{{/compare}}{{/compare}}{{/compare}}</th>
+              <th class="col-price">{{! TH price }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Price{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Cena{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Prezzo{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Preis{{else}}Prix{{/compare}}{{/compare}}{{/compare}}{{/compare}}</th>
             </tr>
-        </tbody>
-    </table>
-<!--/600px container -->
-<!--/100% wrapper-->
+          </thead>
+          <tbody>
+            {{#each items}}
+            <tr>
+              <td>{{name}}</td>
+              <td class="col-qty">{{quantity}}</td>
+              <td class="col-price">{{formatCurrency sellingPrice}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+        {{/if}}
+
+        {{#if totals}}
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" class="totals-table">
+          {{#each totals}}
+          {{#if value}}
+          <tr>
+            <td>{{name}}</td>
+            <td class="col-price">{{formatCurrency value}}</td>
+          </tr>
+          {{/if}}
+          {{/each}}
+        </table>
+        {{/if}}
+
+        <!-- HELP -->
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" class="help-section">
+          <tr><td>&nbsp;</td></tr>
+          <tr>
+            <td>
+              <h2 class="h2-flush">{{! Help heading }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}Need help?{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Potrzebujesz pomocy?{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Hai bisogno di aiuto?{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Benötigen Sie Hilfe?{{else}}Besoin d'aide ?{{/compare}}{{/compare}}{{/compare}}{{/compare}}</h2>
+              <p style="margin-bottom:10px;">
+                {{! Help text }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}You will find more information in our <a href="https://www.chanel.com/en/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> or by contacting our <a href="https://www.chanel.com/en/customer-service/" style="color:#1d1d1d;text-decoration:underline;">Customer Service</a>.{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Więcej informacji znajdziesz w naszym <a href="https://www.chanel.com/pl/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> lub kontaktując się z naszym <a href="https://www.chanel.com/pl/obsluga-klienta/" style="color:#1d1d1d;text-decoration:underline;">Działem obsługi klienta</a>.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Troverete maggiori informazioni nelle nostre <a href="https://www.chanel.com/it/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> o contattando il nostro <a href="https://www.chanel.com/it/servizio-clienti/" style="color:#1d1d1d;text-decoration:underline;">Servizio clienti</a>.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Weitere Informationen finden Sie in unseren <a href="https://www.chanel.com/de/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> oder wenden Sie sich an unseren <a href="https://www.chanel.com/de/kundenservice/" style="color:#1d1d1d;text-decoration:underline;">Kundendienst</a>.{{else}}Vous trouverez plus d'informations dans notre <a href="https://www.chanel.com/fr/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> ou en contactant notre <a href="https://www.chanel.com/fr/conseils-services/" style="color:#1d1d1d;text-decoration:underline;">Service client</a>.{{/compare}}{{/compare}}{{/compare}}{{/compare}}
+              </p>
+              <p class="p-muted">
+                {{! Privacy text }}
+{{#compare clientPreferencesData.locale "==" "en-GB"}}For information on the collection and processing of your personal data by CHANEL, please read our
+                <a href="https://www.chanel.com/en/privacy-policy/" style="color:#9b9b9b;text-decoration:underline;">Privacy Policy</a>.{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Aby uzyskać informacje na temat gromadzenia i przetwarzania Twoich danych osobowych przez CHANEL, zapoznaj się z naszą
+                <a href="https://www.chanel.com/pl/polityka-prywatnosci/" style="color:#9b9b9b;text-decoration:underline;">Polityką prywatności</a>.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Per informazioni sulla raccolta e il trattamento dei dati personali da parte di CHANEL, consultare la nostra
+                <a href="https://www.chanel.com/it/informativa-sulla-privacy/" style="color:#9b9b9b;text-decoration:underline;">Informativa sulla privacy</a>.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Informationen zur Erhebung und Verarbeitung Ihrer personenbezogenen Daten durch CHANEL finden Sie in unserer
+                <a href="https://www.chanel.com/de/datenschutzrichtlinie/" style="color:#9b9b9b;text-decoration:underline;">Datenschutzrichtlinie</a>.{{else}}Pour toute information concernant la collecte et le traitement de vos données personnelles par CHANEL, consultez notre
+                <a href="https://www.chanel.com/fr/politique-de-confidentialite/" style="color:#9b9b9b;text-decoration:underline;">Politique de confidentialité</a>.{{/compare}}{{/compare}}{{/compare}}{{/compare}}
+              </p>
+            </td>
+          </tr>
+        </table>
+            </td>
+          </tr>
+        </table>
+
+  <!-- FOOTER -->
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0px auto;background-color:#000000" class="footer">
+    <tbody><tr>
+        <td style="padding-left:20px;padding-right:20px" class="wrapperP">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tbody><tr>
+                    <td height="54"></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <h2 style="margin:0"><center><img src="https://img-mail.chanel.com/1563281513168-chanel_white.png" alt="Chanel" width="175" style="display:inline-block"></center></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="54"></td>
+                </tr>
+            </tbody></table>
+            <table width="100%" role="presentation" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <td valign="top" width="50%" style="padding-right:20px;vertical-align:top;" class="footer-col">
+                            <table width="100%" role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                <tbody><tr>
+                                    <td valign="top" style="font-family:Arial,Helvetica,sans-serif">
+                                        <h3 style="margin-bottom:18px;color:#ffffff;font-size:18px">
+                                            <img src="https://img-mail.chanel.com/1573047330036-explore_F_@2x.png" alt="{{#compare clientPreferencesData.locale "==" "en-GB"}}Explore CHANEL.com{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Odkrywaj CHANEL.com{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Esplora CHANEL.com{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Entdecken Sie CHANEL.com{{else}}Explorer CHANEL.com{{/compare}}{{/compare}}{{/compare}}{{/compare}}" width="181">
+                                        </h3>
+                                        <ul class="footer-nav-list">
+                                            <li><a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-yJzVfq-ppdPscA7JUT6JuuYCYr1bh9JYBR0-Q1RZwOdHwAZy7_tZfzFdTyNJkcbcxMv2V8C-vvaoR19OXO0YRioODDhASrAL1Nbx0oxTD9" target="_blank">Haute Couture</a></li>
+                                            <li><a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-yKyGJM6CG76uBuL2A1RhJ9AEAW82_hgwUcJJyWdMUITfOhg3DgMcDz2Nq2p0vQAxmZKozv051h_6Zj_yDXJiYU__OfqJ_YKobt8-7rPZU6" target="_blank">{{#compare clientPreferencesData.locale "==" "en-GB"}}Fashion{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Moda{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Moda{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Mode{{else}}Mode{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                                            <li><a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-yL6nYQIFTUH31HSFa_LJ8tvX8cdNqj5ITEye_jEldsgpc4slo-iBVSKKxVRUEzGk5mBgdljjXxMINB05B-ooJjkVHEwGvXJM5IEk4MrlRi" target="_blank">{{#compare clientPreferencesData.locale "==" "en-GB"}}High Jewellery{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Haute Joaillerie{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Alta Gioielleria{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Haute Joaillerie{{else}}Haute Joaillerie{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                                            <li><a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-yMSw3tGeBGfQbklMY4ZWUws86dvw4enXpuUOuVq_PU3xeGt1t7y4QRTF5r8puU7HeBiRjojKxkrvZyirvNhz_L3Z00vYDtGB1b4zseESo0" target="_blank">{{#compare clientPreferencesData.locale "==" "en-GB"}}Jewellery{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Biżuteria{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Gioielleria{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Schmuck{{else}}Joaillerie{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                                            <li><a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-yN0npK29XTWUL-rO4qt1DqBTodjCies8uxYLoO4UrFGEER5Ueymb1Sgbb6tZWZe5ozk6A43A6UyYKLc0jnoZ5D-5h1ynjL7VkXIyll49-x" target="_blank">{{#compare clientPreferencesData.locale "==" "en-GB"}}Watches{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Zegarki{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Orologi{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Uhren{{else}}Horlogerie{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                                            <li><a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-yO-EUNs8E5k8M281LmZw2yOvS-khKcyMy-zRlzIzMxXpjqeTq5izqEfBBW2tR-ekChBH65_-4dErIjwU1Xc5FbgKDA9LSeWoCC1s0gKsW7" target="_blank">{{#compare clientPreferencesData.locale "==" "en-GB"}}Eyewear{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Okulary{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Occhiali{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Brillen{{else}}Lunettes{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                                            <li><a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-yP78H2PTxGKj_TviLr3MLgftZnCa59o7KcST3IF2Lo1oanNlX2bb_YNKzuvCzDjDNNh2gDqEd0-B5neNLGbFuhD5NGe7h1pwvjy843Xri7" target="_blank">{{#compare clientPreferencesData.locale "==" "en-GB"}}Fragrances{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Perfumy{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Profumi{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Düfte{{else}}Parfums{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                                            <li><a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-yQ1TdEtQ-zYgTYO_S9h1YoPGdSU0__73KFh2aywaqoamJCzm9ZM3Ml53-vdePp5VYxy8AWQ1pvf8W7X0PaDJmXmVr8L9gsgllzMxfPKon9" target="_blank">{{#compare clientPreferencesData.locale "==" "en-GB"}}Makeup{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Makijaż{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Trucco{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Make-up{{else}}Maquillage{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                                            <li><a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-yRwj0gAYuGi9toqZB9IWzLovbC4q-a0G-FttwX35Oi3PnFKHOXj-WSxuFkm5BbEQS5zPe_7n0J9Dk79v_QzOww3hXTazYOIfl2No-nZoDo" target="_blank">{{#compare clientPreferencesData.locale "==" "en-GB"}}Skincare{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Pielęgnacja{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Trattamenti{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Pflege{{else}}Soins{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    <td valign="top" width="50%" style="vertical-align:top;" class="footer-col">
+                            <table width="100%" role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                <tbody><tr>
+                                    <td valign="top">
+                                        <h3 style="margin-bottom:18px;color:#ffffff;font-size:18px">
+                                            <img src="https://img-mail.chanel.com/1573047231617-online_F_@2x.png" alt="{{#compare clientPreferencesData.locale "==" "en-GB"}}Online Services{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Usługi online{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Servizi online{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Onlineservices{{else}}Services en ligne{{/compare}}{{/compare}}{{/compare}}{{/compare}}" width="149">
+                                        </h3>
+                                        <ul class="footer-nav-list">
+                                            <li><a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-ySvr2DMmA_e20emUf1MomnY2nfOvx4h-Pt-XuoxkVhKxkhwdyQqkyDZYK8FBxviA-ZN3pQfTDWiMU5SoTn0O4cnIirurLF6e2JCDRJJdUg" target="_blank">{{#compare clientPreferencesData.locale "==" "en-GB"}}Find a boutique{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Znajdź butik{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Trova una boutique{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Finden Sie eine Boutique{{else}}Trouver une boutique{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                                            <li><a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-yTJBzuX6oR5ZMXvPZXqA0MglX8MCJI2iIPwln4-1DRwVBAzR1F-mCDnXroA2AQ_jVUr7lX09yzPU0_OA3pnrblqmKH6zKsVEcWP5c_ck7n" target="_blank">{{#compare clientPreferencesData.locale "==" "en-GB"}}My account{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Moje konto{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il mio account{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Mein Konto{{else}}Mon compte{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                                            <li><a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-yUVoJMQDa_MXVCejprUaxDREu6gO8EPwXtjiIpCy8P29qt6WgPVzfNEb3MlhNIRS3dWOnROZVkE0iXDKgAjk3VGbl-k2MXsmtOS5Ci48L_" target="_blank">{{#compare clientPreferencesData.locale "==" "en-GB"}}Returns{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Zwroty{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Resi{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Retouren{{else}}Retours{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                                            <li><a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-yV62lH7U8bamAct7s0PbI0JdBpXeHo1guaxbL9VZGheoRZBSLzdhJlRQsLxBWLF9yeGnv-qewZWWfwddlaSpcktl-4o1DHROvxBzUTUcqw" target="_blank">{{#compare clientPreferencesData.locale "==" "en-GB"}}FAQ{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}FAQ{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}FAQ{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}FAQ{{else}}FAQ{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                <tbody><tr>
+                    <th height="27">
+                    </th>
+                </tr>
+            </tbody></table>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tbody><tr>
+                    <td height="18" style="border-top:1px solid #333333"></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <div class="footer-legal">
+                            <p>CHANEL S.A.S. ; RCS Nanterre 542 052 766</p>
+                            <p style="margin-bottom:6px;">135 avenue Charles de Gaulle 92521 Neuilly-sur-Seine Cedex</p>
+                            <a href="https://click.mailing.chanel.com/?qs=ABB7InYiOjEsImQiOjQ5MTV9ADIAAAAAANqh7-yW1VvPWz1RK7oyGSdlIunpPT-Q7U9XNHLPfFTtiaZp-0Y89VBcAhTFvF_c6zrL5lLWDNicyq47Ey-YwZseCLyrFC8_6KXw6wY697RTLYia" style="color:#9b9b9b" target="_blank">{{#compare clientPreferencesData.locale "==" "en-GB"}}Privacy Policy{{else}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Polityka prywatności{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Politica sulla privacy{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Datenschutzrichtlinie{{else}}Politique de confidentialité{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="18"></td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>

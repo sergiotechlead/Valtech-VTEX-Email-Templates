@@ -19,7 +19,31 @@
 
   /* ============================================================
      CHANEL Email Templates — Design System
-     ============================================================ */
+     Edit ONLY this <style> block to update all visual properties.
+     ============================================================
+
+     COLOR TOKENS
+     Brand Black   : #000000   (buttons, borders, headings)
+     Text Dark     : #1d1d1d   (greeting h1, body links)
+     Text Body     : #333333   (paragraphs, table cells)
+     Text Muted    : #9b9b9b   (footer, legal notices)
+     Background    : #f9f9f9   (page bg, info panels)
+     White         : #ffffff   (email body)
+     Border Light  : #eeeeee   (row dividers)
+     Border Dark   : #333333   (footer divider)
+
+     TYPOGRAPHY
+     Font stack    : Arial, Helvetica, sans-serif
+     H1 size       : 22px  (mobile: 18px)
+     H2 size       : 12px  uppercase, letter-spacing 0.7px
+     Body size     : 14px  line-height 23px
+     Small / legal : 11px  line-height 20px
+
+     SPACING
+     Section gap   : 28px
+     Info panel    : 16px 20px
+     Content pad   : 0 40px 40px
+  */
 
   /* --- Reset ------------------------------------------------- */
   body,table,td,p,a,li { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
@@ -68,8 +92,33 @@
   .p-muted   { font-size:11px; color:#9b9b9b; line-height:20px; margin:0; }
   .p-muted a { color:#9b9b9b; }
 
+  /* --- Product table ----------------------------------------- */
+  .product-table              { width:100%; border-collapse:collapse; }
+  .product-table th           { font-family:Arial,Helvetica,sans-serif; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.7px; color:#000000; padding:8px 0; border-bottom:2px solid #000000; text-align:left; }
+  .product-table th.col-qty   { padding:8px 6px; text-align:center; }
+  .product-table th.col-price { text-align:right; }
+  .product-table td           { font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#333333; padding:12px 0; border-bottom:1px solid #eeeeee; vertical-align:top; }
+  .product-table td.col-qty   { padding:12px 6px; text-align:center; }
+  .product-table td.col-price { text-align:right; white-space:nowrap; }
+
+  /* --- Totals table ------------------------------------------ */
+  .totals-table              { width:100%; border-collapse:collapse; margin-top:16px; }
+  .totals-table td           { font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#333333; padding:5px 0; }
+  .totals-table td.col-price { text-align:right; white-space:nowrap; }
+  .totals-table .total-row td { font-weight:700; color:#000000; border-top:1px solid #000000; padding-top:10px; }
+
+  /* --- Info panels (shipping address, payment, delivery) ----- */
+  .info-box    { background-color:#f9f9f9; margin-bottom:28px; }
+  .info-box td { padding:16px 20px; }
+  .info-box p  { font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#333333; line-height:22px; margin:0; }
+
   /* --- CTA button -------------------------------------------- */
   .btn-primary { display:inline-block; background-color:#000000; color:#ffffff; font-family:Arial,Helvetica,sans-serif; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1px; text-decoration:none; padding:14px 32px; }
+
+  /* --- Verification code box --------------------------------- */
+  .code-box    { background-color:#f9f9f9; text-align:center; margin:24px 0; }
+  .code-box td { padding:16px 20px; text-align:center; }
+  .code-box p  { font-family:Arial,Helvetica,sans-serif; font-size:40px; letter-spacing:20px; color:#000000; margin:0; padding-left:20px; line-height:1.4; }
 
   /* --- Download box ------------------------------------------ */
   .download-box    { background-color:#f9f9f9; text-align:center; margin:24px 0; }

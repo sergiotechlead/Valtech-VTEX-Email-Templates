@@ -32,7 +32,12 @@
 			"quantity": 1,
 			"sku": {
 				"nameComplete": "Sac Caviar & Or Noir",
-				"imageUrl": "https://chanel.com/images/sac-caviar-or-noir.jpg"
+				"imageUrl": "https://www.chanel.com/images///f_auto,q_auto:good,dpr_1.1/w_1600/-9543173046302.jpg",
+				"skuName": "Sac Caviar & Or Noir",
+				"skuId": "9543173046302",
+				"skuRefId": "9543173046302",
+				"skuPrice": 2700,
+				"skuListPrice": 2700
 			}
 		}
 	],
@@ -46,6 +51,7 @@
 		"state": "",
 		"postalCode": "66000"
 	},
+	"locale": "fr-FR",
 	"_accountInfo": {
 		"HostName": "chanel",
 		"MainAccountName": "chanel",
