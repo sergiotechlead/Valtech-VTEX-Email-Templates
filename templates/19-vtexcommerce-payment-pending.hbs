@@ -80,7 +80,7 @@
     font-size:   14px;
     color:       #333333;
     line-height: 23px;
-    margin:      0 0 14px;
+    margin:      0 0 27px;
   }
   a      { color:#1d1d1d; text-decoration:underline; }
   strong { color:#000000; }
@@ -134,7 +134,7 @@
   @media only screen and (max-width:640px) {
     .email-container { width:100%!important; }
     .footer-col      { width:100%!important; display:block!important; padding:0 0 20px 0!important; }
-    .content-padding { padding:20px!important; }
+    .content-padding { padding:10px!important; }
     h1               { font-size:18px!important; }
   }
 
@@ -161,7 +161,7 @@
         <!-- MAIN CONTENT -->
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background-color:#ffffff;">
           <tr>
-            <td style="padding:0 40px 40px;background-color:#ffffff;" class="content-padding">
+            <td style="padding:0 10px 10px;background-color:#ffffff;" class="content-padding">
 
               <!-- GREETING -->
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:36px;">
@@ -174,7 +174,7 @@
                     {{#compare clientPreferencesData.locale "==" "pl-PL"}}<h1>Drogi Kliencie,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}<h1>Gentile cliente,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}<h1>Sehr geehrter Kunde,</h1>{{else}}<h1>Cher client,</h1>{{/compare}}{{/compare}}{{/compare}}
                     {{/if}}
                     <p>
-{{#compare clientPreferencesData.locale "==" "pl-PL"}}Twoje zamówienie oczekuje na potwierdzenie płatności. Prosimy o jak najszybsze dokonanie płatności, aby uniknąć anulowania.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il suo ordine è in attesa di conferma del pagamento. La preghiamo di completare il pagamento il prima possibile per evitare la cancellazione.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Ihre Bestellung wartet auf die Zahlungsbestätigung. Bitte schließen Sie die Zahlung so schnell wie möglich ab, um eine Stornierung zu vermeiden.{{else}}Votre commande est en attente de confirmation de paiement. Veuillez effectuer votre paiement dans les meilleurs délais pour éviter l'annulation.{{/compare}}{{/compare}}{{/compare}}
+{{#compare clientPreferencesData.locale "==" "pl-PL"}}Twoje zamówienie oczekuje na potwierdzenie płatności. Aby je sfinalizować, uprzejmie prosimy o dokonanie płatności w najkrótszym możliwym czasie.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il suo ordine è in attesa di conferma del pagamento. Per finalizzare l'ordine, La invitiamo a procedere al pagamento nel più breve tempo possibile.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Ihre Bestellung wartet auf die Zahlungsbestätigung. Um sie abzuschließen, laden wir Sie ein, die Zahlung so bald wie möglich zu tätigen.{{else}}Votre commande est en attente de confirmation de paiement. Afin de la finaliser, nous vous invitons à procéder au règlement dans les meilleurs délais.{{/compare}}{{/compare}}{{/compare}}
                     </p>
                     {{#if orderId}}
                     <p style="margin-bottom:28px;">

@@ -80,7 +80,7 @@
     font-size:   14px;
     color:       #333333;
     line-height: 23px;
-    margin:      0 0 14px;
+    margin:      0 0 27px;
   }
   a      { color:#1d1d1d; text-decoration:underline; }
   strong { color:#000000; }
@@ -140,7 +140,7 @@
   @media only screen and (max-width:640px) {
     .email-container { width:100%!important; }
     .footer-col      { width:100%!important; display:block!important; padding:0 0 20px 0!important; }
-    .content-padding { padding:20px!important; }
+    .content-padding { padding:10px!important; }
     h1               { font-size:18px!important; }
   }
 
@@ -167,7 +167,7 @@
         <!-- MAIN CONTENT -->
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background-color:#ffffff;">
           <tr>
-            <td style="padding:0 40px 40px;background-color:#ffffff;" class="content-padding">
+            <td style="padding:0 10px 10px;background-color:#ffffff;" class="content-padding">
 
               <!-- GREETING -->
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:36px;">
@@ -179,7 +179,7 @@
                     {{#compare locale "==" "pl-PL"}}<h1>Drogi Kliencie,</h1>{{else}}{{#compare locale "==" "it-IT"}}<h1>Gentile cliente,</h1>{{else}}{{#compare locale "==" "de-DE"}}<h1>Sehr geehrter Kunde,</h1>{{else}}<h1>Cher client,</h1>{{/compare}}{{/compare}}{{/compare}}
                     {{/if}}
                     <p>
-{{#compare locale "==" "pl-PL"}}Płatność za Twoją subskrypcję nie mogła zostać przetworzona. Zaktualizuj informacje o płatności, aby zapewnić ciągłość usługi.{{else}}{{#compare locale "==" "it-IT"}}Il pagamento per il suo abbonamento non è stato elaborato. Aggiorni le sue informazioni di pagamento per garantire la continuità del servizio.{{else}}{{#compare locale "==" "de-DE"}}Die Zahlung für Ihr Abonnement konnte nicht verarbeitet werden. Bitte aktualisieren Sie Ihre Zahlungsinformationen, um die Kontinuität des Dienstleistung zu gewährleisten.{{else}}Le paiement de votre abonnement n'a pas pu être traité. Veuillez mettre à jour vos informations de paiement pour assurer la continuité du service.{{/compare}}{{/compare}}{{/compare}}
+{{#compare locale "==" "pl-PL"}}Płatność za Twoją subskrypcję niestety nie mogła zostać przetworzona. Prosimy o zaktualizowanie informacji o płatności, aby zapewnić ciągłość usługi.{{else}}{{#compare locale "==" "it-IT"}}Il pagamento per il suo abbonamento non è stato purtroppo elaborato. La invitiamo ad aggiornare le sue informazioni di pagamento per garantire la continuità del servizio.{{else}}{{#compare locale "==" "de-DE"}}Die Zahlung für Ihr Abonnement konnte leider nicht verarbeitet werden. Wir laden Sie ein, Ihre Zahlungsinformationen zu aktualisieren, um die Kontinuität der Dienstleistung zu gewährleisten.{{else}}Le paiement de votre abonnement n'a malheureusement pas pu être traité. Nous vous invitons à mettre à jour vos informations de paiement afin de bénéficier d'une continuité de service optimale.{{/compare}}{{/compare}}{{/compare}}
                     </p>
 
                     <!-- SUBSCRIPTION SUMMARY -->

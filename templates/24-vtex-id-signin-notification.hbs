@@ -67,7 +67,7 @@
     font-size:   14px;
     color:       #333333;
     line-height: 23px;
-    margin:      0 0 14px;
+    margin:      0 0 27px;
   }
   a      { color:#1d1d1d; text-decoration:underline; }
   strong { color:#000000; }
@@ -106,7 +106,7 @@
   @media only screen and (max-width:640px) {
     .email-container { width:100%!important; }
     .footer-col      { width:100%!important; display:block!important; padding:0 0 20px 0!important; }
-    .content-padding { padding:20px!important; }
+    .content-padding { padding:10px!important; }
     h1               { font-size:18px!important; }
   }
 
@@ -134,7 +134,7 @@
         <!-- MAIN CONTENT -->
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background-color:#ffffff;">
           <tr>
-            <td style="padding:0 40px 40px;background-color:#ffffff;" class="content-padding">
+            <td style="padding:0 10px 10px;background-color:#ffffff;" class="content-padding">
 
               <!-- GREETING -->
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:36px;">
@@ -203,7 +203,7 @@
                 <tr>
                   <td>
                     <p>
-                      {{#compare locale "==" "pl-PL"}}Jeśli to nie byłeś Ty, zalecamy natychmiastowe zresetowanie hasła w celu zabezpieczenia konta.{{else}}{{#compare locale "==" "it-IT"}}Se non eri tu, ti consigliamo di reimpostare immediatamente la password per proteggere il tuo account.{{else}}{{#compare locale "==" "de-DE"}}Wenn Sie das nicht waren, empfehlen wir Ihnen, Ihr Passwort sofort zurückzusetzen, um Ihr Konto zu schützen.{{else}}Si ce n'était pas vous, nous vous recommandons de réinitialiser votre mot de passe immédiatement pour sécuriser votre compte.{{/compare}}{{/compare}}{{/compare}}
+                      {{#compare locale "==" "pl-PL"}}Jeśli to nie Ty, prosimy o natychmiastowe zresetowanie hasła w celu zabezpieczenia konta.{{else}}{{#compare locale "==" "it-IT"}}Se non eri tu, ti invitiamo a reimpostare immediatamente la password per proteggere il tuo account.{{else}}{{#compare locale "==" "de-DE"}}Wenn Sie das nicht waren, laden wir Sie ein, Ihr Passwort unverzüglich zurückzusetzen, um Ihr Konto zu schützen.{{else}}Si ce n'était pas vous, nous vous invitons à réinitialiser votre mot de passe sans délai afin de sécuriser votre compte.{{/compare}}{{/compare}}{{/compare}}
                     </p>
                   </td>
                 </tr>

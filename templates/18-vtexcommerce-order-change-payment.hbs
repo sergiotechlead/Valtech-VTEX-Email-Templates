@@ -80,7 +80,7 @@
     font-size:   14px;
     color:       #333333;
     line-height: 23px;
-    margin:      0 0 14px;
+    margin:      0 0 27px;
   }
   a      { color:#1d1d1d; text-decoration:underline; }
   strong { color:#000000; }
@@ -136,7 +136,7 @@
   @media only screen and (max-width:640px) {
     .email-container { width:100%!important; }
     .footer-col      { width:100%!important; display:block!important; padding:0 0 20px 0!important; }
-    .content-padding { padding:20px!important; }
+    .content-padding { padding:10px!important; }
     h1               { font-size:18px!important; }
   }
 
@@ -162,7 +162,7 @@
         <!-- MAIN CONTENT -->
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background-color:#ffffff;">
           <tr>
-            <td style="padding:0 40px 40px;background-color:#ffffff;" class="content-padding">
+            <td style="padding:0 10px 10px;background-color:#ffffff;" class="content-padding">
 
               <!-- GREETING -->
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:36px;">
@@ -177,7 +177,7 @@
                     {{/if}}
                     <p>
                       {{! Body paragraph payment change }}
-{{#compare clientPreferencesData.locale "==" "pl-PL"}}Twoja płatność nie została zatwierdzona. Twoje zamówienie oczekuje na nową metodę płatności.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il suo pagamento non è stato autorizzato. Il suo ordine è in attesa di un nuovo metodo di pagamento.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Ihre Zahlung wurde nicht autorisiert. Ihre Bestellung wartet auf eine neue Zahlungsmethode.{{else}}Votre paiement n'a pas été autorisé. Votre commande est en attente d'un nouveau mode de paiement.{{/compare}}{{/compare}}{{/compare}}
+{{#compare clientPreferencesData.locale "==" "pl-PL"}}Twoja płatność niestety nie została zatwierdzona. Twoje zamówienie oczekuje obecnie na nową metodę płatności.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il suo pagamento non è stato purtroppo autorizzato. Il suo ordine è attualmente in attesa di un nuovo metodo di pagamento.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Ihre Zahlung wurde leider nicht autorisiert. Ihre Bestellung wartet derzeit auf eine neue Zahlungsmethode.{{else}}Votre paiement n'a malheureusement pas été autorisé. Votre commande est actuellement en attente d'un nouveau mode de paiement.{{/compare}}{{/compare}}{{/compare}}
                     </p>
                     {{#if orderId}}
                     <p style="margin-bottom:28px;">

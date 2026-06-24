@@ -80,7 +80,7 @@
     font-size:   14px;
     color:       #333333;
     line-height: 23px;
-    margin:      0 0 14px;
+    margin:      0 0 27px;
   }
   a      { color:#1d1d1d; text-decoration:underline; }
   strong { color:#000000; }
@@ -136,7 +136,7 @@
   @media only screen and (max-width:640px) {
     .email-container { width:100%!important; }
     .footer-col      { width:100%!important; display:block!important; padding:0 0 20px 0!important; }
-    .content-padding { padding:20px!important; }
+    .content-padding { padding:10px!important; }
     h1               { font-size:18px!important; }
   }
 
@@ -162,7 +162,7 @@
         <!-- MAIN CONTENT -->
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background-color:#ffffff;">
           <tr>
-            <td style="padding:0 40px 40px;background-color:#ffffff;" class="content-padding">
+            <td style="padding:0 10px 10px;background-color:#ffffff;" class="content-padding">
 
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:36px;">
                 <tr>
@@ -176,7 +176,7 @@
                     {{/if}}
                     <p>
                       {{! Body paragraph payment approved }}
-{{#compare clientPreferencesData.locale "==" "pl-PL"}}Twoja płatność została zaakceptowana. Twoje zamówienie jest teraz przygotowywane.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il suo pagamento è stato accettato. Il suo ordine è in fase di preparazione.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Ihre Zahlung wurde akzeptiert. Ihre Bestellung wird derzeit vorbereitet.{{else}}Votre paiement a été accepté. Votre commande est maintenant en cours de préparation.{{/compare}}{{/compare}}{{/compare}}
+{{#compare clientPreferencesData.locale "==" "pl-PL"}}Twoja płatność została pomyślnie zaakceptowana. Twoje zamówienie jest przygotowywane z największą starannością.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il suo pagamento è stato accettato con successo. Il suo ordine è in fase di preparazione con la massima cura.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Ihre Zahlung wurde erfolgreich akzeptiert. Ihre Bestellung wird derzeit mit größter Sorgfalt vorbereitet.{{else}}Votre paiement a bien été accepté. Votre commande est à présent en cours de préparation avec le plus grand soin.{{/compare}}{{/compare}}{{/compare}}
                     </p>
                     {{#if orderId}}
                     <p style="margin-bottom:28px;">

@@ -80,7 +80,7 @@
     font-size:   14px;
     color:       #333333;
     line-height: 23px;
-    margin:      0 0 14px;
+    margin:      0 0 27px;
   }
   a      { color:#1d1d1d; text-decoration:underline; }
   strong { color:#000000; }
@@ -136,7 +136,7 @@
   @media only screen and (max-width:640px) {
     .email-container { width:100%!important; }
     .footer-col      { width:100%!important; display:block!important; padding:0 0 20px 0!important; }
-    .content-padding { padding:20px!important; }
+    .content-padding { padding:10px!important; }
     h1               { font-size:18px!important; }
   }
 
@@ -162,7 +162,7 @@
         <!-- MAIN CONTENT -->
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background-color:#ffffff;">
           <tr>
-            <td style="padding:0 40px 40px;background-color:#ffffff;" class="content-padding">
+            <td style="padding:0 10px 10px;background-color:#ffffff;" class="content-padding">
 
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:36px;">
                 <tr>
@@ -171,7 +171,7 @@
 {{#if clientPreferencesData.locale}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}<h1>Drogi Kliencie,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}<h1>Gentile cliente,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}<h1>Sehr geehrter Kunde,</h1>{{else}}<h1>Cher client,</h1>{{/compare}}{{/compare}}{{/compare}}{{else}}<h1>Cher client,</h1>{{/if}}
                     <p>
                       {{! Body paragraph back in stock }}
-{{#if clientPreferencesData.locale}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Produkt, który obserwujesz, jest teraz dostępny. Nie przegap tej okazji, aby go zdobyć.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il prodotto che stai seguendo è ora disponibile. Non perdere questa opportunità di acquistarlo.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Das Produkt, das Sie verfolgen, ist jetzt verfügbar. Verpassen Sie nicht die Gelegenheit, es zu erwerben.{{else}}Le produit que vous suivez est maintenant disponible. Ne manquez pas cette occasion de l'acquérir.{{/compare}}{{/compare}}{{/compare}}{{else}}Le produit que vous suivez est maintenant disponible. Ne manquez pas cette occasion de l'acquérir.{{/if}}
+{{#if clientPreferencesData.locale}}{{#compare clientPreferencesData.locale "==" "pl-PL"}}Produkt, który obserwowałeś(-aś), jest teraz dostępny. Zapraszamy do skorzystania z tej wyjątkowej okazji.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il prodotto che stava seguendo è ora disponibile. La invitiamo ad approfittarne senza indugio.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Das Produkt, das Sie verfolgt haben, ist jetzt verfügbar. Wir laden Sie ein, diese Gelegenheit zu nutzen.{{else}}Le produit que vous suivez est à nouveau disponible. Nous vous invitons à en profiter dès à présent.{{/compare}}{{/compare}}{{/compare}}{{else}}Le produit que vous suivez est à nouveau disponible. Nous vous invitons à en profiter dès à présent.{{/if}}
                     </p>
                   </td>
                 </tr>

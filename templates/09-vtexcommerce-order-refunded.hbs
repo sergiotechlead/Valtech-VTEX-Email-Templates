@@ -80,7 +80,7 @@
     font-size:   14px;
     color:       #333333;
     line-height: 23px;
-    margin:      0 0 14px;
+    margin:      0 0 27px;
   }
   a      { color:#1d1d1d; text-decoration:underline; }
   strong { color:#000000; }
@@ -136,7 +136,7 @@
   @media only screen and (max-width:640px) {
     .email-container { width:100%!important; }
     .footer-col      { width:100%!important; display:block!important; padding:0 0 20px 0!important; }
-    .content-padding { padding:20px!important; }
+    .content-padding { padding:10px!important; }
     h1               { font-size:18px!important; }
   }
 
@@ -162,7 +162,7 @@
         <!-- MAIN CONTENT -->
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background-color:#ffffff;">
           <tr>
-            <td style="padding:0 40px 40px;background-color:#ffffff;" class="content-padding">
+            <td style="padding:0 10px 10px;background-color:#ffffff;" class="content-padding">
 
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:36px;">
                 <tr>
@@ -176,7 +176,7 @@
                     {{/if}}
                     <p>
                       {{! Body paragraph order refunded }}
-{{#compare clientPreferencesData.locale "==" "pl-PL"}}Twój zwrot pieniędzy został pomyślnie przetworzony. Kwota zostanie zaksięgowana na Twoim pierwotnym środku płatniczym w ciągu 5 do 10 dni roboczych.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il rimborso è stato elaborato con successo. L'importo verrà accreditato sul metodo di pagamento originale entro 5-10 giorni lavorativi.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Ihre Rückerstattung wurde erfolgreich bearbeitet. Der Betrag wird innerhalb von 5 bis 10 Werktagen Ihrer ursprünglichen Zahlungsmethode gutgeschrieben.{{else}}Votre remboursement a été traité avec succès. Le montant sera crédité sur votre moyen de paiement original dans un délai de 5 à 10 jours ouvrés.{{/compare}}{{/compare}}{{/compare}}
+{{#compare clientPreferencesData.locale "==" "pl-PL"}}Twój zwrot pieniędzy został pomyślnie przetworzony. Kwota zostanie zaksięgowana na Twoim pierwotnym środku płatniczym w ciągu 5 do 10 dni roboczych.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il rimborso è stato elaborato con successo. L'importo verrà accreditato sul metodo di pagamento originale entro 5-10 giorni lavorativi.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Ihre Rückerstattung wurde erfolgreich bearbeitet. Der Betrag wird innerhalb von 5 bis 10 Werktagen Ihrer ursprünglichen Zahlungsmethode gutgeschrieben.{{else}}Votre remboursement a été traité avec succès. Le montant sera crédité sur votre moyen de paiement d'origine dans un délai de 5 à 10 jours ouvrés.{{/compare}}{{/compare}}{{/compare}}
                     </p>
                     {{#if orderId}}
                     <p style="margin-bottom:28px;">
