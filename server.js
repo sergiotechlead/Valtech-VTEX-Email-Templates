@@ -53,6 +53,7 @@ const TEMPLATE_META = {
   '22-catalog-admin-reports':                           { label: 'Catalog Admin Reports',       description: 'Rapport d\'administration du catalogue disponible' },
   '23-export-products-catalogv2':                       { label: 'Export Products Catalog V2',  description: 'Rapport d\'exportation du catalogue produits disponible' },
   '24-vtex-id-signin-notification':                     { label: 'Sign-in Notification',        description: 'Notification de connexion à votre compte' },
+  '25-vtexid-configure-active-password':                { label: 'Configure Active Password',   description: 'Configurez votre mot de passe actif' },
 };
 
 function getTemplates(activeName = null) {
