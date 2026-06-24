@@ -141,9 +141,9 @@
                 <tr>
                   <td>
                     {{#if userName}}
-{{#compare locale "==" "pl-PL"}}<h1>Dzień dobry {{userName}},</h1>{{else}}{{#compare locale "==" "it-IT"}}<h1>Ciao {{userName}},</h1>{{else}}{{#compare locale "==" "de-DE"}}<h1>Guten Tag {{userName}},</h1>{{else}}<h1>Bonjour {{userName}},</h1>{{/compare}}{{/compare}}{{/compare}}
+{{#compare locale "==" "pl-PL"}}<p style="margin-bottom:30px;">Szanowny/a Panie/Pani {{userName}},</p>{{else}}{{#compare locale "==" "it-IT"}}<p style="margin-bottom:30px;">Gentile Sig./Sig.ra {{userName}},</p>{{else}}{{#compare locale "==" "de-DE"}}<p style="margin-bottom:30px;">Sehr geehrte/r Herr/Frau {{userName}},</p>{{else}}<p style="margin-bottom:30px;">Cher/Chère {{userName}},</p>{{/compare}}{{/compare}}{{/compare}}
                     {{else}}
-{{#compare locale "==" "pl-PL"}}<h1>Drogi Kliencie,</h1>{{else}}{{#compare locale "==" "it-IT"}}<h1>Gentile cliente,</h1>{{else}}{{#compare locale "==" "de-DE"}}<h1>Sehr geehrter Kunde,</h1>{{else}}<h1>Cher client,</h1>{{/compare}}{{/compare}}{{/compare}}
+{{#compare locale "==" "pl-PL"}}<p style="margin-bottom:30px;">Szanowny/a Kliencie,</p>{{else}}{{#compare locale "==" "it-IT"}}<p style="margin-bottom:30px;">Gentile Cliente,</p>{{else}}{{#compare locale "==" "de-DE"}}<p style="margin-bottom:30px;">Sehr geehrte/r Kunde/Kundin,</p>{{else}}<p style="margin-bottom:30px;">Cher Client,</p>{{/compare}}{{/compare}}{{/compare}}
                     {{/if}}
 
                     <!-- BODY MESSAGE -->

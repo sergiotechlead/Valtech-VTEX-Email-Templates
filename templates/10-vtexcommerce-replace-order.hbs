@@ -167,13 +167,13 @@
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:36px;">
                 <tr>
                   <td>
-                    {{#if orders.0.clientProfileData.firstName}}
-                    {{! Greeting orders.0 firstName }}
-{{#compare orders.0.clientPreferencesData.locale "==" "pl-PL"}}<h1>Dzień dobry {{orders.0.clientProfileData.firstName}},</h1>{{else}}{{#compare orders.0.clientPreferencesData.locale "==" "it-IT"}}<h1>Ciao {{orders.0.clientProfileData.firstName}},</h1>{{else}}{{#compare orders.0.clientPreferencesData.locale "==" "de-DE"}}<h1>Guten Tag {{orders.0.clientProfileData.firstName}},</h1>{{else}}<h1>Bonjour {{orders.0.clientProfileData.firstName}},</h1>{{/compare}}{{/compare}}{{/compare}}
+                    {{#if orders.0.clientProfileData.lastName}}
+{{#compare orders.0.clientPreferencesData.locale "==" "pl-PL"}}<p style="margin-bottom:30px;">Szanowny/a Panie/Pani {{orders.0.clientProfileData.lastName}},</p>{{else}}{{#compare orders.0.clientPreferencesData.locale "==" "it-IT"}}<p style="margin-bottom:30px;">Gentile Sig./Sig.ra {{orders.0.clientProfileData.lastName}},</p>{{else}}{{#compare orders.0.clientPreferencesData.locale "==" "de-DE"}}<p style="margin-bottom:30px;">Sehr geehrte/r Herr/Frau {{orders.0.clientProfileData.lastName}},</p>{{else}}<p style="margin-bottom:30px;">Cher/Chère M. {{orders.0.clientProfileData.lastName}},</p>{{/compare}}{{/compare}}{{/compare}}
+                    {{else}}{{#if orders.0.clientProfileData.firstName}}
+{{#compare orders.0.clientPreferencesData.locale "==" "pl-PL"}}<p style="margin-bottom:30px;">Szanowny/a Panie/Pani {{orders.0.clientProfileData.firstName}},</p>{{else}}{{#compare orders.0.clientPreferencesData.locale "==" "it-IT"}}<p style="margin-bottom:30px;">Gentile Sig./Sig.ra {{orders.0.clientProfileData.firstName}},</p>{{else}}{{#compare orders.0.clientPreferencesData.locale "==" "de-DE"}}<p style="margin-bottom:30px;">Sehr geehrte/r Herr/Frau {{orders.0.clientProfileData.firstName}},</p>{{else}}<p style="margin-bottom:30px;">Cher/Chère {{orders.0.clientProfileData.firstName}},</p>{{/compare}}{{/compare}}{{/compare}}
                     {{else}}
-                    {{! Default greeting }}
-{{#compare orders.0.clientPreferencesData.locale "==" "pl-PL"}}<h1>Drogi Kliencie,</h1>{{else}}{{#compare orders.0.clientPreferencesData.locale "==" "it-IT"}}<h1>Gentile cliente,</h1>{{else}}{{#compare orders.0.clientPreferencesData.locale "==" "de-DE"}}<h1>Sehr geehrter Kunde,</h1>{{else}}<h1>Cher client,</h1>{{/compare}}{{/compare}}{{/compare}}
-                    {{/if}}
+{{#compare orders.0.clientPreferencesData.locale "==" "pl-PL"}}<p style="margin-bottom:30px;">Szanowny/a Kliencie,</p>{{else}}{{#compare orders.0.clientPreferencesData.locale "==" "it-IT"}}<p style="margin-bottom:30px;">Gentile Cliente,</p>{{else}}{{#compare orders.0.clientPreferencesData.locale "==" "de-DE"}}<p style="margin-bottom:30px;">Sehr geehrte/r Kunde/Kundin,</p>{{else}}<p style="margin-bottom:30px;">Cher Client,</p>{{/compare}}{{/compare}}{{/compare}}
+                    {{/if}}{{/if}}
                     <p>
                       {{! Body paragraph replace order }}
 {{#compare orders.0.clientPreferencesData.locale "==" "pl-PL"}}Twoje zamówienie zastępcze zostało zarejestrowane. Obecnie przetwarzamy je z największą starannością.{{else}}{{#compare orders.0.clientPreferencesData.locale "==" "it-IT"}}Il suo ordine sostitutivo è stato registrato. Lo stiamo attualmente elaborando con la massima cura.{{else}}{{#compare orders.0.clientPreferencesData.locale "==" "de-DE"}}Ihre Ersatzbestellung wurde erfasst. Wir bearbeiten sie derzeit mit größter Sorgfalt.{{else}}Votre commande de remplacement a bien été enregistrée. Nous la traitons actuellement avec la plus grande attention.{{/compare}}{{/compare}}{{/compare}}

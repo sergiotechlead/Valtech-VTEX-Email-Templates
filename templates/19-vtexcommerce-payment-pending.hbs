@@ -168,11 +168,13 @@
                 <tr>
                   <td>
                     {{#each orders}}
-                    {{#if clientProfileData.firstName}}
-                    <h1>{{#compare clientPreferencesData.locale "==" "pl-PL"}}Dzień dobry {{clientProfileData.firstName}},{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Ciao {{clientProfileData.firstName}},{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Guten Tag {{clientProfileData.firstName}},{{else}}Bonjour {{clientProfileData.firstName}},{{/compare}}{{/compare}}{{/compare}}</h1>
+                    {{#if clientProfileData.lastName}}
+{{#compare clientPreferencesData.locale "==" "pl-PL"}}<p style="margin-bottom:30px;">Szanowny/a Panie/Pani {{clientProfileData.lastName}},</p>{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}<p style="margin-bottom:30px;">Gentile Sig./Sig.ra {{clientProfileData.lastName}},</p>{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}<p style="margin-bottom:30px;">Sehr geehrte/r Herr/Frau {{clientProfileData.lastName}},</p>{{else}}<p style="margin-bottom:30px;">Cher/Chère M. {{clientProfileData.lastName}},</p>{{/compare}}{{/compare}}{{/compare}}
+                    {{else}}{{#if clientProfileData.firstName}}
+{{#compare clientPreferencesData.locale "==" "pl-PL"}}<p style="margin-bottom:30px;">Szanowny/a Panie/Pani {{clientProfileData.firstName}},</p>{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}<p style="margin-bottom:30px;">Gentile Sig./Sig.ra {{clientProfileData.firstName}},</p>{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}<p style="margin-bottom:30px;">Sehr geehrte/r Herr/Frau {{clientProfileData.firstName}},</p>{{else}}<p style="margin-bottom:30px;">Cher/Chère {{clientProfileData.firstName}},</p>{{/compare}}{{/compare}}{{/compare}}
                     {{else}}
-                    {{#compare clientPreferencesData.locale "==" "pl-PL"}}<h1>Drogi Kliencie,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}<h1>Gentile cliente,</h1>{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}<h1>Sehr geehrter Kunde,</h1>{{else}}<h1>Cher client,</h1>{{/compare}}{{/compare}}{{/compare}}
-                    {{/if}}
+{{#compare clientPreferencesData.locale "==" "pl-PL"}}<p style="margin-bottom:30px;">Szanowny/a Kliencie,</p>{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}<p style="margin-bottom:30px;">Gentile Cliente,</p>{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}<p style="margin-bottom:30px;">Sehr geehrte/r Kunde/Kundin,</p>{{else}}<p style="margin-bottom:30px;">Cher Client,</p>{{/compare}}{{/compare}}{{/compare}}
+                    {{/if}}{{/if}}
                     <p>
 {{#compare clientPreferencesData.locale "==" "pl-PL"}}Twoje zamówienie oczekuje na potwierdzenie płatności. Aby je sfinalizować, uprzejmie prosimy o dokonanie płatności w najkrótszym możliwym czasie.{{else}}{{#compare clientPreferencesData.locale "==" "it-IT"}}Il suo ordine è in attesa di conferma del pagamento. Per finalizzare l'ordine, La invitiamo a procedere al pagamento nel più breve tempo possibile.{{else}}{{#compare clientPreferencesData.locale "==" "de-DE"}}Ihre Bestellung wartet auf die Zahlungsbestätigung. Um sie abzuschließen, laden wir Sie ein, die Zahlung so bald wie möglich zu tätigen.{{else}}Votre commande est en attente de confirmation de paiement. Afin de la finaliser, nous vous invitons à procéder au règlement dans les meilleurs délais.{{/compare}}{{/compare}}{{/compare}}
                     </p>
