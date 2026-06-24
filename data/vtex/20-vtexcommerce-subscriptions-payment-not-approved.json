@@ -1,0 +1,77 @@
+{
+	"customerProfile": {
+		"name": "Léana BELKHIRI",
+		"email": "leana.belkhiri@email.com",
+		"document": "542052766",
+		"phone": "+33 (0) 1 44 50 66 00"
+	},
+	"totalValue": 2700,
+	"plan": {
+		"frequency": {
+			"periodicity": "MONTHLY",
+			"interval": "1"
+		}
+	},
+	"purchaseSettings": {
+		"currencySymbol": "R$",
+		"purchaseDay": "Monday",
+		"selectedSla": "Standard",
+		"paymentMethod": {
+			"paymentSystemName": "Visa",
+			"paymentSystemGroup": "creditCard",
+			"paymentAccount": {
+				"cardNumber": "1111"
+			}
+		}
+	},
+	"schedule": {
+		"nextExecution": "2021-10-14T14:34:00.000+00:00"
+	},
+	"items": [
+		{
+			"quantity": 1,
+			"sku": {
+				"nameComplete": "Sac Caviar & Or Noir",
+				"imageUrl": "https://chanel.com/images/sac-caviar-or-noir.jpg"
+			}
+		}
+	],
+	"shippingAddress": {
+		"receiverName": "Madame Léana BELKHIRI",
+		"street": "22 ESPACE MEDITERRANEE",
+		"number": "",
+		"complement": null,
+		"neighborhood": "",
+		"city": "PERPIGNAN",
+		"state": "",
+		"postalCode": "66000"
+	},
+	"_accountInfo": {
+		"HostName": "chanel",
+		"MainAccountName": "chanel",
+		"IsPersisted": true,
+		"IsRemoved": false,
+		"Id": "e39d05f9-0c54-4469-a626-8bb5cff169f8",
+		"Cnpj": null,
+		"CompanyName": "CHANEL",
+		"TradingName": "CHANEL",
+		"AccountName": "chanel",
+		"DefaultUrl": null,
+		"Address": null,
+		"Number": null,
+		"Complement": null,
+		"District": null,
+		"City": null,
+		"State": null,
+		"PostalCode": null,
+		"Country": "France",
+		"Telephone": null,
+		"IsActive": true,
+		"Sponsor": "eb436322-473b-4296-89a9-f129c479be4c",
+		"Logo": null,
+		"AppId": "fddf74e6-cc47-4a7d-8956-f0a6629cb23b",
+		"IsOperating": true,
+		"LV": null,
+		"Sigla": null
+	}
+}

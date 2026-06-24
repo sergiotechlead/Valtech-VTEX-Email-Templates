@@ -46,6 +46,9 @@ const TEMPLATE_META = {
   '15-oms-order-report':                                { label: 'Orders Report',           description: 'Rapport de commandes disponible' },
   '16-vtex-payment-report':                             { label: 'VTEX Payment Report',     description: 'Rapport de paiement VTEX disponible' },
   '17-vtex-payment-status-update':                      { label: 'Payment Status Update',   description: 'Mise à jour du statut de paiement' },
+  '18-vtexcommerce-order-change-payment':               { label: 'Payment Change',          description: 'Modification du paiement de votre commande' },
+  '19-vtexcommerce-payment-pending':                    { label: 'Payment Pending',         description: 'En attente de votre paiement' },
+  '20-vtexcommerce-subscriptions-payment-not-approved': { label: 'Subscription Payment Failed', description: 'Paiement de l\'abonnement non approuvé' },
 };
 
 function getTemplates(activeName = null) {

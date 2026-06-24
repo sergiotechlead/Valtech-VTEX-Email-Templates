@@ -1,0 +1,368 @@
+{
+	"orders": [
+		{
+			"package": null,
+			"subjectItemAttachment": {
+				"item": "Sac Caviar & Or Noir",
+				"totalItems": 1
+			},
+			"items": [
+				{
+					"additionalInfo": {
+						"dimension": {
+							"cubicweight": 1,
+							"height": 0,
+							"length": 0,
+							"weight": 0,
+							"width": 0
+						},
+						"categoriesIds": "/1/",
+						"productClusterId": "",
+						"commercialConditionId": "1",
+						"brandName": "CHANEL",
+						"brandId": "1",
+						"offeringInfo": null,
+						"offeringType": null,
+						"offeringTypeId": null
+					},
+					"sellerSku": "AP0250Y01480C3906",
+					"priceValidUntil": "2022-09-14T14:34:00.000+00:00",
+					"callCenterOperator": null,
+					"commission": 0,
+					"freightCommission": 0,
+					"uniqueId": "AP0250Y01480C3906-01",
+					"id": "1",
+					"productId": "1",
+					"refId": "AP0250Y01480C3906",
+					"ean": "",
+					"name": "Sac Caviar & Or Noir",
+					"skuName": "Sac Caviar & Or Noir",
+					"modalType": null,
+					"tax": 450,
+					"price": 2700,
+					"listPrice": 2700,
+					"manualPrice": null,
+					"sellingPrice": 2700,
+					"rewardValue": 0,
+					"isGift": false,
+					"preSaleDate": null,
+					"productCategoryIds": "/1/",
+					"productCategories": {
+						"1": "Maroquinerie"
+					},
+					"quantity": 1,
+					"seller": "1",
+					"imageUrl": "",
+					"detailUrl": "/sac-caviar-or-noir/p",
+					"components": [],
+					"bundleItems": [],
+					"attachments": [],
+					"itemAttachment": {
+						"name": null,
+						"content": {}
+					},
+					"attachmentOfferings": [],
+					"offerings": [],
+					"priceTags": [],
+					"availability": "available",
+					"measurementUnit": "un",
+					"unitMultiplier": 1
+				}
+			],
+			"sellers": [
+				{
+					"subSellerId": "1",
+					"fulfillmentEndpoint": "http://fulfillment.vtexcommerce.com.br/api/fulfillment?an=chanel",
+					"id": "1",
+					"name": "CHANEL",
+					"logo": "https://chanel.com/logo.png"
+				}
+			],
+			"paymentData": {
+				"giftCards": [],
+				"transactions": [
+					{
+						"isActive": true,
+						"transactionId": "TXN-735182",
+						"merchantName": "CHANEL",
+						"payments": [
+							{
+								"id": "PAY-735182",
+								"paymentSystem": "6",
+								"paymentSystemName": "Boleto Bancário",
+								"value": 2700,
+								"installments": 1,
+								"connectorResponses": {},
+								"referenceValue": 2700,
+								"cardHolder": null,
+								"cardNumber": null,
+								"firstDigits": null,
+								"lastDigits": null,
+								"cvv2": null,
+								"expireMonth": null,
+								"expireYear": null,
+								"url": "https://chanel.com.br/boleto/{Installment}",
+								"koinUrl": null,
+								"tid": null,
+								"redemptionCode": null,
+								"giftCardId": null,
+								"giftCardProvider": null,
+								"giftCardAsDiscount": null,
+								"group": "bankInvoice",
+								"dueDate": "2021-09-17",
+								"accountId": null,
+								"parentAccountId": null
+							}
+						]
+					}
+				]
+			},
+			"giftRegistryData": null,
+			"receiptData": null,
+			"contextData": null,
+			"marketPlaceOrderId": "",
+			"orderFormId": "chanel-735182",
+			"sequence": "AA01455972",
+			"affiliateId": "CHN",
+			"status": "",
+			"callCenterOperator": "",
+			"userProfileId": "user-735179",
+			"hostName": "chanel",
+			"creationVersion": null,
+			"creationEnvironment": null,
+			"lastChangeVersion": null,
+			"workflowInstanceId": null,
+			"orderId": "735182",
+			"orderGroup": "735182",
+			"state": "payment-pending",
+			"isCheckedIn": false,
+			"sellerOrderId": "00-v735182chanel-01",
+			"storeId": null,
+			"value": 2700,
+			"totals": [
+				{
+					"id": "Items",
+					"name": "Total des Articles",
+					"value": 2700
+				},
+				{
+					"id": "Discounts",
+					"name": "Total des Remises",
+					"value": 0
+				},
+				{
+					"id": "Shipping",
+					"name": "Total de la Livraison",
+					"value": 0
+				},
+				{
+					"id": "Tax",
+					"name": "Total de la TVA",
+					"value": 450
+				}
+			],
+			"clientProfileData": {
+				"attachmentId": "clientProfileData",
+				"email": "leana.belkhiri@email.com",
+				"firstName": "Léana",
+				"lastName": "BELKHIRI",
+				"document": "542052766",
+				"documentType": "siret",
+				"phone": "+33 (0) 1 44 50 66 00",
+				"corporateName": null,
+				"tradeName": null,
+				"corporateDocument": null,
+				"stateInscription": null,
+				"corporatePhone": null,
+				"isCorporate": false,
+				"profileCompleteOnLoading": true,
+				"profileErrorOnLoading": false,
+				"customerClass": null
+			},
+			"ratesAndBenefitsData": {
+				"attachmentId": "ratesAndBenefitsData",
+				"rateAndBenefitsIdentifiers": [],
+				"teaser": []
+			},
+			"shippingData": {
+				"attachmentId": "shippingData",
+				"address": {
+					"addressType": "residential",
+					"receiverName": "Madame Léana BELKHIRI",
+					"addressId": "66000",
+					"postalCode": "66000",
+					"city": "PERPIGNAN",
+					"state": "",
+					"country": "FRA",
+					"street": "22 ESPACE MEDITERRANEE",
+					"number": "",
+					"neighborhood": "",
+					"complement": null,
+					"reference": null,
+					"geoCoordinates": []
+				},
+				"logisticsInfo": [
+					{
+						"itemIndex": 0,
+						"selectedSla": "Standard",
+						"selectedDeliveryChannel": "delivery",
+						"addressId": "66000",
+						"slas": [
+							{
+								"id": "Standard",
+								"deliveryChannel": "delivery",
+								"name": "Standard",
+								"deliveryIds": [
+									{
+										"courierId": "chanel_courier",
+										"warehouseId": "warehouse_paris",
+										"dockId": "dock_chanel",
+										"courierName": "CHANEL Express",
+										"quantity": 1
+									}
+								],
+								"shippingEstimate": "3bd",
+								"shippingEstimateDate": "2021-09-17T14:34:00.000+00:00",
+								"lockTTL": "10d",
+								"availableDeliveryWindows": [],
+								"deliveryWindow": null,
+								"price": 0,
+								"listPrice": 0,
+								"tax": 0,
+								"pickupStoreInfo": {
+									"isPickupStore": false,
+									"friendlyName": null,
+									"address": null,
+									"additionalInfo": null,
+									"dockId": null
+								}
+							}
+						],
+						"shipsTo": [
+							"FRA"
+						],
+						"itemId": "1",
+						"deliveryChannels": [
+							{
+								"id": "delivery"
+							}
+						]
+					}
+				],
+				"selectedAddresses": [
+					{
+						"addressType": "residential",
+						"receiverName": "Madame Léana BELKHIRI",
+						"addressId": "66000",
+						"postalCode": "66000",
+						"city": "PERPIGNAN",
+						"state": "",
+						"country": "FRA",
+						"street": "22 ESPACE MEDITERRANEE",
+						"number": "",
+						"neighborhood": "",
+						"complement": null,
+						"reference": null,
+						"geoCoordinates": []
+					}
+				],
+				"availableAddresses": [
+					{
+						"addressType": "residential",
+						"receiverName": "Madame Léana BELKHIRI",
+						"addressId": "66000",
+						"postalCode": "66000",
+						"city": "PERPIGNAN",
+						"state": "",
+						"country": "FRA",
+						"street": "22 ESPACE MEDITERRANEE",
+						"number": "",
+						"neighborhood": "",
+						"complement": null,
+						"reference": null,
+						"geoCoordinates": []
+					}
+				]
+			},
+			"clientPreferencesData": {
+				"attachmentId": "clientPreferencesData",
+				"locale": "fr-FR",
+				"optinNewsLetter": false
+			},
+			"commercialConditionData": null,
+			"marketingData": null,
+			"storePreferencesData": {
+				"countryCode": "FRA",
+				"checkToSavePersonDataByDefault": false,
+				"templateOptions": {
+					"toggleCorporate": false
+				},
+				"timeZone": "Romance Standard Time",
+				"currencyCode": "EUR",
+				"currencyLocale": 1036,
+				"currencySymbol": "€",
+				"currencyFormatInfo": {
+					"currencyDecimalDigits": 2,
+					"currencyDecimalSeparator": ",",
+					"currencyGroupSeparator": " ",
+					"currencyGroupSize": 3,
+					"startsWithCurrencySymbol": true
+				}
+			},
+			"openTextField": null,
+			"customData": null,
+			"hooksData": null,
+			"changeData": null,
+			"salesChannel": "1",
+			"followUpEmail": "service@chanel.com",
+			"creationDate": "2021-09-14T14:34:00.000+00:00",
+			"lastChange": "2021-09-14T14:34:00.000+00:00",
+			"timeZoneCreationDate": "2021-09-14T14:34:00.000",
+			"timeZoneLastChange": "2021-09-14T14:34:00.000",
+			"isCompleted": false,
+			"merchantName": "chanel",
+			"userType": "",
+			"roundingError": 0,
+			"allowEdition": false,
+			"allowCancellation": true
+		}
+	],
+	"ordersUrl": "https://chanel.com/account/orders",
+	"orderGroup": "735182",
+	"subjectItemAttachment": {
+		"item": "Sac Caviar & Or Noir",
+		"totalItems": 1,
+		"extraItems": 0
+	},
+	"split": false,
+	"totalValue": 2700,
+	"callCenterOperatorData": null,
+	"_accountInfo": {
+		"HostName": "chanel",
+		"MainAccountName": "chanel",
+		"IsPersisted": true,
+		"IsRemoved": false,
+		"Id": "e39d05f9-0c54-4469-a626-8bb5cff169f8",
+		"Cnpj": null,
+		"CompanyName": "CHANEL",
+		"TradingName": "CHANEL",
+		"AccountName": "chanel",
+		"DefaultUrl": null,
+		"Address": null,
+		"Number": null,
+		"Complement": null,
+		"District": null,
+		"City": null,
+		"State": null,
+		"PostalCode": null,
+		"Country": "France",
+		"Telephone": null,
+		"IsActive": true,
+		"Sponsor": "eb436322-473b-4296-89a9-f129c479be4c",
+		"Logo": null,
+		"AppId": "fddf74e6-cc47-4a7d-8956-f0a6629cb23b",
+		"IsOperating": true,
+		"LV": null,
+		"Sigla": null
+	}
+}
