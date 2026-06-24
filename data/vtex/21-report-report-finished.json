@@ -1,0 +1,18 @@
+{
+  "orders": [
+    {
+      "clientProfileData": {
+        "firstName": "Léana"
+      },
+      "clientPreferencesData": {
+        "locale": "fr"
+      }
+    }
+  ],
+  "Link": "https://s3.amazonaws.com/OMSReport/v3/_finished/chanel/e60d9f57-e40a-4fb2-acfe-62562e2885e4.zip",
+  "_accountInfo": {
+    "HostName": "chanel",
+    "TradingName": "CHANEL",
+    "Id": "e39d05f9-0c54-4469-a626-8bb5cff169f8"
+  }
+}

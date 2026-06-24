@@ -49,6 +49,7 @@ const TEMPLATE_META = {
   '18-vtexcommerce-order-change-payment':               { label: 'Payment Change',          description: 'Modification du paiement de votre commande' },
   '19-vtexcommerce-payment-pending':                    { label: 'Payment Pending',         description: 'En attente de votre paiement' },
   '20-vtexcommerce-subscriptions-payment-not-approved': { label: 'Subscription Payment Failed', description: 'Paiement de l\'abonnement non approuvé' },
+  '21-report-report-finished':                          { label: 'Report Finished',             description: 'Votre rapport est disponible' },
 };
 
 function getTemplates(activeName = null) {
