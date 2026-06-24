@@ -85,10 +85,10 @@
   a      { color:#1d1d1d; text-decoration:underline; }
   strong { color:#000000; }
 
-  /* h2 variant — flush top */
+  /* h2 variant — flush top (used inside the help section) */
   .h2-flush { margin-top:0; }
 
-  /* Small muted text */
+  /* Small muted text — privacy & legal notices */
   .p-muted   { font-size:11px; color:#9b9b9b; line-height:20px; margin:0; }
   .p-muted a { color:#9b9b9b; }
 
@@ -107,7 +107,7 @@
   .totals-table td.col-price { text-align:right; white-space:nowrap; }
   .totals-table .total-row td { font-weight:700; color:#000000; border-top:1px solid #000000; padding-top:10px; }
 
-  /* --- Info panels (shipping address, payment, delivery) ----- */
+  /* --- Info panels ------------------------------------------- */
   .info-box    { background-color:#f9f9f9; margin-bottom:28px; }
   .info-box td { padding:16px 20px; }
   .info-box p  { font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#333333; line-height:22px; margin:0; }
@@ -172,9 +172,111 @@
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:36px;">
           <tr>
             <td>
-              <!-- Heading -->
-              <h1>
-                {{#compare language "==" "pl"}}Odkrywaj CHANEL.com{{else}}{{#compare language "==" "it"}}Esplora CHANEL.com{{else}}{{#compare language "==" "de"}}Entdecken Sie CHANEL.com{{else}}Explorer CHANEL.com{{/compare}}{{/compare}}{{/compare}}" width="181">
+              {{! Report heading }}
+              <h1>{{type}} — {{_accountInfo.TradingName}}</h1>
+
+              <p>
+                {{! Report ready body }}
+{{#compare language "==" "pl"}}Raport jest gotowy do pobrania. Kliknij poniższy przycisk, aby pobrać plik.{{else}}{{#compare language "==" "it"}}Il report è pronto per il download. Fai clic sul pulsante qui sotto per scaricarlo.{{else}}{{#compare language "==" "de"}}Der Bericht steht zum Download bereit. Klicken Sie auf die Schaltfläche unten, um die Datei herunterzuladen.{{else}}Le rapport est prêt à être téléchargé. Cliquez sur le bouton ci-dessous pour télécharger le fichier.{{/compare}}{{/compare}}{{/compare}}
+              </p>
+
+              {{#if period}}
+              <h2 class="h2-flush">{{! Period section heading }}
+{{#compare language "==" "pl"}}Okres objęty raportem{{else}}{{#compare language "==" "it"}}Periodo di copertura{{else}}{{#compare language "==" "de"}}Berichtszeitraum{{else}}Période couverte{{/compare}}{{/compare}}{{/compare}}</h2>
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" class="info-box">
+                <tr>
+                  <td>
+                    <p>
+                      {{! Period from label }}
+{{#compare language "==" "pl"}}<strong>Od:</strong>{{else}}{{#compare language "==" "it"}}<strong>Dal:</strong>{{else}}{{#compare language "==" "de"}}<strong>Von:</strong>{{else}}<strong>Du :</strong>{{/compare}}{{/compare}}{{/compare}} {{period.fromDate}}<br>
+                      {{! Period to label }}
+{{#compare language "==" "pl"}}<strong>Do:</strong>{{else}}{{#compare language "==" "it"}}<strong>Al:</strong>{{else}}{{#compare language "==" "de"}}<strong>Bis:</strong>{{else}}<strong>Au :</strong>{{/compare}}{{/compare}}{{/compare}} {{period.toDate}}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+              {{/if}}
+            </td>
+          </tr>
+        </table>
+
+        {{#if reportContentLink}}
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" class="download-box">
+          <tr>
+            <td>
+              <a href="{{reportContentLink}}" class="btn-primary" target="_blank">{{! Download button }}
+{{#compare language "==" "pl"}}Pobierz raport{{else}}{{#compare language "==" "it"}}Scarica il rapporto{{else}}{{#compare language "==" "de"}}Bericht herunterladen{{else}}Télécharger le rapport{{/compare}}{{/compare}}{{/compare}}
+              </a>
+            </td>
+          </tr>
+        </table>
+
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:12px;">
+          <tr>
+            <td>
+              <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:23px;margin:0;">
+                {{! Link fallback text }}
+{{#compare language "==" "pl"}}Jeśli przycisk nie działa, skopiuj i wklej poniższy link do przeglądarki :{{else}}{{#compare language "==" "it"}}Se il pulsante non funziona, copia e incolla il seguente link nel browser :{{else}}{{#compare language "==" "de"}}Wenn die Schaltfläche nicht funktioniert, kopieren und fügen Sie den folgenden Link in Ihren Browser ein :{{else}}Si le bouton ne fonctionne pas, copiez et collez le lien suivant dans votre navigateur :{{/compare}}{{/compare}}{{/compare}}
+                <br>
+                <a href="{{reportContentLink}}" style="color:#1d1d1d;text-decoration:underline;word-break:break-all;">{{reportContentLink}}</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+        {{/if}}
+
+        <!-- HELP -->
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" class="help-section">
+          <tr><td>&nbsp;</td></tr>
+          <tr>
+            <td>
+              <h2 class="h2-flush">{{! Help heading }}
+{{#compare language "==" "pl"}}Potrzebujesz pomocy?{{else}}{{#compare language "==" "it"}}Hai bisogno di aiuto?{{else}}{{#compare language "==" "de"}}Benötigen Sie Hilfe?{{else}}Besoin d'aide ?{{/compare}}{{/compare}}{{/compare}}</h2>
+              <p style="margin-bottom:10px;">
+                {{! Help text }}
+{{#compare language "==" "pl"}}Więcej informacji znajdziesz w naszym <a href="https://www.chanel.com/pl/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> lub kontaktując się z naszym <a href="https://www.chanel.com/pl/uslugi-i-pielegnacja/" style="color:#1d1d1d;text-decoration:underline;">Działem obsługi klienta</a>.{{else}}{{#compare language "==" "it"}}Troverete maggiori informazioni nelle nostre <a href="https://www.chanel.com/it/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> o contattando il nostro <a href="https://www.chanel.com/it/servizio-clienti/" style="color:#1d1d1d;text-decoration:underline;">Servizio clienti</a>.{{else}}{{#compare language "==" "de"}}Weitere Informationen finden Sie in unseren <a href="https://www.chanel.com/de/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> oder wenden Sie sich an unseren <a href="https://www.chanel.com/de/kundenservice/" style="color:#1d1d1d;text-decoration:underline;">Kundendienst</a>.{{else}}Vous trouverez plus d'informations dans notre <a href="https://www.chanel.com/fr/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> ou en contactant notre <a href="https://www.chanel.com/fr/conseils-services/" style="color:#1d1d1d;text-decoration:underline;">Service client</a>.{{/compare}}{{/compare}}{{/compare}}
+              </p>
+              <p class="p-muted">
+                {{! Privacy text }}
+{{#compare language "==" "pl"}}Aby uzyskać informacje na temat gromadzenia i przetwarzania Twoich danych osobowych przez CHANEL, zapoznaj się z naszą
+                <a href="https://www.chanel.com/pl/polityka-prywatnosci/" style="color:#9b9b9b;text-decoration:underline;">Polityką prywatności</a>.{{else}}{{#compare language "==" "it"}}Per informazioni sulla raccolta e il trattamento dei dati personali da parte di CHANEL, consultare la nostra
+                <a href="https://www.chanel.com/it/informativa-sulla-privacy/" style="color:#9b9b9b;text-decoration:underline;">Informativa sulla privacy</a>.{{else}}{{#compare language "==" "de"}}Informationen zur Erhebung und Verarbeitung Ihrer personenbezogenen Daten durch CHANEL finden Sie in unserer
+                <a href="https://www.chanel.com/de/datenschutzbestimmungen/" style="color:#9b9b9b;text-decoration:underline;">Datenschutzrichtlinie</a>.{{else}}Pour toute information concernant la collecte et le traitement de vos données personnelles par CHANEL, consultez notre
+                <a href="https://www.chanel.com/fr/politique-de-confidentialite/" style="color:#9b9b9b;text-decoration:underline;">Politique de confidentialité</a>.{{/compare}}{{/compare}}{{/compare}}
+              </p>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+  <!-- FOOTER -->
+  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0px auto;background-color:#000000" class="footer">
+    <tbody><tr>
+      <td style="padding-left:20px;padding-right:20px" class="wrapperP">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tbody><tr>
+            <td height="54"></td>
+          </tr>
+          <tr>
+            <td align="center">
+              <h2 style="margin:0"><center><img src="https://img-mail.chanel.com/1563281513168-chanel_white.png" alt="Chanel" width="175" style="display:inline-block"></center></h2>
+            </td>
+          </tr>
+          <tr>
+            <td height="54"></td>
+          </tr>
+        </tbody></table>
+        <table width="100%" role="presentation" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td valign="top" width="50%" style="padding-right:20px;vertical-align:top;" class="footer-col">
+              <table width="100%" role="presentation" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                  <td valign="top" style="font-family:Arial,Helvetica,sans-serif">
+                    <h3 style="margin-bottom:18px;color:#ffffff;font-size:18px">
+                      <img src="https://img-mail.chanel.com/1573047330036-explore_F_@2x.png" alt="{{#compare language "==" "pl"}}Odkrywaj CHANEL.com{{else}}{{#compare language "==" "it"}}Esplora CHANEL.com{{else}}{{#compare language "==" "de"}}Entdecken Sie CHANEL.com{{else}}Explorer CHANEL.com{{/compare}}{{/compare}}{{/compare}}" width="181">
                     </h3>
                     <ul class="footer-nav-list">
                       <li><a style="color:#9b9b9b;text-decoration:none;" href="{{#compare language "==" "pl"}}https://www.chanel.com/pl/haute-couture/{{else}}{{#compare language "==" "it"}}https://www.chanel.com/it/haute-couture/{{else}}{{#compare language "==" "de"}}https://www.chanel.com/de/haute-couture/{{else}}https://www.chanel.com/fr/haute-couture/{{/compare}}{{/compare}}{{/compare}}" target="_blank">Haute Couture</a></li>
