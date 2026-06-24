@@ -51,6 +51,7 @@ const TEMPLATE_META = {
   '20-vtexcommerce-subscriptions-payment-not-approved': { label: 'Subscription Payment Failed', description: 'Paiement de l\'abonnement non approuvé' },
   '21-report-report-finished':                          { label: 'Report Finished',             description: 'Votre rapport est disponible' },
   '22-catalog-admin-reports':                           { label: 'Catalog Admin Reports',       description: 'Rapport d\'administration du catalogue disponible' },
+  '23-export-products-catalogv2':                       { label: 'Export Products Catalog V2',  description: 'Rapport d\'exportation du catalogue produits disponible' },
 };
 
 function getTemplates(activeName = null) {

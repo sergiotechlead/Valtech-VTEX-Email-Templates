@@ -1,167 +1,355 @@
-
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; box-sizing: border-box; width: 100%; height: 100%; margin: 0; padding: 0; background: #f1f1f1 !important;">
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>{{tradingName}}</title>
-<!--[if gte mso 9]>
-<xml>
-  <o:OfficeDocumentSettings>
-  <o:AllowPNG/>
-  <o:PixelsPerInch>96</o:PixelsPerInch>
-  </o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
-<style>
-a[x-apple-data-detectors] {
-color: inherit !important;
-text-decoration: none !important;
-font-size: inherit !important;
-font-family: inherit !important;
-font-weight: inherit !important;
-line-height: inherit !important;
-}
-</style>
-<style>
-@media (max-width: 600px) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{#compare locale "==" "en"}}Product Catalog Export{{else}}{{#compare locale "==" "pl"}}Eksport katalogu produktów{{else}}{{#compare locale "==" "it"}}Export catalogo prodotti{{else}}{{#compare locale "==" "de"}}Produktkatalogexport{{else}}Exportation du catalogue produits{{/compare}}{{/compare}}{{/compare}}{{/compare}} – CHANEL</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style type="text/css">
 
-img {
-  max-width: 100% !important;
-  height: auto !important;
-}
-}
-</style>
+  /* ============================================================
+     CHANEL Email Templates — Design System
+     ============================================================
 
+     COLOR TOKENS
+     Brand Black   : #000000
+     Text Dark     : #1d1d1d
+     Text Body     : #333333
+     Text Muted    : #9b9b9b
+     Background    : #f9f9f9
+     White         : #ffffff
+     Border Light  : #eeeeee
+     Border Dark   : #333333
+  */
+
+  /* --- Reset ------------------------------------------------- */
+  body,table,td,p,a,li { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+  body,td,th,input,textarea,select,p,span { font-family:Arial,ArialMT,Helvetica,sans-serif; }
+  table,td { mso-table-lspace:0pt; mso-table-rspace:0pt; }
+  img { -ms-interpolation-mode:bicubic; border:0; outline:none; text-decoration:none; }
+
+  /* --- Layout ------------------------------------------------ */
+  body             { margin:0; padding:0; background-color:#f9f9f9; }
+  .email-wrapper   { width:100%; background-color:#f9f9f9; }
+  .email-container { max-width:640px; margin:0 auto; background-color:#ffffff; }
+
+  /* --- Typography -------------------------------------------- */
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:   22px;
+    font-weight: 400;
+    color:       #1d1d1d;
+    margin:      0 0 16px;
+    line-height: 1.4;
+  }
+  h2 {
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      12px;
+    font-weight:    700;
+    color:          #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin:         28px 0 12px;
+    line-height:    1.4;
+  }
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:   14px;
+    color:       #333333;
+    line-height: 23px;
+    margin:      0 0 14px;
+  }
+  a      { color:#1d1d1d; text-decoration:underline; }
+  strong { color:#000000; }
+
+  .h2-flush { margin-top:0; }
+  .p-muted   { font-size:11px; color:#9b9b9b; line-height:20px; margin:0; }
+  .p-muted a { color:#9b9b9b; }
+
+  /* --- Info panels ------------------------------------------- */
+  .info-box       { background-color:#f9f9f9; margin-bottom:28px; }
+  .info-box td    { padding:16px 20px; }
+  .info-box p     { font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#333333; line-height:22px; margin:0; }
+  .info-box p + p { margin-top:6px; }
+
+  /* --- CTA button -------------------------------------------- */
+  .btn-primary { display:inline-block; background-color:#000000; color:#ffffff; font-family:Arial,Helvetica,sans-serif; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1px; text-decoration:none; padding:14px 32px; }
+
+  /* --- Download box ------------------------------------------ */
+  .download-box    { margin:28px 0 16px; }
+  .download-box td { padding:0; }
+
+  /* --- Help section ------------------------------------------ */
+  .help-section    { margin-top:28px; border-top:1px solid #eeeeee; }
+  .help-section td { height:28px; }
+
+  /* --- Footer ------------------------------------------------ */
+  .footer-nav-list    { font-size:14px; line-height:22px; padding:0; margin:0; color:#9b9b9b; list-style-type:none; }
+  .footer-nav-list li { margin-bottom:9px; }
+  .footer-nav-list a  { text-decoration:none; color:#9b9b9b; }
+  .footer-legal       { color:#9b9b9b; font-size:12px; text-align:center; line-height:16px; }
+  .footer-legal p     { font-size:12px; color:#9b9b9b; margin-bottom:3px; }
+  .footer-legal a     { color:#9b9b9b; }
+
+  /* --- Responsive ------------------------------------------- */
+  @media only screen and (max-width:640px) {
+    .email-container { width:100%!important; }
+    .footer-col      { width:100%!important; display:block!important; padding:0 0 20px 0!important; }
+    .content-padding { padding:20px!important; }
+    h1               { font-size:18px!important; }
+  }
+
+  </style>
 </head>
+<body style="margin:0;padding:0;background-color:#f9f9f9;">
+  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%;background-color:#f9f9f9;" class="email-wrapper">
+    <tr>
+      <td>
 
-<body style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; box-sizing: border-box; font-size: 16px; width: 100%; height: 100%; margin: 0; padding: 0; background: #f1f1f1 !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-<table width="100%" border="0" cellpadding="0" cellspacing="0" style="box-sizing: border-box; margin: 0; padding: 0; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 100%; height: 100%; line-height: 100% !important; background-color: #fff">
-  <tr style="box-sizing: border-box !important;">
-    <td align="left" valign="top" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-      <table style="box-sizing: border-box; width: 100%; max-width: 40rem; margin: auto; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-        <tr style="box-sizing: border-box !important;">
-          <td style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; max-width: 40rem; margin: auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
-            <div style="border-radius: 8px; border: 1px solid #e3e4e6; color: #3f3f40 !important; padding: 3rem; background-color: #fff">
-                <table style="box-sizing: border-box; width: 100%; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-                  <tbody>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="1" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; width: 20%; padding-bottom: 2rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
-                        <div style="display: inline-flex; flex-direction: row;">
-                            <img src="https://qamarketplace.myvtex.com/_v/public/assets/v1/published/vtex.messages-templates@0.1.12/public/react/cdbfb2a8b730a7ee840752d7af7ddc1c.png" width="77px" height="28px">
-                        </div>
-                      </td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="6" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; padding-bottom: 1rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
-                        <h1 style="margin: 0; box-sizing: border-box; line-height: 1.25; font-size: 2rem !important; color: #323845;">
-                            Your products were sucessfully exported!
-                        </h1>
-                      </td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="6" style="font-size: 16px; line-height: 24px; box-sizing: border-box; border-collapse: collapse; text-align: left; padding-bottom: 2.5rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #323845;" align="left">
-                            Download the spreadsheet with the exported products from your store by clicking the button below:
-                      </td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="6" style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: center; padding-bottom: 1rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
-                        <a href={{downloadLink}} target="_blank" style="display: inline-flex; justify-items: center; padding: 16px 20px; text-decoration: none; font-size: 16px; font-weight: 700; color: white; background-color: #2953B2; border-radius: 4px;">
-                            <img src="https://io.vtex.com.br/vtex-marketplace-email/icon_download_rounded_white.png" style="margin-right: 8px;">
-                            Download XLS
-                        </a>
-                      </td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="6" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: center; padding-bottom: 2.5rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #707685;" align="left">
-                            This file expires in <span style="font-weight: bold; color:#323845">48 hours</span> 
-                      </td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="6" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; padding-bottom: 1rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
-                        <h3 style="margin: 0; box-sizing: border-box; line-height: 20px; font-size: 1.2rem !important; color: #323845;">
-                           Edit price and inventory in bulk
-                        </h1>
-                      </td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="6" style="font-size: 16px; line-height: 24px; box-sizing: border-box; border-collapse: collapse; text-align: left; padding-bottom: 2rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #323845;" align="left">
-                        Use the price and inventory spreadsheet templates to bulk edit those informations in your admin.
-                      </td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="6" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; padding-bottom: 2rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
-                        <div style="display: flex;">
-                            <img src="https://io.vtex.com.br/vtex-marketplace-email/icon_download_rounded_blue.png" style="margin-right: 8px; align-self: flex-start;">
-                            <a href="https://io.vtex.com.br/vtex-marketplace-email/prices.xlsx" target="_blank" style="font-size: 16px; line-height: 1; color: #2953B2;">
-                                Download price spreadsheet template
-                            </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="6" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; padding-bottom: 3rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
-                        <div style="display: flex;">
-                            <img src="https://io.vtex.com.br/vtex-marketplace-email/icon_download_rounded_blue.png" style="margin-right: 8px; align-self: flex-start;">
-                            <a href="https://io.vtex.com.br/vtex-marketplace-email/inventory.xlsx" target="_blank" style="font-size: 16px; line-height: 1; color: #2953B2;">
-                                Download inventory spreadsheet template
-                            </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="6" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; padding-bottom: 1rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
-                        <h3 style="margin: 0; box-sizing: border-box; line-height: 1.25; font-size: 14px !important; color: #323845;">
-                           Learn more about bulk editing price and inventory
-                        </h1>
-                      </td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="6" style="display: flex; font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; padding-bottom: 3rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
-                        <a href="https://help.vtex.com/en/tutorial/sku-price-change--tutorials_95#by-importing-spreadsheets" target="_blank" style="font-size: 16px; line-height: 1; color: #2953B2; margin-right: 24px">
-                            Importing price
-                        </a>                            
-                        <a href="https://help.vtex.com/en/tutorial/importing-and-exporting-an-inventory-spreadsheet--tutorials_2034" target="_blank" style="font-size: 16px; line-height: 1; color: #2953B2;">
-                            Importing inventory
-                        </a>
-                      </td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="6" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; padding-bottom: 1rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
-                        <hr style="width: 100%; border: none; height: 1px; margin-bottom: 1rem; background-color: #cacbcc !important;">
-                      </hr></td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="6" style="line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; padding-bottom: .25rem; font-size: 0.75rem; color: #727273 !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
-                        <span>
-                            If you didn’t request this email, please ignore it.
-                        </span>
-                      </td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td colspan="6" style="line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; white-space: nowrap; padding-bottom: 2rem; font-size: 0.75rem; color: #727273 !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
-                        <span>
-                            Need help?
-                        </span>
-                        <a target="_blank" href="https://help.vtex.com" alt="VTEX Help" style="box-sizing: border-box; padding-left: .25rem; padding-right: .25rem; text-decoration: underline; white-space: nowrap; font-size: 0.75rem; color: #727273 !important;">
-                            Contact us
-                        </a>
-                      </td>
-                    </tr>
-                    <tr style="box-sizing: border-box !important;">
-                      <td style="line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-size: 0.75rem; color: #727273 !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">&copy; VTEX</td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
+  <!-- TOP BAR -->
+  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#000000;max-width:640px;margin:0 auto;">
+    <tr><td style="height:7px;font-size:7px;line-height:7px;">&nbsp;</td></tr>
+  </table>
+
+  <!-- LOGO HEADER -->
+  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background-color:#ffffff;">
+    <tr>
+      <td align="center" style="padding:36px 40px 30px;background-color:#ffffff;">
+        <a href="https://www.chanel.com/fr/" style="text-decoration:none;border:0;display:inline-block;" target="_blank" aria-label="Page d'accueil CHANEL">
+          <svg xmlns="http://www.w3.org/2000/svg" width="175" height="28" viewBox="0 0 175 28" role="img" aria-label="CHANEL"><title>CHANEL</title><path fill="#000000" fill-rule="evenodd" d="m20.655 17.726 4.565 2.615c-2.282 4.197-6.737 6.922-11.781 6.922C6.075 27.263 0 21.629 0 13.713S6.075.163 13.439.163c5.044 0 9.5 2.725 11.781 6.923L20.655 9.7c-1.326-2.725-4.013-4.381-7.216-4.381-4.603 0-8.1 3.423-8.1 8.394s3.497 8.395 8.1 8.395c3.203 0 5.89-1.657 7.216-4.382m29.05 8.874V15.554H36.818V26.6h-5.154V.826h5.154V10.4h12.887V.826h5.155V26.6zm29.898-10.678L74.926 5.061 70.25 15.922zM89.838 26.6h-5.634l-2.54-5.892H68.188l-2.54 5.892h-5.634L71.428.826h6.996zm23.748 0L99.778 6.313V26.6h-4.786V.826h6.812l11.598 17.084V.826h4.787V26.6zm14.543 0V.826h18.41v4.787h-13.624v5.523h11.782v4.786h-11.782v5.892h14.36V26.6zm27.431 0V.826h5.154v20.62h13.622V26.6z"/></svg>
+        </a>
+      </td>
+    </tr>
+  </table>
+
+        <!-- MAIN CONTENT -->
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0 auto;background-color:#ffffff;">
+          <tr>
+            <td style="padding:0 40px 40px;" class="content-padding">
+
+              <!-- GREETING + HEADING -->
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:36px;">
+                <tr>
+                  <td>
+                    {{#if user.name}}
+{{#compare locale "==" "en"}}<h1>Hello {{user.name}},</h1>{{else}}{{#compare locale "==" "pl"}}<h1>Dzień dobry {{user.name}},</h1>{{else}}{{#compare locale "==" "it"}}<h1>Ciao {{user.name}},</h1>{{else}}{{#compare locale "==" "de"}}<h1>Guten Tag {{user.name}},</h1>{{else}}<h1>Bonjour {{user.name}},</h1>{{/compare}}{{/compare}}{{/compare}}{{/compare}}
+                    {{else}}
+{{#compare locale "==" "en"}}<h1>Dear Customer,</h1>{{else}}{{#compare locale "==" "pl"}}<h1>Drogi Kliencie,</h1>{{else}}{{#compare locale "==" "it"}}<h1>Gentile cliente,</h1>{{else}}{{#compare locale "==" "de"}}<h1>Sehr geehrter Kunde,</h1>{{else}}<h1>Cher client,</h1>{{/compare}}{{/compare}}{{/compare}}{{/compare}}
+                    {{/if}}
+
+                    <!-- BODY MESSAGE -->
+                    <p>
+{{#compare locale "==" "en"}}Your product catalog for <strong>{{_accountInfo.TradingName}}</strong> has been successfully exported. Click the button below to download your file.{{else}}{{#compare locale "==" "pl"}}Eksport katalogu produktów dla <strong>{{_accountInfo.TradingName}}</strong> został pomyślnie wykonany. Kliknij poniższy przycisk, aby pobrać plik.{{else}}{{#compare locale "==" "it"}}L'esportazione del catalogo prodotti per <strong>{{_accountInfo.TradingName}}</strong> è stata completata con successo. Fai clic sul pulsante qui sotto per scaricare il file.{{else}}{{#compare locale "==" "de"}}Der Export des Produktkatalogs für <strong>{{_accountInfo.TradingName}}</strong> wurde erfolgreich abgeschlossen. Klicken Sie auf die Schaltfläche unten, um Ihre Datei herunterzuladen.{{else}}L'exportation du catalogue produits de <strong>{{_accountInfo.TradingName}}</strong> a été réalisée avec succès. Cliquez sur le bouton ci-dessous pour télécharger votre fichier.{{/compare}}{{/compare}}{{/compare}}{{/compare}}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- EXPORT DETAILS PANEL -->
+              <h2>{{#compare locale "==" "en"}}Export Details{{else}}{{#compare locale "==" "pl"}}Szczegóły eksportu{{else}}{{#compare locale "==" "it"}}Dettagli dell'export{{else}}{{#compare locale "==" "de"}}Exportdetails{{else}}Détails de l'exportation{{/compare}}{{/compare}}{{/compare}}{{/compare}}</h2>
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" class="info-box">
+                <tr>
+                  <td>
+                    {{#if _accountInfo.TradingName}}
+                    <p>
+                      {{#compare locale "==" "en"}}<strong>Account:</strong>{{else}}{{#compare locale "==" "pl"}}<strong>Konto:</strong>{{else}}{{#compare locale "==" "it"}}<strong>Account:</strong>{{else}}{{#compare locale "==" "de"}}<strong>Konto:</strong>{{else}}<strong>Compte :</strong>{{/compare}}{{/compare}}{{/compare}}{{/compare}} {{_accountInfo.TradingName}}
+                    </p>
+                    {{/if}}
+                    {{#if exportId}}
+                    <p>
+                      {{#compare locale "==" "en"}}<strong>Export ID:</strong>{{else}}{{#compare locale "==" "pl"}}<strong>ID eksportu:</strong>{{else}}{{#compare locale "==" "it"}}<strong>ID esportazione:</strong>{{else}}{{#compare locale "==" "de"}}<strong>Export-ID:</strong>{{else}}<strong>ID d'exportation :</strong>{{/compare}}{{/compare}}{{/compare}}{{/compare}} {{exportId}}
+                    </p>
+                    {{/if}}
+                    {{#if exportDate}}
+                    <p>
+                      {{#compare locale "==" "en"}}<strong>Export Date:</strong>{{else}}{{#compare locale "==" "pl"}}<strong>Data eksportu:</strong>{{else}}{{#compare locale "==" "it"}}<strong>Data di esportazione:</strong>{{else}}{{#compare locale "==" "de"}}<strong>Exportdatum:</strong>{{else}}<strong>Date d'exportation :</strong>{{/compare}}{{/compare}}{{/compare}}{{/compare}} {{exportDate}}
+                    </p>
+                    {{/if}}
+                    {{#if totalProducts}}
+                    <p>
+                      {{#compare locale "==" "en"}}<strong>Total Products:</strong>{{else}}{{#compare locale "==" "pl"}}<strong>Łączna liczba produktów:</strong>{{else}}{{#compare locale "==" "it"}}<strong>Prodotti totali:</strong>{{else}}{{#compare locale "==" "de"}}<strong>Gesamtprodukte:</strong>{{else}}<strong>Total produits :</strong>{{/compare}}{{/compare}}{{/compare}}{{/compare}} {{totalProducts}}
+                    </p>
+                    {{/if}}
+                    {{#if categories}}
+                    <p>
+                      {{#compare locale "==" "en"}}<strong>Categories:</strong>{{else}}{{#compare locale "==" "pl"}}<strong>Kategorie:</strong>{{else}}{{#compare locale "==" "it"}}<strong>Categorie:</strong>{{else}}{{#compare locale "==" "de"}}<strong>Kategorien:</strong>{{else}}<strong>Catégories :</strong>{{/compare}}{{/compare}}{{/compare}}{{/compare}} {{categories}}
+                    </p>
+                    {{/if}}
+                    {{#if status}}
+                    <p>
+                      {{#compare locale "==" "en"}}<strong>Status:</strong>{{else}}{{#compare locale "==" "pl"}}<strong>Status:</strong>{{else}}{{#compare locale "==" "it"}}<strong>Stato:</strong>{{else}}{{#compare locale "==" "de"}}<strong>Status:</strong>{{else}}<strong>Statut :</strong>{{/compare}}{{/compare}}{{/compare}}{{/compare}} {{status}}
+                    </p>
+                    {{/if}}
+                  </td>
+                </tr>
+              </table>
+
+              <!-- DOWNLOAD CTA -->
+              {{#if downloadLink}}
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" class="download-box">
+                <tr>
+                  <td>
+                    <a href="{{downloadLink}}" class="btn-primary" style="display:inline-block;background-color:#000000;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;text-decoration:none;padding:14px 32px;" target="_blank">{{#compare locale "==" "en"}}Download Export (XLSX){{else}}{{#compare locale "==" "pl"}}Pobierz eksport (XLSX){{else}}{{#compare locale "==" "it"}}Scarica l'export (XLSX){{else}}{{#compare locale "==" "de"}}Export herunterladen (XLSX){{else}}Télécharger l'export (XLSX){{/compare}}{{/compare}}{{/compare}}{{/compare}}</a>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- EXPIRATION NOTICE -->
+              {{#if expirationDate}}
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:12px;">
+                <tr>
+                  <td>
+                    <p class="p-muted">
+                      {{#compare locale "==" "en"}}<strong>Link expires on:</strong>{{else}}{{#compare locale "==" "pl"}}<strong>Link wygasa:</strong>{{else}}{{#compare locale "==" "it"}}<strong>Link valido fino al:</strong>{{else}}{{#compare locale "==" "de"}}<strong>Link läuft ab am:</strong>{{else}}<strong>Lien valide jusqu'au :</strong>{{/compare}}{{/compare}}{{/compare}}{{/compare}} {{expirationDate}}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+              {{/if}}
+
+              <!-- FALLBACK LINK -->
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:16px;">
+                <tr>
+                  <td>
+                    <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333333;line-height:23px;margin:0;">
+{{#compare locale "==" "en"}}If the button does not work, copy and paste the following link into your browser:{{else}}{{#compare locale "==" "pl"}}Jeśli przycisk nie działa, skopiuj i wklej poniższy link do przeglądarki:{{else}}{{#compare locale "==" "it"}}Se il pulsante non funziona, copia e incolla il seguente link nel browser:{{else}}{{#compare locale "==" "de"}}Wenn die Schaltfläche nicht funktioniert, kopieren und fügen Sie den folgenden Link in Ihren Browser ein:{{else}}Si le bouton ne fonctionne pas, copiez et collez le lien suivant dans votre navigateur :{{/compare}}{{/compare}}{{/compare}}{{/compare}}
+                      <br>
+                      <a href="{{downloadLink}}" style="color:#1d1d1d;text-decoration:underline;word-break:break-all;">{{downloadLink}}</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+              {{/if}}
+
+              <!-- SYSTEM NOTICE -->
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:20px;">
+                <tr>
+                  <td>
+                    <p class="p-muted">{{#compare locale "==" "en"}}This email was generated automatically by the system. Please do not reply to this message.{{else}}{{#compare locale "==" "pl"}}Ta wiadomość e-mail została wygenerowana automatycznie przez system. Prosimy nie odpowiadać na tę wiadomość.{{else}}{{#compare locale "==" "it"}}Questa e-mail è stata generata automaticamente dal sistema. Si prega di non rispondere a questo messaggio.{{else}}{{#compare locale "==" "de"}}Diese E-Mail wurde automatisch vom System generiert. Bitte antworten Sie nicht auf diese Nachricht.{{else}}Cet e-mail a été généré automatiquement par le système. Merci de ne pas répondre à ce message.{{/compare}}{{/compare}}{{/compare}}{{/compare}}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- HELP SECTION -->
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" class="help-section">
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                  <td>
+                    <h2 class="h2-flush">{{#compare locale "==" "en"}}Need help?{{else}}{{#compare locale "==" "pl"}}Potrzebujesz pomocy?{{else}}{{#compare locale "==" "it"}}Hai bisogno di aiuto?{{else}}{{#compare locale "==" "de"}}Benötigen Sie Hilfe?{{else}}Besoin d'aide ?{{/compare}}{{/compare}}{{/compare}}{{/compare}}</h2>
+                    <p style="margin-bottom:10px;">
+{{#compare locale "==" "en"}}You will find more information in our <a href="https://www.chanel.com/en/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> or by contacting our <a href="https://www.chanel.com/en/customer-service/" style="color:#1d1d1d;text-decoration:underline;">Customer Service</a>.{{else}}{{#compare locale "==" "pl"}}Więcej informacji znajdziesz w naszym <a href="https://www.chanel.com/pl/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> lub kontaktując się z naszym <a href="https://www.chanel.com/pl/uslugi-i-pielegnacja/" style="color:#1d1d1d;text-decoration:underline;">Działem obsługi klienta</a>.{{else}}{{#compare locale "==" "it"}}Troverete maggiori informazioni nelle nostre <a href="https://www.chanel.com/it/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> o contattando il nostro <a href="https://www.chanel.com/it/servizio-clienti/" style="color:#1d1d1d;text-decoration:underline;">Servizio clienti</a>.{{else}}{{#compare locale "==" "de"}}Weitere Informationen finden Sie in unseren <a href="https://www.chanel.com/de/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> oder wenden Sie sich an unseren <a href="https://www.chanel.com/de/kundenservice/" style="color:#1d1d1d;text-decoration:underline;">Kundendienst</a>.{{else}}Vous trouverez plus d'informations dans notre <a href="https://www.chanel.com/fr/faq/" style="color:#1d1d1d;text-decoration:underline;">FAQ</a> ou en contactant notre <a href="https://www.chanel.com/fr/conseils-services/" style="color:#1d1d1d;text-decoration:underline;">Service client</a>.{{/compare}}{{/compare}}{{/compare}}{{/compare}}
+                    </p>
+                    <p class="p-muted">
+{{#compare locale "==" "en"}}For information on the collection and processing of your personal data by CHANEL, please read our <a href="https://www.chanel.com/en/privacy-policy/" style="color:#9b9b9b;text-decoration:underline;">Privacy Policy</a>.{{else}}{{#compare locale "==" "pl"}}Aby uzyskać informacje na temat gromadzenia i przetwarzania Twoich danych osobowych przez CHANEL, zapoznaj się z naszą <a href="https://www.chanel.com/pl/polityka-prywatnosci/" style="color:#9b9b9b;text-decoration:underline;">Polityką prywatności</a>.{{else}}{{#compare locale "==" "it"}}Per informazioni sulla raccolta e il trattamento dei dati personali da parte di CHANEL, consultare la nostra <a href="https://www.chanel.com/it/informativa-sulla-privacy/" style="color:#9b9b9b;text-decoration:underline;">Informativa sulla privacy</a>.{{else}}{{#compare locale "==" "de"}}Informationen zur Erhebung und Verarbeitung Ihrer personenbezogenen Daten durch CHANEL finden Sie in unserer <a href="https://www.chanel.com/de/datenschutzbestimmungen/" style="color:#9b9b9b;text-decoration:underline;">Datenschutzrichtlinie</a>.{{else}}Pour toute information concernant la collecte et le traitement de vos données personnelles par CHANEL, consultez notre <a href="https://www.chanel.com/fr/politique-de-confidentialite/" style="color:#9b9b9b;text-decoration:underline;">Politique de confidentialité</a>.{{/compare}}{{/compare}}{{/compare}}{{/compare}}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+        </table>
+
+  <!-- FOOTER -->
+  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:640px;margin:0px auto;background-color:#000000;" class="footer">
+    <tbody><tr>
+      <td style="padding-left:20px;padding-right:20px;" class="wrapperP">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tbody><tr><td height="54"></td></tr>
+          <tr>
+            <td align="center">
+              <h2 style="margin:0;"><center><img src="https://img-mail.chanel.com/1563281513168-chanel_white.png" alt="Chanel" width="175" style="display:inline-block;"></center></h2>
+            </td>
+          </tr>
+          <tr><td height="54"></td></tr>
+        </tbody></table>
+
+        <table width="100%" role="presentation" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+
+            <!-- LEFT COL: Explore -->
+            <td valign="top" width="50%" style="padding-right:20px;vertical-align:top;" class="footer-col">
+              <table width="100%" role="presentation" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                  <td valign="top" style="font-family:Arial,Helvetica,sans-serif;">
+                    <h3 style="margin-bottom:18px;color:#ffffff;font-size:18px;">
+                      <img src="https://img-mail.chanel.com/1573047330036-explore_F_@2x.png" alt="{{#compare locale "==" "en"}}Explore CHANEL.com{{else}}{{#compare locale "==" "pl"}}Odkrywaj CHANEL.com{{else}}{{#compare locale "==" "it"}}Esplora CHANEL.com{{else}}{{#compare locale "==" "de"}}Entdecken Sie CHANEL.com{{else}}Explorer CHANEL.com{{/compare}}{{/compare}}{{/compare}}{{/compare}}" width="181">
+                    </h3>
+                    <ul class="footer-nav-list">
+                      <li><a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/haute-couture/{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/haute-couture/{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/haute-couture/{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/haute-couture/{{else}}https://www.chanel.com/fr/haute-couture/{{/compare}}{{/compare}}{{/compare}}{{/compare}}" target="_blank">Haute Couture</a></li>
+                      <li><a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/fashion/{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/moda/{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/moda/{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/mode/{{else}}https://www.chanel.com/fr/mode/{{/compare}}{{/compare}}{{/compare}}{{/compare}}" target="_blank">{{#compare locale "==" "en"}}Fashion{{else}}{{#compare locale "==" "pl"}}Moda{{else}}{{#compare locale "==" "it"}}Moda{{else}}{{#compare locale "==" "de"}}Mode{{else}}Mode{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                      <li><a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/high-jewellery/{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/bizuteria-luksusowa/{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/alta-gioielleria/{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/haute-joaillerie/{{else}}https://www.chanel.com/fr/haute-joaillerie/{{/compare}}{{/compare}}{{/compare}}{{/compare}}" target="_blank">{{#compare locale "==" "en"}}High Jewellery{{else}}{{#compare locale "==" "pl"}}Haute Joaillerie{{else}}{{#compare locale "==" "it"}}Alta Gioielleria{{else}}{{#compare locale "==" "de"}}Haute Joaillerie{{else}}Haute Joaillerie{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                      <li><a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/jewellery/{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/bizuteria/{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/gioielleria/{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/schmuck/{{else}}https://www.chanel.com/fr/joaillerie/{{/compare}}{{/compare}}{{/compare}}{{/compare}}" target="_blank">{{#compare locale "==" "en"}}Jewellery{{else}}{{#compare locale "==" "pl"}}Biżuteria{{else}}{{#compare locale "==" "it"}}Gioielleria{{else}}{{#compare locale "==" "de"}}Schmuck{{else}}Joaillerie{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                      <li><a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/watches/{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/zegarki/{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/orologeria/{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/uhren/{{else}}https://www.chanel.com/fr/horlogerie/{{/compare}}{{/compare}}{{/compare}}{{/compare}}" target="_blank">{{#compare locale "==" "en"}}Watches{{else}}{{#compare locale "==" "pl"}}Zegarki{{else}}{{#compare locale "==" "it"}}Orologi{{else}}{{#compare locale "==" "de"}}Uhren{{else}}Horlogerie{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                      <li><a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/eyewear/{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/okulary/{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/occhiali/{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/brillen/{{else}}https://www.chanel.com/fr/lunettes/{{/compare}}{{/compare}}{{/compare}}{{/compare}}" target="_blank">{{#compare locale "==" "en"}}Eyewear{{else}}{{#compare locale "==" "pl"}}Okulary{{else}}{{#compare locale "==" "it"}}Occhiali{{else}}{{#compare locale "==" "de"}}Brillen{{else}}Lunettes{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                      <li><a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/fragrances/{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/zapachy/{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/profumi/{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/parfum/{{else}}https://www.chanel.com/fr/parfums/{{/compare}}{{/compare}}{{/compare}}{{/compare}}" target="_blank">{{#compare locale "==" "en"}}Fragrances{{else}}{{#compare locale "==" "pl"}}Perfumy{{else}}{{#compare locale "==" "it"}}Profumi{{else}}{{#compare locale "==" "de"}}Düfte{{else}}Parfums{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                      <li><a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/makeup/{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/makijaz/{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/make-up/{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/make-up/{{else}}https://www.chanel.com/fr/maquillage/{{/compare}}{{/compare}}{{/compare}}{{/compare}}" target="_blank">{{#compare locale "==" "en"}}Makeup{{else}}{{#compare locale "==" "pl"}}Makijaż{{else}}{{#compare locale "==" "it"}}Trucco{{else}}{{#compare locale "==" "de"}}Make-up{{else}}Maquillage{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                      <li><a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/skincare/{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/pielegnacja-skory/{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/skincare/{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/hautpflege/{{else}}https://www.chanel.com/fr/soins/{{/compare}}{{/compare}}{{/compare}}{{/compare}}" target="_blank">{{#compare locale "==" "en"}}Skincare{{else}}{{#compare locale "==" "pl"}}Pielęgnacja{{else}}{{#compare locale "==" "it"}}Trattamenti{{else}}{{#compare locale "==" "de"}}Pflege{{else}}Soins{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                    </ul>
+                  </td>
+                </tr></tbody>
+              </table>
+            </td>
+
+            <!-- RIGHT COL: Online Services -->
+            <td valign="top" width="50%" style="vertical-align:top;" class="footer-col">
+              <table width="100%" role="presentation" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                  <td valign="top">
+                    <h3 style="margin-bottom:18px;color:#ffffff;font-size:18px;">
+                      <img src="https://img-mail.chanel.com/1573047231617-online_F_@2x.png" alt="{{#compare locale "==" "en"}}Online Services{{else}}{{#compare locale "==" "pl"}}Usługi online{{else}}{{#compare locale "==" "it"}}Servizi online{{else}}{{#compare locale "==" "de"}}Onlineservices{{else}}Services en ligne{{/compare}}{{/compare}}{{/compare}}{{/compare}}" width="149">
+                    </h3>
+                    <ul class="footer-nav-list">
+                      <li><a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/storelocator/{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/storelocator/{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/storelocator/{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/storelocator/{{else}}https://www.chanel.com/fr/storelocator/{{/compare}}{{/compare}}{{/compare}}{{/compare}}" target="_blank">{{#compare locale "==" "en"}}Find a boutique{{else}}{{#compare locale "==" "pl"}}Znajdź butik{{else}}{{#compare locale "==" "it"}}Trova una boutique{{else}}{{#compare locale "==" "de"}}Finden Sie eine Boutique{{else}}Trouver une boutique{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                      <li><a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/account/{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/account/{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/account/{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/account/{{else}}https://www.chanel.com/fr/account/{{/compare}}{{/compare}}{{/compare}}{{/compare}}" target="_blank">{{#compare locale "==" "en"}}My account{{else}}{{#compare locale "==" "pl"}}Moje konto{{else}}{{#compare locale "==" "it"}}Il mio account{{else}}{{#compare locale "==" "de"}}Mein Konto{{else}}Mon compte{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                      <li><a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/faq/fragrance-beauty/#return{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/faq/fragrance-beauty/#return{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/faq/fragrance-beauty/#return{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/faq/fragrance-beauty/#return{{else}}https://www.chanel.com/fr/faq/parfums-beaute/#return{{/compare}}{{/compare}}{{/compare}}{{/compare}}" target="_blank">{{#compare locale "==" "en"}}Returns{{else}}{{#compare locale "==" "pl"}}Zwroty{{else}}{{#compare locale "==" "it"}}Resi{{else}}{{#compare locale "==" "de"}}Retouren{{else}}Retours{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a></li>
+                      <li><a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/faq/{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/faq/{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/faq/{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/faq/{{else}}https://www.chanel.com/fr/faq/{{/compare}}{{/compare}}{{/compare}}{{/compare}}" target="_blank">FAQ</a></li>
+                    </ul>
+                  </td>
+                </tr></tbody>
+              </table>
+            </td>
+
+          </tr></tbody>
+        </table>
+
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tbody><tr><th height="27"></th></tr></tbody>
+        </table>
+
+        <!-- FOOTER LEGAL -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tbody>
+            <tr><td height="18" style="border-top:1px solid #333333;"></td></tr>
+            <tr>
+              <td align="center">
+                <div class="footer-legal">
+                  <p>CHANEL S.A.S. ; RCS Nanterre 542 052 766</p>
+                  <p style="margin-bottom:6px;">135 avenue Charles de Gaulle 92521 Neuilly-sur-Seine Cedex</p>
+                  <a href="{{#compare locale "==" "en"}}https://www.chanel.com/en/privacy-policy/{{else}}{{#compare locale "==" "pl"}}https://www.chanel.com/pl/polityka-prywatnosci/{{else}}{{#compare locale "==" "it"}}https://www.chanel.com/it/informativa-sulla-privacy/{{else}}{{#compare locale "==" "de"}}https://www.chanel.com/de/datenschutzbestimmungen/{{else}}https://www.chanel.com/fr/politique-de-confidentialite/{{/compare}}{{/compare}}{{/compare}}{{/compare}}" style="color:#9b9b9b;" target="_blank">{{#compare locale "==" "en"}}Privacy Policy{{else}}{{#compare locale "==" "pl"}}Polityka prywatności{{else}}{{#compare locale "==" "it"}}Politica sulla privacy{{else}}{{#compare locale "==" "de"}}Datenschutzrichtlinie{{else}}Politique de confidentialité{{/compare}}{{/compare}}{{/compare}}{{/compare}}</a>
+                </div>
+              </td>
+            </tr>
+            <tr><td height="18"></td></tr>
+          </tbody>
+        </table>
+
+      </td>
+    </tr></tbody>
+  </table>
+
+      </td>
+    </tr>
+  </table>
 </body>
-
 </html>
