@@ -166,9 +166,9 @@
 			],
 			"clientProfileData": {
 				"attachmentId": "clientProfileData",
-				"email": "leana.belkhiri@email.com",
-				"firstName": "Léana",
-				"lastName": "BELKHIRI",
+				"email": "sergio.beleno@valtech.com",
+				"firstName": "Sergio",
+				"lastName": "Beleño",
 				"document": "542052766",
 				"documentType": "siret",
 				"phone": "+33 (0) 1 44 50 66 00",
@@ -191,7 +191,7 @@
 				"attachmentId": "shippingData",
 				"address": {
 					"addressType": "residential",
-					"receiverName": "Madame Léana BELKHIRI",
+					"receiverName": "Monsieur Beleño",
 					"addressId": "66000",
 					"postalCode": "66000",
 					"city": "PERPIGNAN",
@@ -255,7 +255,7 @@
 				"selectedAddresses": [
 					{
 						"addressType": "residential",
-						"receiverName": "Madame Léana BELKHIRI",
+						"receiverName": "Monsieur Beleño",
 						"addressId": "66000",
 						"postalCode": "66000",
 						"city": "PERPIGNAN",
@@ -272,7 +272,7 @@
 				"availableAddresses": [
 					{
 						"addressType": "residential",
-						"receiverName": "Madame Léana BELKHIRI",
+						"receiverName": "Monsieur Beleño",
 						"addressId": "66000",
 						"postalCode": "66000",
 						"city": "PERPIGNAN",
@@ -495,9 +495,9 @@
 			],
 			"clientProfileData": {
 				"attachmentId": "clientProfileData",
-				"email": "leana.belkhiri@email.com",
-				"firstName": "Léana",
-				"lastName": "BELKHIRI",
+				"email": "sergio.beleno@valtech.com",
+				"firstName": "Sergio",
+				"lastName": "Beleño",
 				"document": "542052766",
 				"documentType": "siret",
 				"phone": "+33 (0) 1 44 50 66 00",
@@ -520,7 +520,7 @@
 				"attachmentId": "shippingData",
 				"address": {
 					"addressType": "residential",
-					"receiverName": "Madame Léana BELKHIRI",
+					"receiverName": "Monsieur Beleño",
 					"addressId": "66000",
 					"postalCode": "66000",
 					"city": "PERPIGNAN",
@@ -584,7 +584,7 @@
 				"selectedAddresses": [
 					{
 						"addressType": "residential",
-						"receiverName": "Madame Léana BELKHIRI",
+						"receiverName": "Monsieur Beleño",
 						"addressId": "66000",
 						"postalCode": "66000",
 						"city": "PERPIGNAN",
@@ -601,7 +601,7 @@
 				"availableAddresses": [
 					{
 						"addressType": "residential",
-						"receiverName": "Madame Léana BELKHIRI",
+						"receiverName": "Monsieur Beleño",
 						"addressId": "66000",
 						"postalCode": "66000",
 						"city": "PERPIGNAN",

@@ -164,9 +164,9 @@
 		}
 	],
 	"clientProfileData": {
-		"email": "leana.belkhiri@email.com",
-		"firstName": "Léana",
-		"lastName": "BELKHIRI",
+		"email": "sergio.beleno@valtech.com",
+		"firstName": "Sergio",
+		"lastName": "Beleño",
 		"document": "542052766",
 		"documentType": "siret",
 		"phone": "+33 (0) 1 44 50 66 00",
@@ -187,7 +187,7 @@
 	"shippingData": {
 		"address": {
 			"addressType": "residential",
-			"receiverName": "Madame Léana BELKHIRI",
+			"receiverName": "Monsieur Beleño",
 			"addressId": "66000",
 			"isDisposable": false,
 			"postalCode": "66000",
@@ -258,7 +258,7 @@
 		"selectedAddresses": [
 			{
 				"addressType": "residential",
-				"receiverName": "Madame Léana BELKHIRI",
+				"receiverName": "Monsieur Beleño",
 				"addressId": "66000",
 				"isDisposable": false,
 				"postalCode": "66000",
@@ -276,7 +276,7 @@
 		"availableAddresses": [
 			{
 				"addressType": "residential",
-				"receiverName": "Madame Léana BELKHIRI",
+				"receiverName": "Monsieur Beleño",
 				"addressId": "66000",
 				"isDisposable": false,
 				"postalCode": "66000",

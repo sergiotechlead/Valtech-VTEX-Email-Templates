@@ -1,7 +1,7 @@
 {
 	"customerProfile": {
-		"name": "Léana BELKHIRI",
-		"email": "leana.belkhiri@email.com",
+		"name": "Sergio Beleño",
+		"email": "sergio.beleno@valtech.com",
 		"document": "542052766",
 		"phone": "+33 (0) 1 44 50 66 00"
 	},
@@ -42,7 +42,7 @@
 		}
 	],
 	"shippingAddress": {
-		"receiverName": "Madame Léana BELKHIRI",
+		"receiverName": "Monsieur Beleño",
 		"street": "22 ESPACE MEDITERRANEE",
 		"number": "",
 		"complement": null,

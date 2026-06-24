@@ -93,7 +93,7 @@
 						"installments": 1,
 						"connectorResponses": {},
 						"referenceValue": 2700,
-						"cardHolder": "LEANA BELKHIRI",
+						"cardHolder": "Sergio Beleño",
 						"cardNumber": null,
 						"firstDigits": "4111",
 						"lastDigits": "1111",
@@ -167,9 +167,9 @@
 	],
 	"clientProfileData": {
 		"attachmentId": "clientProfileData",
-		"email": "leana.belkhiri@email.com",
-		"firstName": "Léana",
-		"lastName": "BELKHIRI",
+		"email": "sergio.beleno@valtech.com",
+		"firstName": "Sergio",
+		"lastName": "Beleño",
 		"document": "542052766",
 		"documentType": "siret",
 		"phone": "+33 (0) 1 44 50 66 00",
@@ -192,7 +192,7 @@
 		"attachmentId": "shippingData",
 		"address": {
 			"addressType": "residential",
-			"receiverName": "Madame Léana BELKHIRI",
+			"receiverName": "Monsieur Beleño",
 			"addressId": "66000",
 			"isDisposable": false,
 			"postalCode": "66000",
@@ -257,7 +257,7 @@
 		"selectedAddresses": [
 			{
 				"addressType": "residential",
-				"receiverName": "Madame Léana BELKHIRI",
+				"receiverName": "Monsieur Beleño",
 				"addressId": "66000",
 				"postalCode": "66000",
 				"city": "PERPIGNAN",
@@ -274,7 +274,7 @@
 		"availableAddresses": [
 			{
 				"addressType": "residential",
-				"receiverName": "Madame Léana BELKHIRI",
+				"receiverName": "Monsieur Beleño",
 				"addressId": "66000",
 				"postalCode": "66000",
 				"city": "PERPIGNAN",
