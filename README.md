@@ -1,6 +1,6 @@
 # VTEX Email Templates — CHANEL
 
-A local development environment for previewing and building VTEX transactional email templates. Designed for the CHANEL brand, with 14 templates covering the full purchase journey.
+A local development environment for previewing and building VTEX transactional email templates. Designed for the CHANEL brand, with 25 templates covering the full purchase journey, admin reports, and account notifications.
 
 ---
 
@@ -61,11 +61,11 @@ The server starts at `http://localhost:3000` (auto-increments the port if 3000 i
 ├── build.js               # Static build script (outputs to dist/)
 ├── package.json
 │
-├── templates/             # Handlebars email templates
+├── templates/             # Handlebars email templates (flat .hbs files)
 │   ├── 01-vtexcommerce-new-order.hbs
 │   ├── 02-vtexcommerce-payment-approved.hbs
 │   ├── ...
-│   ├── 14-order-invoice-custom.hbs
+│   ├── 25-vtexid-configure-active-password.hbs
 │   └── partials/          # Shared .hbs partials (loaded automatically)
 │
 ├── data/
@@ -95,26 +95,45 @@ The server starts at `http://localhost:3000` (auto-increments the port if 3000 i
 
 ## Templates
 
-All 14 templates follow the VTEX event naming convention and map to the purchase journey in order:
+All 25 templates follow the VTEX event naming convention and map to the purchase journey, admin reports, and account notifications:
 
-| # | Template name | Email subject (fr) | VTEX event |
-|---|---|---|---|
-| 01 | `vtexcommerce-new-order` | Merci pour votre commande | `new-order` |
-| 02 | `vtexcommerce-payment-approved` | Votre paiement a été confirmé | `payment-approved` |
-| 03 | `vtexcommerce-order-invoiced` | Votre facture est disponible | `order-invoiced` |
-| 04 | `vtexcommerce-order-shipped` | Votre commande est en route | `order-shipped` |
-| 05 | `vtexcommerce-shipping-update` | Une mise à jour sur votre livraison | `shipping-update` |
-| 06 | `vtexcommerce-order-shipping-finished` | Votre commande a été livrée | `order-shipping-finished` |
-| 07 | `vtexcommerce-order-cancelled` | Votre commande a été annulée | `order-cancelled` |
-| 08 | `vtexcommerce-payment-denied` | Un problème avec votre paiement | `payment-denied` |
-| 09 | `vtexcommerce-order-refunded` | Votre remboursement est en cours | `order-refunded` |
-| 10 | `vtexcommerce-replace-order` | Votre nouvelle commande est confirmée | `replace-order` |
-| 11 | `vtexcommerce-order-shipped-with-cancel-request` | Votre commande est en route – Annulation en cours | `order-shipped-with-cancel-request` |
-| 12 | `portal-avise-me` | L'article que vous attendiez est de retour | `avise-me` |
-| 13 | `vtexid-check-email` | Confirmez votre adresse e-mail | `check-email` |
-| 14 | `order-invoice-custom` | Votre facture est prête | (custom) |
+| # | Template name | Label | Email subject (fr) | VTEX event |
+|---|---|---|---|---|
+| 01 | `vtexcommerce-new-order` | New Order | Merci pour votre commande | `new-order` |
+| 02 | `vtexcommerce-payment-approved` | Payment Approved | Votre paiement a été confirmé | `payment-approved` |
+| 03 | `vtexcommerce-order-invoiced` | Order Invoiced | Votre facture est disponible | `order-invoiced` |
+| 04 | `vtexcommerce-order-shipped` | Order Shipped | Votre commande est en route | `order-shipped` |
+| 05 | `vtexcommerce-shipping-update` | Shipping Update | Une mise à jour sur votre livraison | `shipping-update` |
+| 06 | `vtexcommerce-order-shipping-finished` | Order Delivered | Votre commande a été livrée | `order-shipping-finished` |
+| 07 | `vtexcommerce-order-cancelled` | Order Cancelled | Votre commande a été annulée | `order-cancelled` |
+| 08 | `vtexcommerce-payment-denied` | Payment Denied | Un problème avec votre paiement | `payment-denied` |
+| 09 | `vtexcommerce-order-refunded` | Order Refunded | Votre remboursement est en cours | `order-refunded` |
+| 10 | `vtexcommerce-replace-order` | Replace Order | Votre nouvelle commande est confirmée | `replace-order` |
+| 11 | `vtexcommerce-order-shipped-with-cancel-request` | Shipped + Cancel | Votre commande est en route – Annulation en cours | `order-shipped-with-cancel-request` |
+| 12 | `portal-avise-me` | Back in Stock | L'article que vous attendiez est de retour | `avise-me` |
+| 13 | `vtexid_check_email` | Email Verification | Confirmez votre adresse e-mail | `check-email` |
+| 14 | `order-invoice-custom` | Invoice | Votre facture est prête | (custom — sent by backend-core-invoice-generator) |
+| 15 | `oms-order-report` | Orders Report | Rapport de commandes disponible | (admin internal) |
+| 16 | `vtex-payment-report` | VTEX Payment Report | Rapport de paiement VTEX disponible | (admin internal) |
+| 17 | `vtex-payment-status-update` | Payment Status Update | Mise à jour du statut de paiement | (admin internal) |
+| 18 | `vtexcommerce-order-change-payment` | Payment Change | Modification du paiement de votre commande | `order-change-payment` |
+| 19 | `vtexcommerce-payment-pending` | Payment Pending | En attente de votre paiement | `payment-pending` |
+| 20 | `vtexcommerce-subscriptions-payment-not-approved` | Subscription Payment Failed | Paiement de l'abonnement non approuvé | `subscriptions-payment-not-approved` |
+| 21 | `report-report-finished` | Report Finished | Votre rapport est disponible | (admin internal) |
+| 22 | `catalog-admin-reports` | Catalog Admin Reports | Rapport d'administration du catalogue disponible | (admin internal) |
+| 23 | `export-products-catalogv2` | Export Products Catalog V2 | Rapport d'exportation du catalogue produits disponible | (admin internal) |
+| 24 | `vtex-id-signin-notification` | Sign-in Notification | Notification de connexion à votre compte | `signin-notification` |
+| 25 | `vtexid-configure-active-password` | Configure Active Password | Configurez votre mot de passe actif | `configure-active-password` |
 
 Each template is a standalone `.hbs` file that includes its own `<head>`, inline CSS, and all layout markup — there is no shared email layout wrapper. This matches the way VTEX stores templates (one self-contained HTML document per event).
+
+### Template categories
+
+- **Purchase journey (01–13):** Customer-facing transactional emails triggered automatically by VTEX order events.
+- **Custom invoice (14):** Triggered by the `backend-core-invoice-generator` app after a PDF is generated and uploaded to S3. The `pdf_url` field in the payload holds the public S3 link.
+- **Admin / reports (15–17, 21–23):** Internal VTEX notifications sent to store administrators — order exports, payment reports, catalog exports.
+- **Payment & subscription (18–20):** Triggered by payment state changes or subscription billing failures.
+- **Account & identity (24–25):** VTEX ID notifications for sign-in alerts and password configuration.
 
 ### Email design conventions
 
@@ -239,13 +258,13 @@ Three width presets are available in the preview toolbar:
 npm run build
 
 # Build a single template:
-node build.js 01-vtexcommerce-new-order
+node build.js 14-order-invoice-custom
 ```
 
 The build script:
 1. Loads all helpers from `helpers/email.js`
 2. Registers all partials from `templates/partials/`
-3. For each template, reads its `.hbs` file and its matching JSON data file
+3. For each `.hbs` file in `templates/`, reads the template and its matching data file from `data/vtex/`
 4. Compiles and writes `dist/<name>.html`
 
 Output files in `dist/` are gitignored and intended for upload to the VTEX admin.
@@ -319,6 +338,14 @@ Block form:
 | `trim` | Strips whitespace |
 | `truncate str 50 "…"` | Truncates with suffix |
 
+### Default
+
+```hbs
+{{default value "fallback"}}
+```
+
+Returns `value` if it is non-null and non-empty, otherwise returns `fallback`.
+
 ### Array / Object
 
 | Helper | Description |
@@ -334,6 +361,8 @@ Block form:
 {{orderStatusLabel status}}
 ```
 Maps VTEX internal status codes to French labels (e.g. `"invoiced"` → `"Expédiée"`).
+
+Supported codes: `payment-pending`, `payment-approved`, `ready-for-handling`, `handling`, `invoiced`, `order-completed`, `canceled`, `cancellation-requested`.
 
 ```hbs
 {{formatAddress address}}
@@ -371,6 +400,8 @@ Repeats a block `n` times.
 
 Each template has a matching JSON file in `data/vtex/` that provides realistic sample data for local preview. The schema mirrors the exact payload VTEX sends to its email template engine at runtime.
 
+### Order-related templates (01–13, 18–20)
+
 Key top-level fields in order-related payloads:
 
 | Field | Type | Description |
@@ -395,6 +426,24 @@ Key top-level fields in order-related payloads:
 | `totalValue` | number | Total across all orders in cents |
 | `orderGroup` | string | Top-level group ID |
 | `split` | boolean | Whether this is a split-order notification |
+
+### Custom invoice template (14)
+
+Template `14-order-invoice-custom` is triggered by the `backend-core-invoice-generator` app, not by a standard VTEX order event. Its payload is simpler:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `to` | string[] | Recipient email address(es) |
+| `orderId` | string | VTEX order ID |
+| `pdf_url` | string | Public S3 URL of the generated invoice PDF |
+| `locale` | string | BCP 47 locale (e.g. `fr-FR`) |
+| `tradingName` | string | Store trading name |
+| `companyName` | string | Company name printed on invoice |
+| `_accountInfo` | object | Store account metadata |
+
+### Admin / report templates (15–17, 21–23)
+
+These templates are sent to store administrators by VTEX internal services. Their payloads vary per report type and are not publicly documented by VTEX. The sample data files in `data/vtex/` reflect the actual structure observed in production.
 
 ---
 

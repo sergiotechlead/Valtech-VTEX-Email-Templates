@@ -30,10 +30,9 @@ if (fs.existsSync(partialsDir)) {
 // Discover templates
 const filter = process.argv[2]; // optional: build only one template
 const templatesDir = path.join(ROOT, 'templates');
-const names = fs.readdirSync(templatesDir).filter(n => {
-  const full = path.join(templatesDir, n);
-  return fs.statSync(full).isDirectory() && n !== 'partials' && (!filter || n === filter);
-});
+const names = fs.readdirSync(templatesDir)
+  .filter(f => f.endsWith('.hbs') && (!filter || f === `${filter}.hbs`))
+  .map(f => path.basename(f, '.hbs'));
 
 if (!fs.existsSync(DIST)) fs.mkdirSync(DIST);
 
@@ -41,14 +40,9 @@ let built = 0;
 let failed = 0;
 
 for (const name of names) {
-  const tplPath = path.join(ROOT, 'templates', name, 'template.hbs');
-  const dataPath = path.join(ROOT, 'data', `${name}.json`);
+  const tplPath = path.join(ROOT, 'templates', `${name}.hbs`);
+  const dataPath = path.join(ROOT, 'data', 'vtex', `${name}.json`);
   const outPath = path.join(DIST, `${name}.html`);
-
-  if (!fs.existsSync(tplPath)) {
-    console.warn(`  [SKIP]  ${name} — template.hbs not found`);
-    continue;
-  }
 
   try {
     const src = fs.readFileSync(tplPath, 'utf8');
