@@ -29,6 +29,7 @@ loadEmailPartials();
 
 // ── Template Discovery ────────────────────────────────────────────────────────
 const TEMPLATE_META = {
+  '00-vtexcommerce-welcome':                            { label: 'Welcome',                 description: 'Bienvenue – Création de compte CHANEL' },
   '01-vtexcommerce-new-order':                          { label: 'New Order',               description: 'Merci pour votre commande' },
   '02-vtexcommerce-payment-approved':                   { label: 'Payment Approved',        description: 'Votre paiement a été confirmé' },
   '03-vtexcommerce-order-invoiced':                     { label: 'Order Invoiced',          description: 'Votre facture est disponible' },
