@@ -17,6 +17,9 @@
   <![endif]-->
   <style type="text/css">
 
+  /* --- Overflow prevention ----------------------------------- */
+  html, body { overflow-x:hidden; width:100%; max-width:100%; margin:0; padding:0; }
+
   /* ============================================================
      CHANEL Email Templates — Design System
      Edit ONLY this <style> block to update all visual properties.
@@ -52,8 +55,8 @@
   img { -ms-interpolation-mode:bicubic; border:0; outline:none; text-decoration:none; }
 
   /* --- Layout ------------------------------------------------ */
-  body             { margin:0; padding:0; background-color:#f9f9f9; }
-  .email-wrapper   { width:100%; background-color:#f9f9f9; }
+  body             { margin:0; padding:0; background-color:#f9f9f9; overflow-x:hidden; max-width:100%; }
+  .email-wrapper   { width:100%; background-color:#f9f9f9; overflow-x:hidden; max-width:100%; }
   .email-container { max-width:640px; margin:0 auto; background-color:#ffffff; }
 
   /* --- Typography -------------------------------------------- */
@@ -140,8 +143,8 @@
 
   </style>
 </head>
-<body style="margin:0;padding:0;background-color:#f9f9f9;">
-  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%;background-color:#f9f9f9;" class="email-wrapper">
+<body style="margin:0;padding:0;background-color:#f9f9f9;overflow-x:hidden;max-width:100%;">
+  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%;background-color:#f9f9f9;max-width:100%;overflow-x:hidden;" class="email-wrapper">
     <tr>
       <td>
 
